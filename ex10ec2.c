@@ -7,8 +7,11 @@ int main (int argc, char *argv[]) {
         return 1;
     }
 
-    for (int i=0; argv[1][i]!='\0'; i++) {
-       char letter = argv[1][i];
+    char letter;
+
+    for (int i=0; letter=argv[1][i], argv[1][i]!='\0'; i++) {
+       //char letter = argv[1][i];
+       //we can set that in for condition using comma (,)
 
        switch (letter) {
            case 'a':
@@ -39,11 +42,9 @@ int main (int argc, char *argv[]) {
            case 'Y':
                if (i > 2) {
                    // it's only sometimes Y
-                   printf("%d: 'Y'\n", i);
+                   printf("%d: 'A'\n", i);
                }
                break;
-               // break should be inside if 
-               // if triggered we break, else we go to default
            default:
                printf("%d: %c is not a vowel.\n", i, letter);
        }

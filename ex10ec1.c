@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <ctype.h> //to inport toupper() and isupper()
+#include <string.h> //to import strlen()
 
 int main (int argc, char *argv[]) {
     if (argc != 2) {
@@ -10,44 +12,42 @@ int main (int argc, char *argv[]) {
     for (int i=0; argv[1][i]!='\0'; i++) {
        char letter = argv[1][i];
 
-       switch (letter) {
+       switch (letter) { //change all vowels to uppercase
            case 'a':
-           case 'A':
-               printf("%d: 'A'\n", i);
+               argv[1][i] = toupper(letter);
                break;
            case 'e':
-           case 'E':
-               printf("%d: 'E'\n", i);
+               argv[1][i] = toupper(letter);
                break;
 
            case 'i':
-           case 'I':
-               printf("%d: 'I'\n", i);
+               argv[1][i] = toupper(letter);
                break;
 
            case 'o':
-           case 'O':
-               printf("%d: 'O'\n", i);
+               argv[1][i] = toupper(letter);
                break;
 
            case 'u':
-           case 'U':
-               printf("%d: 'U'\n", i);
+               argv[1][i] = toupper(letter);
                break;
 
            case 'y':
-           case 'Y':
                if (i > 2) {
                    // it's only sometimes Y
-                   printf("%d: 'Y'\n", i);
+                   argv[1][i] = toupper(letter);
                }
                break;
-               // break should be inside if 
-               // if triggered we break, else we go to default
-           default:
-               printf("%d: %c is not a vowel.\n", i, letter);
        }
     }
+    
+    //print only the uppercase letters
+    for (int i=0; i<strlen(argv[1]); i++) { 
+        if (isupper(argv[1][i])) {
+            printf("%c", argv[1][i]);
+        }
+    }
+    printf("\n");
 
     return 0;
 }
