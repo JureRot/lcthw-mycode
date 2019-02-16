@@ -46,5 +46,9 @@ int main (int argc, char *argv[]) {
     printf("another each: %c %c %c %c\n", 
             another[0], another[1], another[2], another[3]);
 
+    /*
+     * void *memcpy(void *str1, const void *str2, size_t n)
+     * copyies n characters from memory area str2 to memory area str1
+     */
     return 0;
 }
