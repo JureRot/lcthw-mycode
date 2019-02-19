@@ -75,7 +75,8 @@ int main (int argc, char *argv[]) {
     
     //destroy them both so we clean up
     Person_destroy(joe);
-    //Person_destroy(frank);
+    Person_destroy(frank);
+    //use valgrind to detect memory leaks (hope vscode can do the same)
 
     return 0;
 }
