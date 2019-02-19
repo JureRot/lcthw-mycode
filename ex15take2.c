@@ -68,6 +68,11 @@ int main (int argc, char *argv[]) {
      * TYPE *ptr = &thing - A pointer of type TYPE named ptr set to the address of thing
      * ptr++ - Increment where ptr points
      *      not actually plus 1 but plus sizeof(pointer type) (effectively shifting to the location of the next element in memory)
+     *      
+     * ptr->elem - Use pointer prt to struct/union to get the elem
+     *      ptr points to struct or union and to get the value of element elem we would do something like ptr.elem
+     *      but because it is a pointer we cant do that but need to dereference it something like
+     *      (*ptr).elem, but this is long and hard to write so the shorthand for this is ptr->elem
      */
 
     //ARRAYS ARE NOT THE SAME AS POINTERS
