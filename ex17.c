@@ -16,7 +16,9 @@ struct Address {
 };
 
 struct Database {
-    struct Address rows[MAX_ROWS];
+    struct Address rows[MAX_ROWS]; //not a pointer, an actual array of Address structures
+    //because this has the actual whole data table, this is a big struct (big chunk of memory) 100 lines of 512*2 + 8*2 bytes
+    //this means the OS maybe cant give us the malloc() and we will have to check if we got it
 };
 
 struct Connection {
