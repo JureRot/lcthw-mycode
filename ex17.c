@@ -132,7 +132,7 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
     addr->set = 1;
     // WARNING: bug, read the "How to Break It" and fix this
     char *res = strncpy(addr->name, name, MAX_DATA);
-    //strncpy(in, out, n) creates a string copy of len n even if string istn that long (similarly to strcpy())
+    //strncpy(in, out, n) creates a string copy of len n even if string isnt that long (otherwise similar to strcpy())
     //strncpy will not add the \0 char at the end (if len of name too big). we need to force it
     res[511] = '\0';
     // demonstrate the strncpy bug
