@@ -228,5 +228,6 @@ int main(int argc, char *argv[]) {
      * addr will have a pinter to name and a pointer to email
      *
      * [https://stackoverflow.com/questions/21269700/dynamically-sized-structs-learn-c-the-hard-way-ex17]
+     * [https://pastebin.com/MvLXkDCz]
      */
 }
