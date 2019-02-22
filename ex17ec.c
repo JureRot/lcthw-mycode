@@ -14,7 +14,7 @@ struct Address {
     int set;
     char *name;
     char *email;
-    //char phone[9]; //i know it should not be string but phone numbers as numbers are hard
+    int phone[9]; //we dont need to free because its not a pointer and we dont malloc()
 };
 
 struct Database {
@@ -46,7 +46,12 @@ void die(struct Connection *conn, const char *message) {
 }
 
 void Address_print(struct Address *addr) {
-    printf("%d %s %s\n", addr->id, addr->name, addr->email);
+    char phone_str[9];
+    for (int i=0; i<9; i++) {
+        phone_str[i] = addr->phone[i] + '0'; //thats how we convert int to char
+    }
+
+    printf("%d %s %s %s\n", addr->id, addr->name, addr->email, phone_str);
 }
 
 void Database_load(struct Connection *conn) {
@@ -61,7 +66,7 @@ void Database_load(struct Connection *conn) {
     if (fread(&conn->db->max_rows, sizeof(conn->db->max_rows), 1, conn->file) != 1)
         die(conn, "Failed reading max_rows");
 
-    //we reserve the space fro all the row (Address) pointers
+    //we reserve the space for all the row (Address) pointers
     conn->db->rows = malloc(sizeof(struct Address*) * conn->db->max_rows); //Address* because rows is a array of pointers to Address-es
     if (!conn->db->rows)
         die(conn, "Failed reserving max_rows-number of Address structs");
@@ -93,6 +98,9 @@ void Database_load(struct Connection *conn) {
             die(conn, "Failed to allocate Address(email)");
         if (fread(row->email, (sizeof(char) * conn->db->max_data), 1, conn->file) != 1)
             die(conn, "Failed to read Address(email)");
+        //we load the phone[]
+        if (fread(&row->phone, sizeof(row->phone), 1, conn->file) != 1)
+            die(conn, "Failed reading Address(phone)");
     }
 }
 
@@ -174,12 +182,16 @@ void Database_create(struct Connection *conn, int data, int rows) {
 
         //we set the name
         conn->db->rows[i]->name = malloc(conn->db->max_data); //no sizeof just the value of max_data
-        conn->db->rows[i]->name = memset(conn->db->rows[i]->name, '\0', conn->db->max_data);
-        //memset(str, c, len) writes len bytes of value c to a string str (effectively wiping the name string in memory)
-        
+        if (!conn->db->rows[i]->name)
+            die(conn, "Failed allocating name during create db");
         //we do the same for email
         conn->db->rows[i]->email = malloc(conn->db->max_data);
+        if (!conn->db->rows[i]->email)
+            die(conn, "Failed allocating email during create db");
         conn->db->rows[i]->email = memset(conn->db->rows[i]->email, '\0', conn->db->max_data);
+
+        //we dont need to create an empty phone array (i think)
+        //conn->db->rows[i]->phone = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     }
 }
 
@@ -210,6 +222,8 @@ void Database_write(struct Connection *conn) {
             die(conn, "Failed to write Address(name)");
         if (fwrite(row->email, (sizeof(char) * conn->db->max_data), 1, conn->file) != 1)
             die(conn, "Failed to write Address(email)");
+        if (fwrite(row->phone, sizeof(row->phone), 1, conn->file) != 1)
+            die(conn, "Failed to write Address(phone)");
     }
 
     rc = fflush(conn->file);
@@ -228,7 +242,7 @@ void Database_get(struct Connection *conn, int id) {
     }
 }
 
-void Database_set(struct Connection *conn, int id, const char *name, const char *email) {
+void Database_set(struct Connection *conn, int id, const char *name, const char *email, const char *phone) {
     struct Address *addr = conn->db->rows[id];
 
     if (addr->set)
@@ -252,6 +266,10 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
     if (!res)
         die(conn, "Email copy failed");
     res[conn->db->max_data - 1] = '\0';
+
+    for (int i=0; i<9; i++) {
+        addr->phone[i] = phone[i]-'0'; //char to int -'0', int to char +'0'
+    }
 }
 
 void Database_delete(struct Connection *conn, int id) {
@@ -260,6 +278,8 @@ void Database_delete(struct Connection *conn, int id) {
     conn->db->rows[id]->set = 0;
     conn->db->rows[id]->name = memset(conn->db->rows[id]->name, '\0', conn->db->max_data);
     conn->db->rows[id]->email = memset(conn->db->rows[id]->email, '\0', conn->db->max_data);
+    //conn->db->rows[id]->phone = { 0 };
+    memset(&conn->db->rows[id]->phone, 0, sizeof(conn->db->rows[id]->phone));
     //this may not be the fastest way, but is simple (no new allocations and no freeing of the memory)
 }
 //DELETE DOESNT WORK, its not that simple, we need to actually create new and kill the other (free)
@@ -290,7 +310,18 @@ void Database_find(struct Connection *conn, char *pattern) {
                     Address_print(row);
                     found = 1;
                 }
+
+                //also we create a string out of phone and compare it to patter
+                char phone_str[9];
+                for (int i=0; i<9; i++) {
+                    phone_str[i] = row->phone[i] + '0';
+                }
+                if (!strcmp(pattern, phone_str)) {
+                        Address_print(row);
+                        found = 1;
+                }
             }
+
             if (!strcmp(pattern, row->name) || !strcmp(pattern, row->email)) {
                 Address_print(row);
                 found = 1;
@@ -332,9 +363,9 @@ int main(int argc, char *argv[]) {
             break;
 
         case 's':
-            if (argc != 6)
-                die(conn, "Need id, name, email to set");
-            Database_set(conn, id, argv[4], argv[5]);
+            if (argc != 7)
+                die(conn, "Need id, name, email, phone to set");
+            Database_set(conn, id, argv[4], argv[5], argv[6]);
             Database_write(conn);
             break;
 
