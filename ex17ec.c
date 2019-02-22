@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
+#include <ctype.h> //for isdigit
 
 #define MAX_DATA 512
 #define MAX_ROWS 100
@@ -13,6 +14,7 @@ struct Address {
     int set;
     char *name;
     char *email;
+    //char phone[9]; //i know it should not be string but phone numbers as numbers are hard
 };
 
 struct Database {
@@ -247,11 +249,17 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
 }
 
 void Database_delete(struct Connection *conn, int id) {
-    struct Address addr = { .id = id, .set = 0 };
-    conn->db->rows[id] = &addr; //& because row is no longer actual struct, but a pointer
+    //struct Address addr = { .id = id, .set = 0 };
+    //conn->db->rows[id] = &addr; //& because row is no longer actual struct, but a pointer
+    conn->db->rows[id]->set = 0;
+    conn->db->rows[id]->name = memset(conn->db->rows[id]->name, '\0', conn->db->max_data);
+    conn->db->rows[id]->email = memset(conn->db->rows[id]->email, '\0', conn->db->max_data);
+    //this may not be the fastest way, but is simple (no new allocations and no freeing of the memory)
 }
 //DELETE DOESNT WORK, its not that simple, we need to actually create new and kill the other (free)
 //look in db_create and in db_close
+//ON THE OTHER HAND
+//why dont we just change the existing one (change the set and reset the strings for name and email)
 
 void Database_list(struct Connection *conn) {
     struct Database *db = conn->db;
@@ -263,6 +271,29 @@ void Database_list(struct Connection *conn) {
             Address_print(cur);
         }
     }
+}
+
+void Database_find(struct Connection *conn, char *pattern) {
+    int found = 0;
+
+    for (int i=0; i<conn->db->max_rows; i++) {
+        struct Address *row = conn->db->rows[i];
+        if (row->set) {
+            if (isdigit(pattern[0])) { //if first char of patter is number
+                if (atoi(pattern)==i) { //we convert ti to numer (ascii to int) and search if same as i (address id)
+                    Address_print(row);
+                    found = 1;
+                }
+            }
+            if (!strcmp(pattern, row->name) || !strcmp(pattern, row->email)) {
+                Address_print(row);
+                found = 1;
+            }
+        }
+    }
+    if (!found)
+        die(conn, "No match");
+    //we go over every row and if set we compare the name to the pattern, if 0 we print and exit program. if none set we return no match
 }
 
 
@@ -311,9 +342,15 @@ int main(int argc, char *argv[]) {
         case 'l':
             Database_list(conn);
             break;
+
+        case 'f':
+            if (argc != 4)
+                die(conn, "Need name to find");
+            Database_find(conn, argv[3]);
+            break;
         
         default:
-            die(conn, "Invalid action: c=create, g=get, s=set, d=delete, l=list");
+            die(conn, "Invalid action: c=create, g=get, s=set, d=delete, l=list, f=find");
     }
 
     Database_close(conn);
