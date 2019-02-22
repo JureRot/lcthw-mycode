@@ -130,17 +130,23 @@ void Database_close(struct Connection *conn) {
         if (conn->db) {
             if (conn->db->rows) {
                 for (int i=0; i<conn->db->max_rows; i++) {
-                    struct Address *curr = conn->db->rows[i];
-                    if (curr)
-                        free(curr);
+                    struct Address *row = conn->db->rows[i];
+                    if (row) {
+                        if (row->name && row->email) {
+                            free(row->name);
+                            free(row->email);
+                        }
+                        free(row);
+                    }
                 }
+                free(conn->db->rows);
             }
-
             free(conn->db);
         }
-
         free(conn);
     }
+    //we need to free conn, db inside conn, rows inside db, every row inside rows, name inside every row, email inside every row
+    //and we need to close the file inside conn
 }
 
 void Database_create(struct Connection *conn, int data, int rows) {
