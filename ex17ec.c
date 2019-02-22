@@ -5,8 +5,8 @@
 #include <string.h>
 #include <ctype.h> //for isdigit
 
-#define MAX_DATA 512
-#define MAX_ROWS 100
+//#define MAX_DATA 512
+//#define MAX_ROWS 100
 
 
 struct Address {
