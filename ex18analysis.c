@@ -46,7 +46,13 @@ int main(int argc, char *argv[]) {
     //and the third thing is "hard-assigning" the function to the function pointer
     printf("\n");
     char *(*tester) (int) = bla;
-    printf("tester: %s is now same as bla: %s\n", tester(3), bla(3));
+    char *tester_str = tester(3);
+    char *bla_str = bla(3);
+    
+    printf("tester: %s is now same as bla: %s\n", tester_str, bla_str);
+    
+    free(tester_str);
+    free(bla_str);
 
     return 0;
 }
