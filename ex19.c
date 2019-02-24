@@ -5,7 +5,7 @@
 //or add it to the Makefile
 
 #include "dbg.h"
-//#include "dbg_ec.h"
+//#include "dbg_ec.h" //this would add the function name in the log printf (not too useful if you have line number)
 #include <stdlib.h>
 #include <stdio.h>
 
