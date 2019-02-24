@@ -1,0 +1,25 @@
+debug(M, ...)
+    glorified printf(). includes file and line number. can be turned off with
+    NDEBUG (which means that part of the code isnt even compiled)
+log_err(M, ...)
+    logs an error and if the errno is set, it also gives the error description
+    (very usefull).
+log_warn(M, ...)
+    does the same as log_err() but is to be used in a less severe cases.
+log_info(M, ...)
+    again a glorified printf(), just a func that logs some info with file name
+    and line numbers.
+check(A, M, ...)
+    glorified assert. checks if A correct, if not it throws a log_err(),
+    resets the errno global and jumps to error part of the function for
+    cleanup.
+sentinel(M, ...)
+    to be used in a part of the program that should not execute to catch
+    unaccouted for states or weird inputs. throws a log_err(), resets the errno
+    global and jumps to the error part of the function for cleanup.
+check_mem(A)
+    to use after malloc or such to check if memory was correctly allcoated (to
+    replace that if(!) die(); statement).
+check_debug(A, M, ...)
+    like check(), but instead of throwing a log_err(), this just throws a
+    debug() so it can be made invisible with NDEBUG.
