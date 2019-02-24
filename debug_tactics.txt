@@ -1,0 +1,16 @@
+Debug tactics:
+
+1. You can't debug code by just looking at it.
+2. Repeat the bug with an automated test (.sh file).
+3. Run the program under the debugger and valgrind and lint.
+4. Find the backtrace and print out all the variables on the path.
+5. Once you fix it, add check() (from dbg.h) to prevent it.
+
+- Start a little text file callec notes.txt and use it for a kind of lab notes for ideas, bugs, problems and so on.
+- Before you use GDB, write out the bug you're going to fix and what could be causing it.
+- For each cause, write out the files and functions where you think the cause is coming from, or just write that you don't know.
+- Now start GDB and pick the first possible cause with good file and function variables and set breakpoints there.
+- Use GDB to than run the program and comfirm wether that is the cause. The best way is to see if you can use the set command to either fix the program easily or cause the error immediately.
+- If this isn't the cause, than mark in the notes.txt that it wasn't, and why. Move on to the next possible cause that is easiest to debugg, and keep adding information.
+
+Using debug printing method will force you in to a very simillar approach.
