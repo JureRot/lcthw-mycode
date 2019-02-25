@@ -133,3 +133,4 @@ Available Control Structures:
 	break - Puts a break in a loop, ending it early.
 	continue - Stops the body of a loop and jumps to the test so it can continue.
 	goto - Jumps to a spot in the code where you've placed a label: (we've been using this in the dbg.h macros to go the the error: label).
+    and other we already used (if, while, for, switch, struct, union, typedef, function)
