@@ -1,0 +1,135 @@
+Availabe Data Types:
+	int - Stores a regular integer, defaulting to 32 bits in size.
+	double - Holds a large floating-point number.
+	float - Holds a smaller floating-point number.
+	char - Holds a single 1-byte character.
+	void - indicates "no type" and is used to say that the function returns nothing, or a pointer has no type, as in void *thing.
+	enum - Enumerated types, which work as and convert to integers, but give you symbolic names for sets. Some compilers will warn you when you don't cover all elements of an enum in switch-statements.
+
+Type Modifiers:
+	unsigned - Changes the type so that it doesn't have negative numbers, giving you a larger upper bound but nothing lower than 0.
+	signed - Gives you negative and positive numbers, but halves your upper bound for exchange for the same lower bound negative.
+	long - Uses a large storage for the type so that it can hold bigger numbers, usually doubling the current size.
+	short - Uses smaller storage for the type so it stores less, but it takes half the space.
+
+Type Qualifiers:
+	const - Indicates that the variable won't change after being initalized.
+	volatile - Indicates that all bets are off, and the compiler should leave this alone and try not to do any fancy optimizations to it. You usually only need this if you're doing really weird stuff to your variables.
+	register - Forces the compiler to keep this variable in a register, and the compiler can just ignore you. These days the compilers are better at figuring out where to put variables, so only use this if you can actually measure an imporvement in speed.
+
+Type Conversions:
+C converts different types in operation by converting the smaller to the bigger before doing the operation. If one side of the expression is on this list, than the other side is converted to that type before the operation is done.
+It goes in order:
+	1. long double
+	2. double
+	3. float
+	4. int (but only char and short int)
+	5. long
+You can force the compiler to convert one type to another by using casts ((type)variable). But be carefull because C won't complain if you cast from bigger to a smaller type (which should only be done if you really know what you're doing).
+
+Type Sizes:
+	int8_t - 8-bit signed integer
+	uint8_t - 8-bit unsigned integer
+	int16_t - 16-bit signed integer
+	uint16_t - 16-bit unsigned integer
+	int32_t - 32-bit signed integer
+	uint32_t - 32-bit unsigned integer
+	int64_t - 64-bit signed integer
+	uint64_t - 64-bit unsigned integer
+
+	INT(N)_MAX - Maximum positive number of an signed integer of bits (N), such as INT16_MAX.
+	INT(N)_MIN - Minimum negative number of an signed integer of bits (N).
+	UINT(N)_MAX - Maximum positive number of an unsigned integer of bits (N). Since it's unsigned, the minimum is 0 and can't have a negative value.
+
+	int_lest(N)_t - Holds at least (N) bits
+	uint_lest(N)_t - Holds at least (N) bits unsigned
+	INT_LEAST(N)_MAX - Maximum value of the matching least (N) type
+	INT_LEAST(N)_MIN - Minimum value of the matching least (N) type
+	UINT_LEAST(N)_MAX - Unsigned maximum of the matching least (N) type
+	int_fast(N)_t - Similar to the int_least(N)_t but asking for the "fastest" with at least that precision
+	uint_fast(N)_t - Unsigned fastest least integer
+	INT_FAST(N)_MAX - Maximum value of the matching fastest (N) type
+	INT_FAST(N)_MIN - Minimum value of the matching fastest (N) type
+	UINT_FAST(N)_MAX - Unsigned maximum of the matching fastest (N) type
+	intptr_t - Signed integer large enough to hold a pointer
+	uintptr_t - Unsigned integer large enough to hold a pointer
+	INTPTR_MAX - Maximum value of a intptr_t
+	INTPTR_MIN - Minimum value of a intptr_t
+	UINTPTR_MAX - Unsigned maximum value of a uintptr_t
+	intmax_t - Biggest number possible on that system
+	uintmax_t - Biggest unsigned number possible on that system
+	INTMAX_MAX - Largest value of the biggest signed number
+	INTMAX_MIN - Smallest value of the biggest signed number
+	UINTMAX_MAX - Largest value of the biggest unsigned number
+	PTRDIFF_MIN - Minimum value of the ptrdiff_t (what is ptrdiff_t)
+	PTRDIFF_MAX - Maximum value of the ptrdiff_t
+	SIZE_MAX - Maximum of size_t (what is size_t)
+
+Available Operators:
+	(binary) - The operator has a left and right: X + Y
+	(unary) - The operator is on its own: -X
+	(prefix) - The operator comes before the variable: ++X
+	(postfix) - This is usually the same as the (prefix) version, but placing it after gives it a different meaning: X++
+	(ternary) - There's only one of these, so it's called the ternary, but it means "three oprands": X ? Y : Z
+
+Math Operators:
+	() - Function call
+	* (binary) - Multiply
+	/ - Divide
+	+ (binary) - Add
+	+ (unary) - Positive number
+	++ (postfix) - Read, then increment
+	++ (prefix) - Incremen, then read
+	-- (postfix) - Read, then decrement
+	-- (prefix) - Decrement, then read
+	- (binary) - Subtract
+	- (unary) - Negative number
+
+Data Operators:
+	-> - Struct pointer access
+	. - Struct value access
+	[] - Array index
+	sizeof - Size of a type of variable
+	& (unary) - Address of
+	* (unary) - Value of
+
+Logic Operators:
+	!= - Does not equal
+	< - Less than
+	<= - Less or equal than
+	== - Equal (not assignment)
+	> - Greater than
+	>= - Greater or equal than
+
+Bit Operators:
+	<< - Shift left
+	>> - Shift right
+	^ - Bitwise xor (exclusive or)
+	| - Bitwise or
+	& - Bitwise and
+	~ - Complement (flips all the bits)
+
+Boolean Operators:
+	! - Not
+	&& - And
+	|| - Or
+	?: - Ternary truth test, read X ? Y : Z as "if X than Y else Z"
+
+Assignment Operators:
+	= - Assign
+	+= - Plus assign
+	-= - Minus assign
+	*= - Multiply assign
+	/= - Divide assign
+	%= - Modulus assign
+	&= - Bitwise-and assign
+	|= - Bitwise-or assign
+	^= - Bitwise-xor assign
+	<<= - Shift left assign
+	>>= - Shift right assign
+
+Available Control Structures:
+	do_while [do { ... } while(X); - First does the code in the block, then test the X expression before exiting.
+	break - Puts a break in a loop, ending it early.
+	continue - Stops the body of a loop and jumps to the test so it can continue.
+	goto - Jumps to a spot in the code where you've placed a label: (we've been using this in the dbg.h macros to go the the error: label).
