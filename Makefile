@@ -1,7 +1,9 @@
 CFLAGS=-Wall -g -DNDEBUG
 
+#this should include all .c files in this directory (optimally)
 all: ex1 ex3
 
+#again, should include all .c files (optimally)
 clean:
 	rm -f ex1
 	rm -f ex3

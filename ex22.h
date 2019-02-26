@@ -1,5 +1,6 @@
 #ifndef _ex22_h
 #define _ex22_h
+//this is a trick so that ex22.h is defined only once
 
 // makes THE_SIZE in ex22.c available to other .c files
 extern int THE_SIZE;
