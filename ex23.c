@@ -50,7 +50,7 @@ int duffs_device(char *from, char *to, int count) {
     return count;
 }
 
-//does pretty much the same as diffs_device, but instead of do-while loop, it uses goto jump command
+//does pretty much the same as duffs_device, but instead of do-while loop, it uses goto jump command
 int zeds_device(char *from, char *to, int count) {
     {
         int n = (count + 7) / 8;
