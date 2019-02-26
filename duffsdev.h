@@ -5,6 +5,8 @@
 #include <errno.h>
 #include <string.h>
 
-#define duff8(C)  { int n = (C+7)/8; for (int i=0; i<n; i++) { printf("%d", i); }; printf("%d", n); }
+#define N 4
+
+#define duff8() { N }
 
 #endif
