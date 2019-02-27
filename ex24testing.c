@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 
     //if we have a fixed size of input array, we dont need to free it (there is no heap alloc (strcpy doesnt allocate))
     //what about if we had a dynamic size of array (probably with pointers, but how, try that too)
-    //and of course the standard ec
+    //and of course, do the standard ec
 
     return 0;
 error:
