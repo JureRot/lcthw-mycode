@@ -40,7 +40,11 @@ char *temp;
 //#define duff8(F, T, C) { T[0]=F[0]; }
 //I dont think this is possible, i dont think it will let me edit outside values through pointers in preprocessor
 //i get a bus error or a segfault (looks like we cant change outside the scope that easy)
+//look into it
+//[https://www.brainbell.com/tutors/c/Advice_and_Warnings_for_C/Macros_and_Miscellaneous_Pitfalls.html]
 
-//BUT I WOULD REALLY LIKE TO DO THIS WITH THE MACRO, AND IN GENERALLY TO UNDERSTAND THIS HEADER FILES
+//BUT I WOULD REALLY LIKE TO DO THIS WITH THE MACRO, AND IN GENERALLY TO UNDERSTAND THIS HEADER FILES STUFF
+
+//there is something called __inline (inline functions) (maybe look at that or something)
 
 #endif
