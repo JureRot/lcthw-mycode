@@ -1,0 +1,5 @@
+The line was: Jure
+The line was: Rot
+The line was: 22
+The line was: 2
+The line was: -100
