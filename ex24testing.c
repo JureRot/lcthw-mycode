@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
     char *filename = "IOin.txt";
     char line[MAX_DATA];
     char input[NUM_LINES][MAX_DATA];
+    //char *input[NUM_LINES];
     int c = 0;
 
     in = fopen(filename, "r");
@@ -36,7 +37,8 @@ int main(int argc, char *argv[]) {
     }
 
     //if we have a fixed size of input array, we dont need to free it (there is no heap alloc (strcpy doesnt allocate))
-    //what about if we had a dynamic size of array
+    //what about if we had a dynamic size of array (probably with pointers, but how, try that too)
+    //and of course the standard ec
 
     return 0;
 error:
