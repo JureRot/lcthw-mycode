@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     int count = 6;
 
     printf("%s\n", to);
-    int rc = duff8();
+    duff8(from, to, count);
     printf("%s\n", to);
     printf("%d\n", rc);
 
