@@ -37,6 +37,9 @@ char *temp;
 }
 */
 
-#define duff8(F, T, C) { T[0]=F[0]; }
+//#define duff8(F, T, C) { T[0]=F[0]; }
+//I dont think this is possible, i dont think it will let me edit outside values through pointers in preprocessor
+
+//BUT I WOULD REALLY LIKE TO DO THIS WITH THE MACRO, AND IN GENERALLY TO UNDERSTAND THIS HEADER FILES
 
 #endif
