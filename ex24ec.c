@@ -83,6 +83,7 @@ int main(int argc, char *argv[]) {
     char *bla3 = "Jure"; //this is a pointer to a string, characters inside this cannot be modified
     printf("%ld, %ld\n", sizeof(bla2), sizeof(bla3));
     printf("%ld, %ld\n", strlen(bla2), strlen(bla3));
+    printf("%p, %p\n", bla2, bla3);
 
 
 
