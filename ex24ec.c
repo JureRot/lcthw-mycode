@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dbg.h"
 
 #define MAX_DATA 100
@@ -46,9 +47,9 @@ int main(int argc, char *argv[]) {
     check(in != NULL, "Failed to read last name.");
 
     printf("How old are you? ");
-    int rc = fscanf(stdin, "%d", &you.age);
-    //fscanf(stream, format, ptr) reads from stream, converts it using format and saves it to the location of ptr (?basically?)
-    check(rc > 0, "You have to enter a number.");
+    in = fgets(in, MAX_DATA-1, stdin);
+    check(atoi(in) != 0, "You have to enter a number."); //this isnt fool proof, it you can for instance enter 123abc456 and ti will recognize 123
+    you.age = atoi(in);
     
     printf("What color are your eyes:\n");
     for (int i=0; i<=OTHER_EYES; i++) { //because EyeColors is a enum, its elements become enumerated, so the OHTER_EYES (the last element) is actually a number (of sorts)
@@ -57,15 +58,17 @@ int main(int argc, char *argv[]) {
     printf("> ");
 
     int eyes = - 1;
-    rc = fscanf(stdin, "%d", &eyes);
-    check(rc > 0, "You have to enter a number.");
+    in = fgets(in, MAX_DATA-1, stdin);
+    check(atoi(in)!=0, "You have to enter a number");
+    eyes = atoi(in);
 
     you.eyes = eyes - 1;
     check(you.eyes<=OTHER_EYES && you.eyes>=0, "Do it right, that's not an option.");
     
     printf("How much do you make an hour? ");
-    rc = fscanf(stdin, "%f", &you.income);
-    check(rc > 0, "Enter a floating point number.");
+    in = fgets(in, MAX_DATA-1, stdin);
+    check(atoi(in)!=0, "Enter a floating point number."); //again it will recognize 123abc456 as number
+    you.income = atoi(in);
 
     printf("----- RESULTS -----\n");
 
@@ -74,6 +77,14 @@ int main(int argc, char *argv[]) {
     printf("Age: %d\n", you.age);
     printf("Eyes: %s\n", EYE_COLOR_NAME[you.eyes]);
     printf("Income: %f\n", you.income);
+
+    char bla1[] = "Jure\n";
+    char bla2[] = "Jure"; //this is array of characters, characters inside this can be modified
+    char *bla3 = "Jure"; //this is a pointer to a string, characters inside this cannot be modified
+    printf("%ld, %ld\n", sizeof(bla2), sizeof(bla3));
+    printf("%ld, %ld\n", strlen(bla2), strlen(bla3));
+
+
 
     return 0;
 error:
@@ -98,5 +109,5 @@ error:
         all of those have other versions, soo look into those too
     */
 
-    //FOR YOU EXTRA CREDIT, READ AND WRITE TO AN ACTUAL .TXT FILE
+   //scanf() is the same as the fscanf(), except with fscanf() you have to pass the source, in scanf() the source is always stdin
 }
