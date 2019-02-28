@@ -86,29 +86,9 @@ int main(int argc, char *argv[]) {
     printf("%p, %p\n", bla2, bla3);
 
 
+   //scanf() is the same as the fscanf(), except with fscanf() you have to pass the source, in scanf() the source is always stdin
 
     return 0;
 error:
     return -1;
-    /*
-        More f functions:
-            fscanf
-            fgets
-            fopen
-            freopen
-            fdopen
-            fclose
-            fcloseall
-            fgetpos
-            fseek
-            ftell
-            frewind
-            fprintf
-            fwrite
-            fread
-
-        all of those have other versions, soo look into those too
-    */
-
-   //scanf() is the same as the fscanf(), except with fscanf() you have to pass the source, in scanf() the source is always stdin
 }
