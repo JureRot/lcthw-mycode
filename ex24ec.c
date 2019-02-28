@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
     printf("Income: %f\n", you.income);
 
     char bla1[] = "Jure\n";
-    char bla2[] = "Jure"; //this is array of characters, characters inside this can be modified
+    char bla2[] = "Jure"; //this is array of characters, characters inside this can be modified (the actual variable bla2 is a pointer to the first char in this array)
     char *bla3 = "Jure"; //this is a pointer to a string, characters inside this cannot be modified
     printf("%ld, %ld\n", sizeof(bla2), sizeof(bla3));
     printf("%ld, %ld\n", strlen(bla2), strlen(bla3));
