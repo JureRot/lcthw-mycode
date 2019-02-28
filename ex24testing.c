@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
         input_dyn[c] = malloc(strlen(line)*sizeof(char));
         strncpy(input_dyn[c], line, strlen(line));
         c++;
-        fprintf(out, "The line of len %lu was: %s", strlen(line), line);
+        fprintf(out, "The line of len %lu was: %s\n", strlen(line), line);
     }
 
 

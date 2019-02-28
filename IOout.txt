@@ -1,1 +1,5 @@
-The line of len 4 was: JureThe line of len 3 was: RotThe line of len 2 was: 22The line of len 1 was: 2The line of len 4 was: -100
+The line of len 4 was: Jure
+The line of len 3 was: Rot
+The line of len 2 was: 22
+The line of len 1 was: 2
+The line of len 4 was: -100

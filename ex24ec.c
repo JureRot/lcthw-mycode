@@ -29,6 +29,24 @@ typedef struct Person {
     float income;
 } Person;
 
+//removes newline char at the end of the string
+char *remove_nl(char *str) {
+    if (str[strlen(str)-1] == '\n') {
+        str[strlen(str)-1] = '\0';
+    }
+    return str;
+}
+
+//TODO:
+//remove any whitespace inside the string
+char *remove_ws(char *str) {
+    //this is harder, will need a new string using malloc
+    //? OR NOT, maybe we can just move the characters after the whitepace one char to the left (for each whitespace)
+    //and fill the end with \0 (add a new func, char_slide_left or something)
+    //(idea for keeping the same string and just removing the whitespace is, so we dont need to free() at the end and we have no mem leaks)
+    return str;
+}
+
 int main(int argc, char *argv[]) {
     Person you = { .age = 0 };
     //int i = 0;
@@ -85,6 +103,10 @@ int main(int argc, char *argv[]) {
     printf("%ld, %ld\n", strlen(bla2), strlen(bla3));
     printf("%p, %p\n", bla2, bla3);
 
+    printf("%s, %s\n", bla1, bla2);
+    char *new_bla1 = remove_nl(bla1);
+    char *new_bla2 = remove_nl(bla2);
+    printf("%s, %s\n", new_bla1, new_bla2);
 
    //scanf() is the same as the fscanf(), except with fscanf() you have to pass the source, in scanf() the source is always stdin
 
