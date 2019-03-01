@@ -41,7 +41,7 @@ char *remove_nl(char *str) {
 //TODO:
 //slides all characters from n till the end one to the left (effectively removing n-th character and adding \0 to the end)
 char *char_slide_left(char *str, int n) {
-    for (int i=0; i<strlen(str), i++) {
+    for (int i=0; i<strlen(str); i++) {
         debug("%c\n", str[i]);
     }
     return str;
