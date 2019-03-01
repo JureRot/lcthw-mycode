@@ -77,7 +77,7 @@ int read_scan(const char *fmt, ...) {
                     //we actually pass it an empty pointer (which will be modidfied in read_int)
                     check(rc == 0, "Failed to read int.");
                     break;
-                
+
                 case 'c': //if c -> we expect character pointer in vargs
                     out_char = va_arg(argp, char *);
                     *out_char = fgetc(stdin);
@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
     int rc = read_scan("%s", MAX_DATA, &first_name); //if we dont pass enought arguments, the program will be stuck waiting
     //read_scan() alters the actual input arguments (here we input the first_name which is NULL and it will set it to the value that is read from stdin). that's why we are using pointers, (or location of string &) so we arent changeing the strings, and can acutally change its value from within another function.
     check(rc == 0, "Failed first name.");
-    
+
     printf("What's your initial? ");
     rc = read_scan("%c\n", &initial); //\n here becuse fgetc() eats the newline (i think, not sure)
     check(rc == 0, "Failed initial.");
@@ -126,7 +126,7 @@ int main(int argc, char *argv[]) {
     printf("What's your last name? ");
     rc = read_scan("%s", MAX_DATA, &last_name);
     check(rc == 0, "Failed last name.");
-    
+
     printf("How old are you? ");
     rc = read_scan("%d", &age);
     check(rc == 0, "Failed age.");
@@ -147,7 +147,7 @@ error:
     return -1;
 
     //the thing with pointers here is a bit weird, but its all about passing the poiinter to a uninitialized string or int, so the function can change its value (because it has the actual pointer to that variable in memory)
-    //if we were to pass the acutall string to the function, the function would create a copy of that string and put it on its scope, and even if we were to change it, the actual value of the string would not be effected, because the scope woud close and we can just assign strings left and right like that. 
+    //if we were to pass the acutall string to the function, the function would create a copy of that string and put it on its scope, and even if we were to change it, the actual value of the string would not be effected, because the scope woud close and we can just assign strings left and right like that.
     //but if we have a pointer to the actual location of it in ram, we can change its value (but we need to wrap out heads around all the * and &)
 
     //the prefix out_ (eg. out_string) is used to clearly signal, even if this is an input argument, it has output effects (it will be modifeid and is the actuall thing we are interested in returning (even if the func actually returns int))
