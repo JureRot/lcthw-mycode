@@ -30,31 +30,35 @@ typedef struct Person {
 } Person;
 
 //removes newline char at the end of the string
-char *remove_nl(char *str) {
+void remove_nl(char *str) { //we can make this func void, because we actually modify the input string (dealing with pointers)
     if (str[strlen(str)-1] == '\n') {
         str[strlen(str)-1] = '\0';
     }
-    return str;
 }
 //takes a pointer to a char array (must be char array (char name[]) not a pointer to string (char *name)) and if the last non-nul characters is newline, it replaces it with another \0. This doesnt make the array shorter, just the last two characters are both \0 (which makes the string shorter strlen()). at the end returns the same pointer to the char array.
 
 //TODO:
 //slides all characters from n till the end one to the left (effectively removing n-th character and adding \0 to the end)
-char *char_slide_left(char *str, int n) {
-    for (int i=0; i<strlen(str); i++) {
-        debug("%c\n", str[i]);
+void char_slide_left(char *str, int n) {
+    for (int i=n; i<strlen(str)-1; i++) {
+        str[i] = str[i+1];
     }
-    return str;
+    str[strlen(str)-1] = '\0';
 }
 
 //TODO:
 //remove any whitespace inside the string
-char *remove_ws(char *str) {
+void remove_ws(char *str) {
     //this is harder, will need a new string using malloc
     //? OR NOT, maybe we can just move the characters after the whitepace one char to the left (for each whitespace)
     //and fill the end with \0 (add a new func, char_slide_left or something)
     //(idea for keeping the same string and just removing the whitespace is, so we dont need to free() at the end and we have no mem leaks)
-    return str;
+    for (int i=0; i<strlen(str); i++) {
+        if (str[i] == ' ') {
+            char_slide_left(str, i); //this is not the safest thing (we are modifying the string we are currently for-ing over)
+            i--; //we need this for when there are consecutive spaces (otherwise we would skip the second)
+        }
+    }
 }
 
 int main(int argc, char *argv[]) {
@@ -114,9 +118,14 @@ int main(int argc, char *argv[]) {
     printf("%p, %p\n", bla2, bla3);
 
     printf("%s, %s\n", bla1, bla2);
-    char *new_bla1 = remove_nl(bla1);
-    char *new_bla2 = remove_nl(bla2);
-    printf("%s, %s\n", new_bla1, new_bla2);
+    remove_nl(bla1); //this function actually modifies the input string
+    remove_nl(bla2);
+    printf("%s, %s\n", bla1, bla2);
+
+    char bla4[] = "  Jure Rot   ";
+    printf("%s\n", bla4);
+    remove_ws(bla4); //this function actually modifies the input string
+    printf("%s\n", bla4);
 
    //scanf() is the same as the fscanf(), except with fscanf() you have to pass the source, in scanf() the source is always stdin
 
