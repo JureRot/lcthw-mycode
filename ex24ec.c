@@ -37,7 +37,6 @@ void remove_nl(char *str) { //we can make this func void, because we actually mo
 }
 //takes a pointer to a char array (must be char array (char name[]) not a pointer to string (char *name)) and if the last non-nul characters is newline, it replaces it with another \0. This doesnt make the array shorter, just the last two characters are both \0 (which makes the string shorter strlen()). at the end returns the same pointer to the char array.
 
-//TODO:
 //slides all characters from n till the end one to the left (effectively removing n-th character and adding \0 to the end)
 void char_slide_left(char *str, int n) {
     for (int i=n; i<strlen(str)-1; i++) {
@@ -46,7 +45,6 @@ void char_slide_left(char *str, int n) {
     str[strlen(str)-1] = '\0';
 }
 
-//TODO:
 //remove any whitespace inside the string
 void remove_ws(char *str) {
     //this is harder, will need a new string using malloc
