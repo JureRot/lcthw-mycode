@@ -36,6 +36,16 @@ char *remove_nl(char *str) {
     }
     return str;
 }
+//takes a pointer to a char array (must be char array (char name[]) not a pointer to string (char *name)) and if the last non-nul characters is newline, it replaces it with another \0. This doesnt make the array shorter, just the last two characters are both \0 (which makes the string shorter strlen()). at the end returns the same pointer to the char array.
+
+//TODO:
+//slides all characters from n till the end one to the left (effectively removing n-th character and adding \0 to the end)
+char *char_slide_left(char *str, int n) {
+    for (int i=0; i<strlen(str), i++) {
+        debug("%c\n", str[i]);
+    }
+    return str;
+}
 
 //TODO:
 //remove any whitespace inside the string
