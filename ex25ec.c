@@ -124,8 +124,6 @@ void my_print(char *str, ...) {
     va_list argp;
     va_start(argp, str);
 
-    //char *text = va_arg(argp, char *);
-    //printf("%s\n", text);
 
     for (int i=0; str[i]!='\0'; i++) {
         if (str[i] == '%') {
@@ -139,32 +137,27 @@ void my_print(char *str, ...) {
                     int_arg = va_arg(argp, int *);
                     //int to string and than fputs()
                     sprintf(num_str, "%d", *int_arg); //this is how we convert to string
-                    //printf("%s\n", num_str);
                     fputs(num_str, stdout);
 
                     break;
 
                 case 'c': //if c -> we expect character in vargs
                     char_arg = va_arg(argp, char *);
-                    //printf("%c", *char_arg);
                     fputc(*char_arg, stdout);
                     break;
 
                 case 's': //if s -> we expect string in vargs
                     str_arg = va_arg(argp, char *);
-                    //printf("%s", str_arg);
                     fputs(str_arg, stdout);
                     break;
 
                 default: //anythign else is a invalid foramt
                     sentinel("Invalid format.");
             }
-        } else {
+        } else { //if any of the other character, we just output it
             fputc(str[i], stdout);
-            //fputc('\n', stdout);
         }
     }
-    //fputc('\n', stdout);
 
     va_end(argp);
 
@@ -207,7 +200,7 @@ int main(int argc, char *argv[]) {
 
     my_print("---- RESULTS ----\n");
     my_print("First name: %s", first_name);
-    my_print("Intial: %c\n", &initial);
+    my_print("Intial: %c\n", &initial); //for my implementation the %d and %c need to be a pointer
     my_print("Last name: %s", last_name);
     my_print("Age: %d\n", &age);
 
