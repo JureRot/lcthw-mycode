@@ -116,8 +116,9 @@ void my_print(char *str, ...) {
     //when we come to % we check what is next char (d, c, s) and get that from vargs
 
     int *int_arg = NULL;
+    char num_str[MAX_DATA]; //we need reserved space (cant init it inside switch)
     char *char_arg = NULL;
-    char **str_arg = NULL;
+    char *str_arg = NULL;
     //this has to be declare beforehand, we cant declare new vars inside switch (because of how it works in c (acutal jump distances))
 
     va_list argp;
@@ -136,31 +137,34 @@ void my_print(char *str, ...) {
 
                 case 'd': //if d -> we expect number in vargs
                     int_arg = va_arg(argp, int *);
-                    printf("%d\n", *int_arg);
+                    //int to string and than fputs()
+                    sprintf(num_str, "%d", *int_arg); //this is how we convert to string
+                    //printf("%s\n", num_str);
+                    fputs(num_str, stdout);
+
                     break;
 
                 case 'c': //if c -> we expect character in vargs
                     char_arg = va_arg(argp, char *);
-                    //fputc(*char_arg, stdout);
-                    printf("%c\n", *char_arg);
+                    //printf("%c", *char_arg);
+                    fputc(*char_arg, stdout);
                     break;
 
                 case 's': //if s -> we expect string in vargs
-                    str_arg = va_arg(argp, char **);
-                    //fputs(*str_arg, stdout);
-                    printf("%s\n", *str_arg);
+                    str_arg = va_arg(argp, char *);
+                    //printf("%s", str_arg);
+                    fputs(str_arg, stdout);
                     break;
 
                 default: //anythign else is a invalid foramt
                     sentinel("Invalid format.");
             }
-            fputs("NEKI", stdout);
         } else {
             fputc(str[i], stdout);
             //fputc('\n', stdout);
         }
     }
-    fputc('\n', stdout);
+    //fputc('\n', stdout);
 
     va_end(argp);
 
@@ -174,28 +178,38 @@ int main(int argc, char *argv[]) {
     char *last_name = NULL;
     int age = 0;
 
-    printf("What's your first name? ");
+    //printf("What's your first name? ");
+    my_print("What's your first name? ");
     int rc = read_scan("%s", MAX_DATA, &first_name); //if we dont pass enought arguments, the program will be stuck waiting
     //read_scan() alters the actual input arguments (here we input the first_name which is NULL and it will set it to the value that is read from stdin). that's why we are using pointers, (or location of string &) so we arent changeing the strings, and can acutally change its value from within another function.
     check(rc == 0, "Failed first name.");
 
-    printf("What's your initial? ");
+    //printf("What's your initial? ");
+    my_print("What's your initial? ");
     rc = read_scan("%c\n", &initial); //\n here becuse fgetc() eats the newline (i think, not sure)
     check(rc == 0, "Failed initial.");
 
-    printf("What's your last name? ");
+    //printf("What's your last name? ");
+    my_print("What's your last name? ");
     rc = read_scan("%s", MAX_DATA, &last_name);
     check(rc == 0, "Failed last name.");
 
-    printf("How old are you? ");
+    //printf("How old are you? ");
+    my_print("How old are you? ");
     rc = read_scan("%d", &age);
     check(rc == 0, "Failed age.");
 
-    printf("---- RESULTS ----\n");
-    printf("First name: %s", first_name);
-    printf("Intial: %c\n", initial);
-    printf("Last name: %s", last_name);
-    printf("Age: %d\n", age);
+    //printf("---- RESULTS ----\n");
+    //printf("First name: %s", first_name);
+    //printf("Intial: %c\n", initial);
+    //printf("Last name: %s", last_name);
+    //printf("Age: %d\n", age);
+
+    my_print("---- RESULTS ----\n");
+    my_print("First name: %s", first_name);
+    my_print("Intial: %c\n", &initial);
+    my_print("Last name: %s", last_name);
+    my_print("Age: %d\n", &age);
 
     free(first_name);
     free(last_name);
@@ -203,10 +217,9 @@ int main(int argc, char *argv[]) {
     //even tho the number also allocates a string during the reading, but alaready frees it inside read_int()
 
     char a[] = "bla";
-    char b = '.';
+    char b = '!';
     int c = 9001;
-    printf("%p, %p, %p\n", &a, &b, &c);
-    my_print("Jure %s Rot%c, %d!!!", &a, &b, &c);
+    my_print("Jure %s Rot%c, %d!!!\n", &a, &b, &c);
 
     return 0;
 

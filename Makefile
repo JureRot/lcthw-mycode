@@ -1,4 +1,4 @@
-CFLAGS=-Wall -g -DNDEBUG
+CFLAGS=-Wall -g -DNDEBUG -lm
 
 #this should include all .c files in this directory (optimally)
 all: ex1 ex3
