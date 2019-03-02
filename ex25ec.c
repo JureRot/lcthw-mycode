@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <math.h>
 #include "dbg.h"
 
 #define MAX_DATA 100
@@ -108,6 +109,65 @@ error:
     return -1;
 }
 
+//TODO andf FIXME
+//this segfaults when trying to read any of va_args (i think)
+void my_print(char *str, ...) {
+    //i need to go over char by char until we come to %
+    //when we come to % we check what is next char (d, c, s) and get that from vargs
+
+    int *int_arg = NULL;
+    char *char_arg = NULL;
+    char **str_arg = NULL;
+    //this has to be declare beforehand, we cant declare new vars inside switch (because of how it works in c (acutal jump distances))
+
+    va_list argp;
+    va_start(argp, str);
+
+    //char *text = va_arg(argp, char *);
+    //printf("%s\n", text);
+
+    for (int i=0; str[i]!='\0'; i++) {
+        if (str[i] == '%') {
+            i++;
+            switch (str[i]) {
+                case '\0': //if null char -> we passed the wrong format
+                    sentinel("Invalid format, you ended with %%.");
+                    break;
+
+                case 'd': //if d -> we expect number in vargs
+                    int_arg = va_arg(argp, int *);
+                    printf("%d\n", *int_arg);
+                    break;
+
+                case 'c': //if c -> we expect character in vargs
+                    char_arg = va_arg(argp, char *);
+                    //fputc(*char_arg, stdout);
+                    printf("%c\n", *char_arg);
+                    break;
+
+                case 's': //if s -> we expect string in vargs
+                    str_arg = va_arg(argp, char **);
+                    //fputs(*str_arg, stdout);
+                    printf("%s\n", *str_arg);
+                    break;
+
+                default: //anythign else is a invalid foramt
+                    sentinel("Invalid format.");
+            }
+            fputs("NEKI", stdout);
+        } else {
+            fputc(str[i], stdout);
+            //fputc('\n', stdout);
+        }
+    }
+    fputc('\n', stdout);
+
+    va_end(argp);
+
+error:
+    va_end(argp);
+}
+
 int main(int argc, char *argv[]) {
     char *first_name = NULL;
     char initial = ' ';
@@ -141,15 +201,16 @@ int main(int argc, char *argv[]) {
     free(last_name);
     //here we need to free the both strings
     //even tho the number also allocates a string during the reading, but alaready frees it inside read_int()
+
+    char a[] = "bla";
+    char b = '.';
+    int c = 9001;
+    printf("%p, %p, %p\n", &a, &b, &c);
+    my_print("Jure %s Rot%c, %d!!!", &a, &b, &c);
+
     return 0;
 
 error:
     return -1;
 
-    //the thing with pointers here is a bit weird, but its all about passing the poiinter to a uninitialized string or int, so the function can change its value (because it has the actual pointer to that variable in memory)
-    //if we were to pass the acutall string to the function, the function would create a copy of that string and put it on its scope, and even if we were to change it, the actual value of the string would not be effected, because the scope woud close and we can just assign strings left and right like that.
-    //but if we have a pointer to the actual location of it in ram, we can change its value (but we need to wrap out heads around all the * and &)
-
-    //the prefix out_ (eg. out_string) is used to clearly signal, even if this is an input argument, it has output effects (it will be modifeid and is the actuall thing we are interested in returning (even if the func actually returns int))
-    //basically it is to signal, that that variable is changing during the function (like changing in actuall ram on the wider scope)
 }
