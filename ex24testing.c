@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
     //what about if we had a dynamic size of array (probably with pointers, but how, try that too)
     //i kinda made it work with input_dyn, and it works and all, BUT, it does throw some warning when compiling (wrong strncpy pointer and wrong type %s when printing)
     //and still i dont know of a easy way of making array len NUM_LINES independen (assigning a dynamic size var after check doesnt bode well) (but for now its just easier to just declare a global NUM_LINES when doing something like that)
-    
+
     return 0;
 error:
     if (in) {

@@ -131,7 +131,6 @@ int main(int argc, char *argv[]) {
     rc = read_scan("%d", &age);
     check(rc == 0, "Failed age.");
 
-    printf("---- RESULTS ----\n");
     printf("First name: %s", first_name);
     printf("Intial: %c\n", initial);
     printf("Last name: %s", last_name);
@@ -139,6 +138,7 @@ int main(int argc, char *argv[]) {
 
     free(first_name);
     free(last_name);
+    printf("---- RESULTS ----\n");
     //here we need to free the both strings
     //even tho the number also allocates a string during the reading, but alaready frees it inside read_int()
     return 0;
