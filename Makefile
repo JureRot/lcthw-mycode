@@ -1,4 +1,7 @@
 CFLAGS=-Wall -g -DNDEBUG -lm
+#-Wall is to display "all" warnings, -g to have backtrac in gdb and lldb
+#-DNDEBUG is to define NDEBUG var to ignore debug outputs from dbg.h
+#-lm is for ex25 log10() from math.h to link it correctly
 
 #this should include all .c files in this directory (optimally)
 all: ex1 ex3

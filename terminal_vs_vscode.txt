@@ -1,0 +1,22 @@
+Resnicno ne vem kaj naj uporabljam.
+
+1) VIM V TERMINALU
+    Ta vim je postal zelo uporabne saj sem dodal janus plugin(ki vsebuje veliko zelo upobljenih pluginov (nerdtree, ctrl-p, ...) in sem tudi sam dodal se malo (gruvbox colorshceme, lightline plugin in lexima plugin))
+    Ta vim ima tudi tab code-complete in syntastic syntax checker in automaticno dodajanje in brisannje (), [], {}, "", '', pravilno razprejanje dodatnih vrstic okoli njih
+    Povrh pa je ta moznost zelo hitra in odzivna, saj je zelo neodvisna od grafike in deluje v terminalu (klub temu, da je zelo neodvisna od grafike se vedno dokaj lepo izgleda)
+    Glavni problem je v tem, da ta moznost ne deluje na Windowsih, kjer imamo na volje le osnovno implementacijo vim-a ki ne vsebuje lepih barv, syntaxe, tab-complet-a, nerdtree-ja, ctrl-p-ja in vec ali manj vsega ostalega
+
+2) VSCODE Z VIM EXTENTION-OM
+    Ta moznost ima vse kar ima prejsnja (samodejni zaklepaji in indentiranje, poravljanje syntaxe, datotecni sistem, barvne palete, ...)
+    Prednost te moznosti je to, da izjemno dobro izgleda in da deluje tudi na Windowsih in je zelo enostavno za vspostaviti (samo dodajanje extention-a in sprememba ctrl+b za left panel v ctrl+l. za tem pa samo se dodamo, da vim extention ignorira  ctrl+l in ctrl+j) (nobenih download-anj pluginov in pisanj .vimrc datotek)
+    VScode ima tud zelo dober intellisence za dopolnjevanje kode in zelo dobro integriran datotecni sistem. Prav tako ima vgrajen terminal, kar je zelo prirocno
+    Po drugi strani pa ni najhitrejsa izmed implementacij in na trenutke tudi ne deluje popolno
+    Obenem tudi ne podpira vseh moznsti v vim-u (kar pa do velike mere ni nikakersen problem, saj jih tudi jaz ne znam uporabljati) vendar so v nekaterih primerih le uporabne (macros)
+
+RESITVE
+    Ena izmed ocitnih resitev je, da poizkusim vedno in povsod delovati v enkem okolju in poizkusim v svoj razvjoni cikel dodati cimmanj spremenjljivk. Tukaj govorim o uporabi VScode-a, saj deluje na vseh platformah in je zelo ensotaven za vspostavitev (tako lahko na prakticno kateremkoli racunalniku delam z le minutami priprav)
+    Druga moznost je da poikusim an Windowsih uspostaviti dualboot / vitualmachine / windows subsystem for linux (WSL) (z kali linux (za pen testing) ali Ubuntu ali Debian) in na windowsih dejansko delam v Linuxu.
+    Najprej potrebujem probati vspostavit linux na windowsih in nato primerjati odzivnost in uporabnost WSL in VSCode-a (se posebej a mac-u).
+    Sele za tem se bom odlocil za eno izded moznosti in se je od tarat naprej drzal
+    (Mislim, da se je izkazalo, da WSL ni to kar mislim in je samo linux terminal v windowsih, torej je za enkrat najmocnejsa in najverjetnjesa moznost se vedno vscode) (se vedno probi WSL, in probi na njem uporablat vim, sam ne vem ker rabmo vec kot samo vim za take stvari (rabmo terminal in podobno))
+    Tretja moznost je pa to, da na Linux-u in (se posebej) na Mac-u uporabljam vim znotraj terminala, ker je zelo hiter in odziven, ko pa potrebujem delati na windowsih (kar ni pretirano pogosto ce govorimo o osebnem programiranju) pa uporabljam vscode
