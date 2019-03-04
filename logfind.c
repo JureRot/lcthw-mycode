@@ -7,7 +7,9 @@
 
 #define MAX_DATA 1024
 
-int file_traverse(int is_or, int count, char *patterns[], char *filename) { // return -1 if error, 0 if no match, 1 if match
+//goes over every line of filename and sees if all/any (depending on is_or) of the patters match
+//returns 0 if no match, 1 if match, -1 if error
+int file_traverse(int is_or, int count, char *patterns[], char *filename) {
     FILE *file;
     char line[MAX_DATA];
     int matches[count];
@@ -18,17 +20,17 @@ int file_traverse(int is_or, int count, char *patterns[], char *filename) { // r
     check(file != NULL, "Failed opening %s", filename);
 
     while (fgets(line, MAX_DATA, file) != NULL) {
-        line[strlen(line)-1] = '\0';
+        line[strlen(line)-1] = '\0'; // replaces \n at the end with \0
         for (int i=0; i<count; i++) {
             if (strstr(line, patterns[i]) != NULL) {
-                if (matches[i] == 0){ // if not repeated match
+                if (matches[i] == 0){ // if not a repeated match
                     matches[i] = 1;
                     num_matches++;
 
-                    if (is_or) { //if or setting, we found one, which is enough
+                    if (is_or) { // if or setting, we found one, which is enough
                         goto match;
                     } else {
-                        if (num_matches == count) { // if num_matches same as patterns, we found all
+                        if (num_matches == count) { // if and setting, if num_matches same as patterns, we found all
                             goto match;
                         }
                     }
@@ -53,6 +55,9 @@ error:
     return -1;
 }
 
+//goes over evey line in .logfind (whis is a regex pattern) and gets all filename matches using glob
+//for each match, calls file_traverse and and prints out the filename if there was a match
+//return 0, -1 if error
 int logfind_traverse(int is_or, int count, char *patterns[]) {
     FILE *logfind;
     char line[MAX_DATA];
@@ -87,12 +92,6 @@ error:
 }
 
 int main(int argc, char *argv[]) {
-    FILE *in;
-    //char in_line[MAX_DATA];
-
-    in = fopen(".logfind", "r");
-    check(in != NULL, "Couldn't open .logfind");
-
     if (argc < 2) {
         log_err("USAGE: logfind [-o] <search_string> [ ... ]");
     } else {
@@ -100,29 +99,29 @@ int main(int argc, char *argv[]) {
             if (argc < 3) {
                 log_err("USAGE: logfind [-o] <search_string> [ ... ]");
             } else {
+                /*
                 char *patterns[argc-2];
                 for (int i=2; i<argc; i++) {
                     patterns[i-2] = argv[i];
                 }
-                //instead of all this we could just do argc -= 2; argv += 2;
-                logfind_traverse(1, argc-2, patterns);
+                */
+                argc -= 2; //we decrease the count and skip the first two call arguments (./logfind, -o)
+                argv += 2;
+                logfind_traverse(1, argc, argv);
             }
         } else {
+            /*
             char *patterns[argc-1];
             for (int i=1; i<argc; i++) {
                 patterns[i-1] = argv[i];
             }
-            //instead of all this we could just do argc--; argv++;
-            logfind_traverse(0, argc-1, patterns);
+            */
+            argc--; // we decrease the cound and skip the first argument (./logfind)
+            argv++;
+            logfind_traverse(0, argc, argv);
         }
     }
 
-    fclose(in);
     return 0;
 
-error:
-    if (in) {
-        fclose(in);
-    }
-    return -1;
 }
