@@ -22,7 +22,7 @@ int file_traverse(int is_or, int count, char *patterns[], char *filename) {
     while (fgets(line, MAX_DATA, file) != NULL) {
         line[strlen(line)-1] = '\0'; // replaces \n at the end with \0
         for (int i=0; i<count; i++) {
-            if (strstr(line, patterns[i]) != NULL) {
+            if (strstr(line, patterns[i]) != NULL) { // this is case sensitive (use strcasestr() for case insensitive)
                 if (matches[i] == 0){ // if not a repeated match
                     matches[i] = 1;
                     num_matches++;
