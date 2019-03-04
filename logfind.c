@@ -104,6 +104,7 @@ int main(int argc, char *argv[]) {
                 for (int i=2; i<argc; i++) {
                     patterns[i-2] = argv[i];
                 }
+                //instead of all this we could just do argc -= 2; argv += 2;
                 logfind_traverse(1, argc-2, patterns);
             }
         } else {
@@ -111,6 +112,7 @@ int main(int argc, char *argv[]) {
             for (int i=1; i<argc; i++) {
                 patterns[i-1] = argv[i];
             }
+            //instead of all this we could just do argc--; argv++;
             logfind_traverse(0, argc-1, patterns);
         }
     }

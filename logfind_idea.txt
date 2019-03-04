@@ -1,0 +1,17 @@
+it loads the list of allowed log files from ~/.logfind file
+(this file has regexes (patters) for which files can be used(guessing within this dir), these are used by glob)
+
+the list of files can be naything that the glob function allows
+(start with just the exact list of file names and than add glob functionality)
+
+IDEA
+prejememo varg stringov
+pogledamo kaj je prvu string (a je -o)
+prebermo to datoteko (.logfind)
+najprej bomo mel notr specificna imena drugih datotek
+vsako od teh datotek bomo odprl, prebral in pogledal ce so usi stringi notr / ce je kerkol od stringov notr
+takoj k najdemo use, outputam, koncamo
+ce pridemo doe EOF, koncamo
+gremo na nasledno datoteko v .logfind
+
+kasenj bomo implementiral se glob (k bo iz .logfind prebral patter in najdu samo datoteke, ki se ujemajo
