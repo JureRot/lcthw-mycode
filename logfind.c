@@ -21,6 +21,7 @@ int file_traverse(int is_or, int count, char *patterns[], char *filename) {
 
     while (fgets(line, MAX_DATA, file) != NULL) {
         line[strlen(line)-1] = '\0'; // replaces \n at the end with \0
+        //strlen here is not save. we should cast it to a var and check if not NULL or bigger than MAX_DATA
         for (int i=0; i<count; i++) {
             if (strstr(line, patterns[i]) != NULL) { // this is case sensitive (use strcasestr() for case insensitive)
                 if (matches[i] == 0){ // if not a repeated match
@@ -69,6 +70,7 @@ int logfind_traverse(int is_or, int count, char *patterns[]) {
 
     while (fgets(line, MAX_DATA, logfind) != NULL) {
         line[strlen(line)-1] = '\0'; //replace /n with \0
+        //strlen here is not save. we should cast it to a var and check if not NULL or bigger than MAX_DATA
 
         glob(line, 0, 0, &result);
         for (int i=0; i<result.gl_pathc; i++) {
