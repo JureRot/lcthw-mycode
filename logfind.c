@@ -125,3 +125,23 @@ int main(int argc, char *argv[]) {
     return 0;
 
 }
+
+//my approach is a bit different from zed's
+//i start in main and go to into another function (logfind_traverse) and from there i go even deeper into another function (file_traverse)
+//so i basically just do some basic parsing in main, but than i hop to logfind_traverse
+//there i find all files for every pattern (everyline) and execute file_travers on them
+//(i construct a list of all files for one line of .logfind and call file_traverse on them)
+
+//zed's approach is a bit different
+//he first constructs a list of all files for all lines of .logfind
+//and than calls "file_traverse" on them
+
+//he goes only one level deep (main -> logfind_traverse -> main (with list) -> file_traverse)
+//i go two levels deep (main -> logfind_traverse -> file_traverse -> logfind_traverse -> level_traverse ...)
+
+//in my case the real computing is done between logfind_traverse and file_traverse and main has pretty much nothing to do with it (main just starts all of it)
+//in his case, the main is the function that actually ties both lgofind_traverse and file_traverse together (indstead of just passing the program to them)
+
+//(i think his approach is more elegant, but has some more complications (changing flags to append to file names using glob, allocating strings and passing the pointers around) and in the end, mine is the one that made the most sense for me in that moment)
+
+// i dont know which approach is better (to to the integral part in main or to branch it out to other fucntions)
