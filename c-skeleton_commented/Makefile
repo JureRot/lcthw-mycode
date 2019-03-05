@@ -1,0 +1,70 @@
+CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)
+#all flags needed to build libraries (may need to change on different platforms), OPTFLAGS var lets people augment the build options as needed by calling > make OPTFLAGS=-flag
+LIBS=-ldl $(OPTLIBS)
+#this options used when liking the library, someone can augment linking options usin OPTLIBS
+PREFIX?=/usr/local
+#optional var with default value (changes if specified otherwise by calling > make PREFIX=/dir)
+
+SOURCES=$(wildcard src/**/*.c src/*.c)
+#dynamicaly creates SOURCES var of all .c files in /src (and dirs below) using the wildcard search
+OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
+#using patsubst to create a new list of all the object files
+#from SOURCES takes .c files and changes the extention to .o and assigns that to OBJECTS
+
+TEST_SRC=$(wildcard test/*_tests.c)
+#wildcard again to find all tests source files (they are in a separate dir)
+TESTS=$(patsubst %.c,%,$(TEST_SRC))
+#using patsubst to get all the test targets (removing the .c (like when we call program ./program it has no extention))
+
+TARGET=build/libYOUR_LIBRARY.a
+#finally say the ultimate targe. change this to whatever library you are actually trying to build
+SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
+
+# The Target Build
+all: $(TARGET) $(SO_TARGET) tests
+#this (all) is the first target and is automatically run if no target is given
+#it builds the TARGET (runs the var below, not the thing above) (which is the library) and then runs the test target (bellow) (which builds the unit tests)
+
+dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
+dev: all
+#this is a way of changing options for just one target (target here is dev, not TARGET)
+#for instance, changing the flags and than calling all in the next line
+#useful for setting different flags on different platforms that need them
+
+$(TARGET): CFLAGS += -fPIC #similarlly as above, here we add the -fPIC flag
+$(TARGET): build $(OBJECTS) #we first run the build target (below) that creates the dirs and than we compile all of the OBJECTS
+	ar rcs $@ $(OBJECTS) #ar makes the TARGET ($@ in this case maps to $(TARGET) which maps to build/libYOUR_LIBRARY.a (in dev, the $@ would map to dev))
+	ranlib $@ #this makes the library
+$(SO_TARGET): $(TARGET) $(OBJECTS) #dont know whats this
+	$(CC) -shared -o $@ $(OBJECTS)
+
+build: #this is called above and creates build and bin directories
+	@mkdir -p build
+	@mkdir -p bin
+
+# The Unit Tests
+.PHONY: tests #if you have a target that's not real, but there's a file or dir with that name you need to tag it as .PHONY so make will ignore the file and always run
+tests: CFLAGS += $(TARGET) #add TARGET to CFLAGS so each of the target programs will be linked with the TARGET library
+tests: $(TESTS) #this builds each program in TESTS variable (declared in header)
+	sh ./tests/runtests.sh #after that we call a simple shell scrip that know how to run all the tests and report their results
+
+# The Cleaner
+clean: #removes the build dir, logfiles, junk from compilers and apple's xcode
+	rm -rf build $(OBJECTS) $(TESTS)
+	rm -f tests/tests.log
+	find . -name "*.gc*" -exec rm {} \;
+	rm -rf `find . -name "*.dSYM" -print`
+
+# The Install
+install: all #first we build everything
+	install -d $(DESTDIR)/$(PREFIX)/lib/ #use linux program install (copy files and set atribs) to create a target lib dir (destdir and prefix can be changed for custom installation (default /usr/local))
+	install $(TARGET) $(DESTDIR)/$(PREFIX)/lib/ #use install again to actually instal the library where it needs to go
+#this is done because install is usuall not permited for normal users (typical build proces make %% sudo make install) so we ensure the right permission set
+
+# The Checker
+check: #to dig out any attempts to use bad functions in c (namely string funcs and other unprotected buffer funcs)
+	@echo Files with potentially dangerous functions.
+	@egrep '[^_.>a-zA-Z0-9](str(n?cpy|n?cat|xfrm|n?dup|str|pbrk|tok|_)|stpn?cpy|r?index[^.]|a?sn?printf|byte_)' $(SOURCES) || true
+#basically creates a regex var that is looking for bad functions (like strcpy)
+#than we use egrep to find any matches in our files
+#the true is there to prevent make from thinking egrep faild when no matches are found
