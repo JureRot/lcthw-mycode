@@ -1,0 +1,114 @@
+CREATIVE PROGRAMMING
+    + I can't make a mistake
+    + It doesn't matter what people think
+    + Whatever my brain comes up with is going to be a great idea
+    - It's possible to write perfect software
+    - My brain tells me the truth, and it can't find any errors: I have therefore written perfect software
+    - My code is who I am and people who criticize its perfection are criticizing me
+
+    This approach is great at the beginning of software development to flesh out the ideas and to come up with creative and interesting concepts and solutions.
+
+DEFENSIVE PROGRAMMING
+    - Software has errors
+    - You aren't your software, yet you're responsible for the errors
+    - You can never remove the errors, only reduce theri probability
+    (Fear and paranoia)
+    + Ruthless correctness and consistency
+    - No creative drive and concentration
+
+    This approac is great when you have your prototype establish for removiing as much errors and mistakes as possible and for making your code consistent and easily repairable.
+
+After having a prototype, you try to rewrite it with following strategies in mind and as someone who wants to break the software:
+    1) NEVER TRUST INPUT: Never trust the data you're given and always validate it (check after malloc, or fopen, checking input arguments, function returns, ...)
+    2) PREVENT ERRORS: If an erros is possible, no matter how probable, try to prevent it
+    3) FAIL EARLY AND OPENLY: Fail early, clenaly, and openly, stating what happened, where, and how to fix it (chekc right after malloc or fopen, not some way in the program or just about when you were to use it. just fail right after the action was taken, stating where and why)
+    4) DOCUMENT ASSUMPTIONS: Clearly state the pre-conditions, post-conditions, nad invariants (for each function document what is the input, what is the output and for each weird piece of code (like switch case without break or some weird pointer manipulation), document and describe it)
+    5) PREVENTION OVER DOCUMENTATION: Don't do with documentation that which can be done with code or avoided completely (try to actually fix or limit the problem or error, not just document it (force or prevent calls with errors))
+    6) AUTOMATE EVERYTHING: Automate everything, especially testing (write unit tests and automate testing, so you expediate your software development and insure less mistakes)
+    7) SIMPLIFY AND CLARIFY: Always simplify the code to the smallest, cleanest form that works without sacrificing safety (break the code in smaller consise chunks and functions, create check outside the function and write simple code first (only than resort to complications if it doesn't work))
+    8) QUESTION THE AUTHORITY: Don't blindly followr or reject rules (just because someone told you so)
+
+
+NEVER TRUST INPUT [ex27_1.c]
+List of things to do in all functions:
+    - For each parameter, identify what its preconditions are, and wether the preconditions should cause a failure or return an error. If you are writing a library, favore erros over failures.
+    - Add assert calls at teh beginning that chekc for each failure precondition using assert(test && "message");. This little hack does the test, and when ti fails, the OS will typically print the assert line for you that includes that message. This is very helpful when you're trying to figure out why that assert is there.
+    - For the other preconditions, return the error code or use my check macro to give an error message. I didn't use check in this example since it would confuse the comparison.
+    - Document WHY these preconditions exist so that when a programmer hits the error, he or she cna figure out if they're really necessary or not.
+    - If you're modifying the inputs, make sure that tehy are correctly formed when the function exits, or abort if they aren't.
+    - Always check the error codes of functions you use. For example, people frequently forget to check the return codes from fopen, or fread, which cause them to use the resources the return codes give despite the error. This causes your program to crash or open an avenue for an attack.
+    - You also need t obe returning consistent error codes so that you can do this for all of your functions. Once you get in this habit, you'll then understand why my check macros work the way they do.
+
+
+PREVENT ERRORS
+It's hard for humans to determine how probable some error is, but it's easy to determine if an error is possible. But still, you have to concentrate on the most probable errors, so not to waste time on irrelevant ones.
+
+Proces of determening what to prevent:
+    - List all the possible erros that can happen, no matter how probable (within reason, of course). No point lising "aliens sucking your memories out to steal your passwords."
+    - Give each possible error a probability that's a percentage of the operations that can be vulnerable. If you are handling requests from the Internet, then it's the percentage of requests that can cause the error. If they are function calls, then it's what percentage of function calls can cause the error.
+    - Calculate the effort in number of hours or amount of code to prevent it. You could also just give an easy of hard metric, or any metric that prevents you from working on the impossible when there are easier things to fix still on the list.
+    - Rank them by effort (lowest to highest), and probability (highest to lowes). This is now your task list.
+    - Prevent all of the errors you can in this list, aiming for removing the possibility, then reducing the probability if you can't make it impossible.
+    - If there are errors you can't fix, then document them so someone else can fix them.
+
+Stop assuming that errors don't happen and work on removing them withut wasint effort.
+
+
+FAIL ERALY AND OPENLY
+When encoutnering an error you can either return an error code, or abort the process.
+The important thing is that failures happen quickly, are clearly documented, give an erro message, and are easy for the programmer to avoid (the beauty of check macros).
+Prefer returning the error code (especially in libraries where we strive to never abort) and let the program deal with that. Invalid pointers are a good exception from that rule.
+Another important thing is not using the same error message or code in multiple locations. Make each failure or error a unique code or message so it can be clear what is the problem and where and how it could be fixed.
+
+
+DOCUMENT ASSUMPTIONS
+Next things to wory about are invariants and postconditions.
+
+Invariant is a condition that must be held true in some state wile the function runs (a structure is always initialized properly while its being used, or sorted data structure is always sorted during processing)
+
+Postcondition is a guarantee on the exit value or result of a function running. This can be something as simple as "function always returns 0, or -1 on error" and can blend together with invariants. These are usually documented, but if you function retuns an allocated resource, you can add a postcondition that the pointer is not NULL (or you can use NULL to indicate an error).
+
+Invariants and postconditions are used primarily in documentation than in code. The best way is to use assert on the ones you can and document the rest.
+
+
+PREVENTION OVER DOCUMENTATION
+It's always better to prevent an error than to just document it. It's better not to have a functionality than an unusable well-documented one. If you find yourself documenting a lot of errors which you aren't able to fix, consider redesigining the feature or removing it.
+
+
+AUTOMATE EVERYTHING
+We will come back to this in the future, but the essence of it is; manual testing isn't fun and its prone to making mistakes.
+
+Try to automate:
+    - Testing and validation
+    - Build processes
+    - Deployment of software
+    - System administration
+    - Error reporting
+
+
+SIPLIFY AND CLARIFY
+"A love affair with complexity is a programming sickness" - Zed A. Shaw
+Simple and clean is not dirty, no matter what everyone else is doing.
+
+Simple test of which function is better:
+    - Make sure both functions have no errors. It doesn't matter how fast or simple a function is if it has errors.
+    - If you can't fix one, then pick the other.
+    - Do they produce the same result? If not, then pick the one that has the result you need.
+    - If they produce the same result, then pick the one that either has fewer features, fewer branches, or you just think is simpler.
+    - Make sure you're not just picking the one that is most impressive. Simple and dirty beats complex and clean any day.
+
+
+QUESTION AUTHORITY
+Defensive programing is to follow rules, because without them you'll miss something or get distracted. Rules are necessary for getting things done, but being a slave to them will kill your creativity.
+This final strategy means you should periodically question the ruels you follow and assume that tehy could be wrong (just like the software you are reviewing).
+This allows you to break out of the defensive mind-set and transitino into the creative mind-set.
+
+
+And the finaly thing: ORDER IS NOT IMPORTANT
+It's not neccessary to start in creative mind-set and than defent your creation. You can flow between them in varying amounts without strict boundaries. And one mind-set is not better than the other.
+
+
+
+Extra Credit:
+    - Go back and apply what you've learned to one exercise.
+    - Find an open source project and give some of the files a similar code review. Submit a patch that fixes a bug.
