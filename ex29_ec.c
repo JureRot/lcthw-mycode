@@ -46,4 +46,6 @@ error:
  *
  * # and run it
  * $ ./ex29 ./libex29.so print_a_message "Hello!"
+ *
+ * on mac the ! is a problem (-bash : ! event not found)
  */
