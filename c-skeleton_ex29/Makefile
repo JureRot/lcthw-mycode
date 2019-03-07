@@ -5,10 +5,10 @@ PREFIX?=/usr/local
 SOURCES=$(wildcard src/**/*.c src/*.c)
 OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 
-TEST_SRC=$(wildcard test/*_tests.c)
+TEST_SRC=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
-TARGET=build/libYOUR_LIBRARY.a
+TARGET=build/libex29.a #we set the name of the lib here
 SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 
 # The Target Build
@@ -30,9 +30,21 @@ build:
 
 # The Unit Tests
 .PHONY: tests
-tests: CFLAGS += $(TARGET)
-tests: $(TESTS)
-	sh ./tests/runtests.sh
+#tests: CFLAGS += $(TARGET)
+#tests: $(TESTS)
+tests:
+	@echo $(TEST_SRC)
+	@echo $(TESTS)
+	cc -Wall -g -DNDEBUG  $(TEST_SRC) -ldl -o $(TESTS) #we build and link the tests
+	$(TESTS) $(SO_TARGET) print_a_message "hello there" | true
+	$(TESTS) $(SO_TARGET) uppercase "hello there" | true
+	$(TESTS) $(SO_TARGET) lowercase "HELLO tHeRe" | true
+	$(TESTS) $(SO_TARGET) fail_on_purpose "i fail" | true
+	$(TESTS) $(SO_TARGET) fail_on_purpose | true
+	$(TESTS) $(SO_TARGET) asdfasdf "asdfasdf" | true
+	$(TESTS) ./build/libex.so print_a_message "i fail" | true
+	#sh ./tests/runtests.sh
+	#THIS IS AN UGLY WAY OF RUNNING TESTS BUT IT WORKS FOR NOW (| true is there to keep going and not stop on first error)
 
 # The Cleaner
 clean:

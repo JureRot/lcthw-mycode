@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "dbg.h"
 #include <dlfcn.h>
+#include <errno.h>
 
 typedef int (*lib_function) (const char *data); //this func pointer matches  the singnature of every func in libex29
 

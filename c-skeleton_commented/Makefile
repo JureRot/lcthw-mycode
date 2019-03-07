@@ -11,7 +11,7 @@ OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 #using patsubst to create a new list of all the object files
 #from SOURCES takes .c files and changes the extention to .o and assigns that to OBJECTS
 
-TEST_SRC=$(wildcard test/*_tests.c)
+TEST_SRC=$(wildcard tests/*_tests.c)
 #wildcard again to find all tests source files (they are in a separate dir)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 #using patsubst to get all the test targets (removing the .c (like when we call program ./program it has no extention))
