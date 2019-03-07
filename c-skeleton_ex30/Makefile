@@ -8,8 +8,10 @@ OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 TEST_SRC=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
-TARGET=build/libYOUR_LIBRARY.a
+TARGET=build/libex30.a #we set the name of the lib here
+SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 
+# The Target Build
 all: $(TARGET) $(SO_TARGET) tests
 
 dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
@@ -28,8 +30,9 @@ build:
 
 # The Unit Tests
 .PHONY: tests
-tests: CFLAGS += $(TARGET)
+#tests: CFLAGS += $(TARGET)
 tests: $(TESTS)
+	cc -Wall -g -DNDEBUG  $(TEST_SRC) -ldl -o $(TESTS) #we build and link the tests
 	sh ./tests/runtests.sh
 
 # The Cleaner
@@ -40,10 +43,9 @@ clean:
 	rm -rf `find . -name "*.dSYM" -print`
 
 # The Install
-install: all #first we build everything
+install: all
 	install -d $(DESTDIR)/$(PREFIX)/lib/
 	install $(TARGET) $(DESTDIR)/$(PREFIX)/lib/
-
 
 # The Checker
 check:
