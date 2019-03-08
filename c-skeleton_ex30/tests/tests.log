@@ -1,0 +1,18 @@
+DEBUG tests/libex30_tests.c:56: ----- RUNNING: ./tests/libex30_tests
+DEBUG tests/libex30_tests.c:48: 
+----- test_dlopen
+DEBUG tests/libex30_tests.c:49: 
+----- test_functions
+DEBUG tests/libex30_tests.c:50: 
+----- test_failures
+DEBUG tests/libex30_tests.c:51: 
+----- test_dlclose
+DEBUG tests/template_tests.c:26: ----- RUNNING: ./tests/template_tests
+DEBUG tests/template_tests.c:18: 
+----- test_dlopen
+DEBUG tests/template_tests.c:19: 
+----- test_functions
+DEBUG tests/template_tests.c:20: 
+----- test_failures
+DEBUG tests/template_tests.c:21: 
+----- test_dlclose
