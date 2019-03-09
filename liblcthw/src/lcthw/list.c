@@ -209,3 +209,26 @@ void *List_remove(List *list, ListNode *node) {
 error:
     return result;
 }
+
+List *List_copy(List *list) {
+    List *result = NULL;
+
+    check(list, "Can't copy NULL list.");
+
+    //invariant check
+    cnt = list->count;
+    check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
+
+    result = calloc(1, sizeof(List));
+    check_mem(result);
+
+    LIST_FOREACH(list, first, cur, next) {
+        List_push(result, cur->value);
+    }
+
+    return result;
+
+error:
+    return NULL;
+
+}

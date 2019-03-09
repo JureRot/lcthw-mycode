@@ -1,7 +1,8 @@
-DEBUG tests/list_tests.c:101: ----- RUNNING: ./tests/list_tests
-DEBUG tests/list_tests.c:91: ----- test_create
-DEBUG tests/list_tests.c:92: ----- test_push_pop
-DEBUG tests/list_tests.c:93: ----- test_unshift
-DEBUG tests/list_tests.c:94: ----- test_remove
-DEBUG tests/list_tests.c:95: ----- test_shift
-DEBUG tests/list_tests.c:96: ----- test_destroy
+DEBUG tests/list_tests.c:124: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:113: ----- test_create
+DEBUG tests/list_tests.c:114: ----- test_push_pop
+DEBUG tests/list_tests.c:115: ----- test_unshift
+DEBUG tests/list_tests.c:116: ----- test_copy
+DEBUG tests/list_tests.c:117: ----- test_remove
+DEBUG tests/list_tests.c:118: ----- test_shift
+DEBUG tests/list_tests.c:119: ----- test_destroy

@@ -51,6 +51,9 @@ void *List_shift(List *list);
 //removes node from list
 void *List_remove(List *list, ListNode *node);
 
+//creates a new list as a copy of the original one
+List *List_copy(List *list);
+
 //defines the macro for loopin over the whole list
 #define LIST_FOREACH(L, S, V, M) ListNode *_node = NULL;\
                                                    ListNode *V = NULL;\

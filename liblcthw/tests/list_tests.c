@@ -66,7 +66,6 @@ char *test_remove() {
     mu_assert(val == test2, "Wrong removed element.");
     mu_assert(List_count(list) == 2, "Wrong count after remove.");
     mu_assert(List_first(list) == test3, "Wrong first after remove.");
-    mu_assert(List_first(list) == test3, "Wrong first after remove.");
     mu_assert(List_last(list) == test1, "Wrong last after remove.");
 
     return NULL;
@@ -85,12 +84,36 @@ char *test_shift() {
     return NULL;
 }
 
+char *test_copy() {
+    mu_assert(List_count(list) != 0, "Wrong count before copy");
+
+    int list_cnt = List_count(list);
+    char *list_first = List_first(list);
+    char *list_last = List_last(list);
+
+    List *copy = List_copy(list);
+
+    mu_assert(list_cnt == List_count(list), "Count of original changed.");
+    mu_assert(list_first == List_first(list), "First element of original changed");
+    mu_assert(list_last == List_last(list), "Last element of original changed");
+
+    mu_assert(list_cnt == List_count(copy), "Count of copy doesn't match.");
+    mu_assert(list_first == List_first(copy), "First element of copy doesn't match.");
+    mu_assert(list->first->next->value == copy->first->next->value, "Second element of copy doesn't match.");
+    mu_assert(list_last == List_last(copy), "Last element of copy doesns't match.");
+
+    List_destroy(copy); //doing List_clear_destroy() here caused segfault ???
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
     mu_run_test(test_create);
     mu_run_test(test_push_pop);
     mu_run_test(test_unshift);
+    mu_run_test(test_copy);
     mu_run_test(test_remove);
     mu_run_test(test_shift);
     mu_run_test(test_destroy);
