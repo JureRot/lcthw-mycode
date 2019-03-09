@@ -1,5 +1,5 @@
 CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)
-LDFLAGS=$(OPTFLAGS)
+LIBS=-ldl $(OPTLIBS)
 PREFIX?=/usr/local
 
 SOURCES=$(wildcard src/**/*.c src/*.c)
@@ -9,13 +9,9 @@ TEST_SRC=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
 TARGET=build/liblcthw.a
+SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 
-OS=$(shell lsb_release -si)
-ifeq ($(OS), Ubuntu)
-	LDLIBS=-llcthw -lbsd -L./build -lm
-endif
-
-all: $(TARGET) tests
+all: $(TARGET) $(SO_TARGET) tests
 
 dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
 dev: all
@@ -24,6 +20,8 @@ $(TARGET): CFLAGS += -fPIC
 $(TARGET): build $(OBJECTS)
 	ar rcs $@ $(OBJECTS)
 	ranlib $@
+$(SO_TARGET): $(TARGET) $(OBJECTS)
+	$(CC) -shared -o $@ $(OBJECTS)
 
 build:
 	@mkdir -p build
@@ -31,12 +29,9 @@ build:
 
 # The Unit Tests
 .PHONY: tests
-tests: LDLIBS += $(TARGET)
+tests: CFLAGS += $(TARGET)
 tests: $(TESTS)
 	sh ./tests/runtests.sh
-
-valgrind:
-	VALGRING="valgrind --log-file=/tmp/valgrind-%p.log" $(MAKE)
 
 # The Cleaner
 clean:
@@ -46,7 +41,7 @@ clean:
 	rm -rf `find . -name "*.dSYM" -print`
 
 # The Install
-install: all
+install: all #first we build everything
 	install -d $(DESTDIR)/$(PREFIX)/lib/
 	install $(TARGET) $(DESTDIR)/$(PREFIX)/lib/
 

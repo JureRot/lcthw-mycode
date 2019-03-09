@@ -1,5 +1,5 @@
 CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)
-LIBS=-ldl $(OPTLIBS)
+LDFLAGS=$(OPTLIBS)
 PREFIX?=/usr/local
 
 SOURCES=$(wildcard src/**/*.c src/*.c)
@@ -9,6 +9,12 @@ TEST_SRC=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
 TARGET=build/liblcthw.a
+SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
+
+#OS=$(shell lsb_release -si)
+#ifeq ($(OS), Ubuntu)
+	#LDLIBS=-llcthw -lbsd -L./build -lm
+#endif
 
 all: $(TARGET) $(SO_TARGET) tests
 
@@ -28,9 +34,13 @@ build:
 
 # The Unit Tests
 .PHONY: tests
-tests: CFLAGS += $(TARGET)
+tests: LDLIBS += $(TARGET)
 tests: $(TESTS)
 	sh ./tests/runtests.sh
+
+
+valgrind:
+	VALGRING="valgrind --log-file=/tmp/valgrind-%p.log" $(MAKE)
 
 # The Cleaner
 clean:
@@ -40,7 +50,7 @@ clean:
 	rm -rf `find . -name "*.dSYM" -print`
 
 # The Install
-install: all #first we build everything
+install: all
 	install -d $(DESTDIR)/$(PREFIX)/lib/
 	install $(TARGET) $(DESTDIR)/$(PREFIX)/lib/
 

@@ -3,7 +3,7 @@
 #define _minunit_h
 
 #include <stdio.h>
-#include <dbg.h>
+#include "dbg.h"
 #include <stdlib.h>
 
 #define mu_suite_start() char *message = NULL
@@ -16,7 +16,7 @@
 }
 
 #define mu_run_test(test) {\
-    debug("\n-----%s", " " #test);\
+    debug("-----%s", " " #test);\
     message = test();\
     tests_run++;\
     if (message) {\
