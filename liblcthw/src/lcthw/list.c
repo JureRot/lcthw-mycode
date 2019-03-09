@@ -8,6 +8,15 @@ List *List_create() {
 }
 
 void List_destroy(List *list) {
+    check(list, "Can't destroy NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     LIST_FOREACH(list, first, cur, next) { //i dont understand how LIST_FOREACH knows what is first, next and cur
         if (cur->prev) {
             free(cur->prev);
@@ -16,20 +25,71 @@ void List_destroy(List *list) {
 
     free(list->last);
     free(list);
+
+error:
+    return;
 }
 
 void List_clear(List *list) {
+    check(list, "Can't clear NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     LIST_FOREACH(list, first, cur, next) {
         free(cur->value);
     }
+
+error:
+    return;
 }
 
-void List_clear_destroy(List *list) {
+/*
+void List_clear_destroy(List *list) { //slow (loop over list twice)
     List_clear(list);
     List_destroy(list);
 }
+*/
+
+void List_clear_destroy(List *list) { //fast (only one loop)
+    check(list, "Can't clear and destroy NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
+    LIST_FOREACH(list, first, cur, next) {
+        free(cur->value);
+        if (cur->prev) {
+            free(cur->prev);
+        }
+    }
+
+    free(list->last);
+    free(list);
+
+error:
+    return;
+}
 
 void List_push(List *list, void *value) { //adds to the end
+    check(list, "Can't push value to NULL list.");
+    check(value, "Can't push NULL value to list.")
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     ListNode *node = calloc(1, sizeof(ListNode));
     check_mem(node);
 
@@ -51,11 +111,33 @@ error:
 }
 
 void *List_pop(List *list) { //pops the last element (from the end)
+    check(list, "Can't pop from NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     ListNode *node = list->last;
     return node != NULL ? List_remove(list, node) : NULL;
+
+error:
+    return NULL;
 }
 
 void List_unshift(List *list, void *value) { //push to the front
+    check(list, "Can't unshift value to NULL list.");
+    check(value, "Can't unshift NULL value to list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     ListNode *node = calloc(1, sizeof(ListNode));
     check_mem(node);
 
@@ -77,12 +159,33 @@ error:
 }
 
 void *List_shift(List *list) { //pop from the front
+    check(list, "Can't shift from NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
+
     ListNode *node = list->first;
     return node != NULL ? List_remove(list, node) : NULL;
+
+error:
+    return NULL;
 }
 
 void *List_remove(List *list, ListNode *node) {
     void *result = NULL;
+
+    check(list, "Can't remove node from NULL list.");
+
+    //invariant check
+    int cnt = list->count;
+    if (cnt < 0) {
+        log_err("Count of list is less than zero.");
+        goto error;
+    }
 
     check(list->first && list->last, "List is empty.");
     check(node, "node can't be NULL.");
