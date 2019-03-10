@@ -16,7 +16,7 @@ void List_destroy(List *list) {
     cnt = list->count;
     check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
 
-    LIST_FOREACH(list, first, cur, next) { //i dont understand how LIST_FOREACH knows what is first, next and cur
+    LIST_FOREACH(list, first, next, cur) { //i dont understand how LIST_FOREACH knows what is first, next and cur
         if (cur->prev) {
             free(cur->prev);
         }
@@ -36,7 +36,7 @@ void List_clear(List *list) {
     cnt = list->count;
     check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
 
-    LIST_FOREACH(list, first, cur, next) {
+    LIST_FOREACH(list, first, next, cur) {
         free(cur->value);
     }
 
@@ -55,6 +55,7 @@ void List_clear_destroy(List *list) { //slow (loop over list twice)
 }
 */
 
+
 void List_clear_destroy(List *list) { //fast (only one loop)
     check(list, "Can't clear and destroy NULL list.");
 
@@ -62,7 +63,7 @@ void List_clear_destroy(List *list) { //fast (only one loop)
     cnt = list->count;
     check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
 
-    LIST_FOREACH(list, first, cur, next) {
+    LIST_FOREACH(list, first, next, cur) {
         free(cur->value);
         if (cur->prev) {
             free(cur->prev);
@@ -206,7 +207,7 @@ void *List_remove(List *list, ListNode *node) {
     cnt = list->count;
     check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
 
-error:
+error: //fallthrough
     return result;
 }
 
@@ -222,14 +223,12 @@ List *List_copy(List *list) {
     result = calloc(1, sizeof(List));
     check_mem(result);
 
-    LIST_FOREACH(list, first, cur, next) {
+    LIST_FOREACH(list, first, next, cur) {
         List_push(result, cur->value);
     }
 
+error: //fallthrough
     return result;
-
-error:
-    return NULL;
 
 }
 
@@ -255,9 +254,7 @@ List *List_join(List *list1, List *list2) {
     result = list1;
     free(list2);
 
-    return result;
-
-error:
+error: //fallthrough
     return result;
 }
 
@@ -277,7 +274,7 @@ List *List_split(List *list, ListNode *node) {
 
     int new_count = List_count(list);
 
-    LIST_FOREACH(list, first, cur, next) { //need to go over them to get the new count values
+    LIST_FOREACH(list, first, next, cur) { //need to go over them to get the new count values
         if (cur == node) {
             break;
         }
@@ -295,8 +292,6 @@ List *List_split(List *list, ListNode *node) {
     result->count = new_count;
     //this part of the code is without checks because we do all the neccessary checks at the beginning of the function.
 
-    return result;
-
-error:
+error: //fallthrough
     return result;
 }

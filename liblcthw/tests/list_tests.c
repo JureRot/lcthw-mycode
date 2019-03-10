@@ -105,7 +105,8 @@ char *test_copy() {
     mu_assert(list->first->next->value == copy->first->next->value, "Second element of copy doesn't match.");
     mu_assert(list_last == List_last(copy), "Last element of copy doesns't match.");
 
-    List_destroy(copy); //doing List_clear_destroy() here caused segfault ???
+    //FIXME
+    List_destroy(copy); //doing List_clear_destroy() here caused segfault (even with default slow version)
 
     return NULL;
 }

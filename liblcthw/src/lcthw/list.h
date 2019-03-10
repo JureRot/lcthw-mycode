@@ -64,7 +64,7 @@ List *List_join(List *list1, List *list2);
 List *List_split(List *list, ListNode *node);
 
 //defines the macro for loopin over the whole list
-#define LIST_FOREACH(L, S, V, M) ListNode *_node = NULL;\
+#define LIST_FOREACH(L, S, M, V) ListNode *_node = NULL;\
                                                    ListNode *V = NULL;\
 for(V = _node = L->S; _node != NULL; V = _node = _node->M)
 
