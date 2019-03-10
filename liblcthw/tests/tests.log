@@ -1,9 +1,10 @@
-DEBUG tests/list_tests.c:175: ----- RUNNING: ./tests/list_tests
-DEBUG tests/list_tests.c:163: ----- test_create
-DEBUG tests/list_tests.c:164: ----- test_push_pop
-DEBUG tests/list_tests.c:165: ----- test_unshift
-DEBUG tests/list_tests.c:166: ----- test_copy
-DEBUG tests/list_tests.c:167: ----- test_join
-DEBUG tests/list_tests.c:168: ----- test_remove
-DEBUG tests/list_tests.c:169: ----- test_shift
-DEBUG tests/list_tests.c:170: ----- test_destroy
+DEBUG tests/list_tests.c:210: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:197: ----- test_create
+DEBUG tests/list_tests.c:198: ----- test_push_pop
+DEBUG tests/list_tests.c:199: ----- test_unshift
+DEBUG tests/list_tests.c:200: ----- test_copy
+DEBUG tests/list_tests.c:201: ----- test_join
+DEBUG tests/list_tests.c:202: ----- test_split
+DEBUG tests/list_tests.c:203: ----- test_remove
+DEBUG tests/list_tests.c:204: ----- test_shift
+DEBUG tests/list_tests.c:205: ----- test_destroy

@@ -53,9 +53,15 @@ void *List_remove(List *list, ListNode *node);
 
 //creates a new list as a copy of the original one
 List *List_copy(List *list);
+
 //joins two lists
 //returns the pointer to the beginning of the first one, the pointer to the second one is removed (freed)
 List *List_join(List *list1, List *list2);
+
+//splits two lists at the node (node becomes the first element in second list)
+//returs the pointer to the beginning of the second list
+//the first (original) list still exists, it's just shortened
+List *List_split(List *list, ListNode *node);
 
 //defines the macro for loopin over the whole list
 #define LIST_FOREACH(L, S, V, M) ListNode *_node = NULL;\

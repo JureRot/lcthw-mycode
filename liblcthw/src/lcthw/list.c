@@ -260,3 +260,43 @@ List *List_join(List *list1, List *list2) {
 error:
     return result;
 }
+
+List *List_split(List *list, ListNode *node) {
+    List *result = NULL;
+
+    check(list, "Can't split NULL list at node.");
+    check(node, "Can't split list at NULL node.");
+    check(List_count(list) > 1, "Can't split list with less than two elements..");
+    check(node->prev, "Can't split on first element (would produce empty list).");
+
+    //invariant check
+    cnt = list->count;
+    check((cnt==0) || (cnt>0 && (list->first && list->last)), "List either has count less than zero or has count greater than zero, but doesn't have first or last element.");
+
+    result = calloc(1, sizeof(List));
+
+    int new_count = List_count(list);
+
+    LIST_FOREACH(list, first, cur, next) { //need to go over them to get the new count values
+        if (cur == node) {
+            break;
+        }
+        new_count--;
+    }
+
+    result->first = node; //set the first and last nodes of new (second) list
+    result->last = list->last;
+    list->last = node->prev; //set the end of original (first) list to just before the node
+
+    node->prev->next = NULL; //remove connections between the two lists
+    node->prev = NULL;
+
+    list->count -= new_count; //update the counts for both lists
+    result->count = new_count;
+    //this part of the code is without checks because we do all the neccessary checks at the beginning of the function.
+
+    return result;
+
+error:
+    return result;
+}

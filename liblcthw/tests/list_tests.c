@@ -122,38 +122,72 @@ char *test_join() {
     List_push(b, test3);
     List_push(b, test1);
 
-    mu_assert(a->count == 3, "Failed creating a list.");
-    mu_assert(b->count == 3, "Failed creating b list.");
+    mu_assert(a->count == 3, "Failed creating list a.");
+    mu_assert(b->count == 3, "Failed creating list b.");
 
     a = List_join(a, b);
 
-    mu_assert(a->count == 6, "Wrong count of aed list.");
+    mu_assert(a->count == 6, "Wrong count of joined list.");
 
-    mu_assert(List_first(a) == test1, "Wrong first element of aed list.");
-    mu_assert(List_last(a) == test1, "Wrong last element of aed list.");
+    mu_assert(List_first(a) == test1, "Wrong first element of joined list.");
+    mu_assert(List_last(a) == test1, "Wrong last element of joined list.");
 
     //tedious check of all the values (forward and back)
-    mu_assert(a->first->value == test1, "Wrong first element of aed list.");
-    mu_assert(a->first->next->value == test2, "Wrong second element of aed list.");
-    mu_assert(a->first->next->next->value == test3, "Wrong third element of aed list.");
-    mu_assert(a->first->next->next->next->value == test2, "Wrong fourth element of aed list.");
-    mu_assert(a->first->next->next->next->next->value == test3, "Wrong fifth element of aed list.");
-    mu_assert(a->first->next->next->next->next->next->value == test1, "Wrong sixth element of aed list.");
+    mu_assert(a->first->value == test1, "Wrong first element of joined list.");
+    mu_assert(a->first->next->value == test2, "Wrong second element of joined list.");
+    mu_assert(a->first->next->next->value == test3, "Wrong third element of joined list.");
+    mu_assert(a->first->next->next->next->value == test2, "Wrong fourth element of joined list.");
+    mu_assert(a->first->next->next->next->next->value == test3, "Wrong fifth element of joined list.");
+    mu_assert(a->first->next->next->next->next->next->value == test1, "Wrong sixth element of joined list.");
 
-    mu_assert(a->last->value == test1, "Wrong last element of aed list.");
-    mu_assert(a->last->prev->value == test3, "Wrong second to last element of aed list.");
-    mu_assert(a->last->prev->prev->value == test2, "Wrong third to last element of aed list.");
-    mu_assert(a->last->prev->prev->prev->value == test3, "Wrong fourth to last element of aed list.");
-    mu_assert(a->last->prev->prev->prev->prev->value == test2, "Wrong fifth to last element of aed list.");
-    mu_assert(a->last->prev->prev->prev->prev->prev->value == test1, "Wrong sixth to last element of aed list.");
+    mu_assert(a->last->value == test1, "Wrong last element of joined list.");
+    mu_assert(a->last->prev->value == test3, "Wrong second to last element of joined list.");
+    mu_assert(a->last->prev->prev->value == test2, "Wrong third to last element of joined list.");
+    mu_assert(a->last->prev->prev->prev->value == test3, "Wrong fourth to last element of joined list.");
+    mu_assert(a->last->prev->prev->prev->prev->value == test2, "Wrong fifth to last element of joined list.");
+    mu_assert(a->last->prev->prev->prev->prev->prev->value == test1, "Wrong sixth to last element of joined list.");
 
     List_destroy(a);
-    //List_destroy(b);
+    //b is already destroyed (freed inside the List_join() function)
 
     return NULL;
 }
 
 char *test_split() {
+    a = List_create();
+    b = NULL;
+
+    List_push(a, test1);
+    List_push(a, test2);
+    List_push(a, test3);
+
+    mu_assert(List_count(a) == 3, "Failed creating list a.");
+
+    b = List_split(a, a->first->next);
+
+    mu_assert(List_count(a) == 1, "Wrong count of first list after split.");
+    mu_assert(List_count(b) == 2, "Wrong count of second list after split.");
+
+    mu_assert(List_first(a) == test1, "Wrong first item of first list after split.");
+    mu_assert(List_last(a) == test1, "Wrong last item of first list after split.");
+
+    mu_assert(List_first(b) == test2, "Wrong first item of second list after split.");
+    mu_assert(List_last(b) == test3, "Wrong last item of second list after split.");
+
+    //test a second time on the last element
+    a = List_join(a, b);
+    b = List_split(a, a->last);
+
+    mu_assert(List_count(a) == 2, "Wrong count of first list after second split.");
+    mu_assert(List_count(b) == 1, "Wrong count of second list after second split.");
+    mu_assert(List_first(a) == test1, "Wrong first item of first list after second split.");
+    mu_assert(List_last(a) == test2, "Wrong last item of first list after second split.");
+    mu_assert(List_first(b) == test3, "Wrong first item of second list after second split.");
+    mu_assert(List_last(b) == test3, "Wrong last item of second list after second split.");
+
+    List_destroy(a);
+    List_destroy(b);
+
     return NULL;
 }
 
@@ -165,6 +199,7 @@ char *all_tests() {
     mu_run_test(test_unshift);
     mu_run_test(test_copy);
     mu_run_test(test_join);
+    mu_run_test(test_split);
     mu_run_test(test_remove);
     mu_run_test(test_shift);
     mu_run_test(test_destroy);
