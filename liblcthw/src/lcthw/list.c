@@ -232,3 +232,31 @@ error:
     return NULL;
 
 }
+
+List *List_join(List *list1, List *list2) {
+    List *result = NULL;
+
+    check(list1, "Can't join NULL list with list.");
+    check(list2, "Can't join list with NULL list.");
+
+    //invariant check
+    cnt = list1->count;
+    check((cnt==0) || (cnt>0 && (list1->first && list1->last)), "First list either has count less than zero or has count greater than zero, but doesn't have first or last element.");
+    cnt = list2->count;
+    check((cnt==0) || (cnt>0 && (list2->first && list2->last)), "Second list either has count less than zero or has count greater than zero, but doesn't have first or last element.");
+
+    list1->last->next = list2->first;
+    list2->first->prev = list1->last;
+
+    list1->last = list2->last;
+
+    list1->count += list2->count;
+
+    result = list1;
+    free(list2);
+
+    return result;
+
+error:
+    return result;
+}

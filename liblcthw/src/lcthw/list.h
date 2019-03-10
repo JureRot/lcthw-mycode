@@ -53,6 +53,9 @@ void *List_remove(List *list, ListNode *node);
 
 //creates a new list as a copy of the original one
 List *List_copy(List *list);
+//joins two lists
+//returns the pointer to the beginning of the first one, the pointer to the second one is removed (freed)
+List *List_join(List *list1, List *list2);
 
 //defines the macro for loopin over the whole list
 #define LIST_FOREACH(L, S, V, M) ListNode *_node = NULL;\

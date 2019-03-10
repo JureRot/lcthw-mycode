@@ -4,6 +4,9 @@
 #include <assert.h>
 
 static List *list = NULL;
+List *copy = NULL;
+List *a = NULL;
+List *b = NULL;
 char *test1 = "test1 data";
 char *test2 = "test2 data";
 char *test3 = "test3 data";
@@ -91,7 +94,7 @@ char *test_copy() {
     char *list_first = List_first(list);
     char *list_last = List_last(list);
 
-    List *copy = List_copy(list);
+    copy = List_copy(list);
 
     mu_assert(list_cnt == List_count(list), "Count of original changed.");
     mu_assert(list_first == List_first(list), "First element of original changed");
@@ -107,6 +110,53 @@ char *test_copy() {
     return NULL;
 }
 
+char *test_join() {
+    a = List_create();
+    b = List_create();
+
+    List_push(a, test1);
+    List_push(a, test2);
+    List_push(a, test3);
+
+    List_push(b, test2);
+    List_push(b, test3);
+    List_push(b, test1);
+
+    mu_assert(a->count == 3, "Failed creating a list.");
+    mu_assert(b->count == 3, "Failed creating b list.");
+
+    a = List_join(a, b);
+
+    mu_assert(a->count == 6, "Wrong count of aed list.");
+
+    mu_assert(List_first(a) == test1, "Wrong first element of aed list.");
+    mu_assert(List_last(a) == test1, "Wrong last element of aed list.");
+
+    //tedious check of all the values (forward and back)
+    mu_assert(a->first->value == test1, "Wrong first element of aed list.");
+    mu_assert(a->first->next->value == test2, "Wrong second element of aed list.");
+    mu_assert(a->first->next->next->value == test3, "Wrong third element of aed list.");
+    mu_assert(a->first->next->next->next->value == test2, "Wrong fourth element of aed list.");
+    mu_assert(a->first->next->next->next->next->value == test3, "Wrong fifth element of aed list.");
+    mu_assert(a->first->next->next->next->next->next->value == test1, "Wrong sixth element of aed list.");
+
+    mu_assert(a->last->value == test1, "Wrong last element of aed list.");
+    mu_assert(a->last->prev->value == test3, "Wrong second to last element of aed list.");
+    mu_assert(a->last->prev->prev->value == test2, "Wrong third to last element of aed list.");
+    mu_assert(a->last->prev->prev->prev->value == test3, "Wrong fourth to last element of aed list.");
+    mu_assert(a->last->prev->prev->prev->prev->value == test2, "Wrong fifth to last element of aed list.");
+    mu_assert(a->last->prev->prev->prev->prev->prev->value == test1, "Wrong sixth to last element of aed list.");
+
+    List_destroy(a);
+    //List_destroy(b);
+
+    return NULL;
+}
+
+char *test_split() {
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
@@ -114,6 +164,7 @@ char *all_tests() {
     mu_run_test(test_push_pop);
     mu_run_test(test_unshift);
     mu_run_test(test_copy);
+    mu_run_test(test_join);
     mu_run_test(test_remove);
     mu_run_test(test_shift);
     mu_run_test(test_destroy);
