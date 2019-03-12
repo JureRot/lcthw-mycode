@@ -190,7 +190,7 @@ void *List_remove(List *list, ListNode *node) {
         list->first->prev = NULL;
     } else if (node == list->last) { //if removing node from tail
         list->last = node->prev;
-        check(list->last != NULL, "Invalid list, somehow got a next that is NULL.");
+        check(list->last != NULL, "Invalid list, somehow got a last that is NULL.");
         list->last->next = NULL;
     } else { //if node to be removed is in the middle
         ListNode *after = node->next;
