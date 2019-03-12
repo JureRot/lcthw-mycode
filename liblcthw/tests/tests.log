@@ -1,0 +1,5 @@
+DEBUG tests/list_algos_tests.c:87: ----- RUNNING: ./tests/list_algos_tests
+DEBUG tests/list_algos_tests.c:81: ----- test_bubble_sort
+DEBUG tests/list_algos_tests.c:82: ----- test_merge_sort
+DEBUG tests/list_algos_tests.c:25: XXXX 1234
+[ERROR] (tests/list_algos_tests.c:65: errno:None) Words are not sorted after merge sort
