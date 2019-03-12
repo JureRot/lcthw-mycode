@@ -1,0 +1,85 @@
+#include <lcthw/list_algos.h>
+#include "list_algos.h" //just for writing
+#include "list.h"
+#include <lcthw/dbg.h>
+#include "dbg.h" //just for writing
+
+//a and b are sequential nodes in list
+//spaws the order of a and b
+//example: wxabyz -> wxbayz
+//TODO
+void swap_nodes(List *list, ListNode *a, ListNode *b) {
+    //printf("%s %s\n", a->value, b->value);
+
+    //if a is first element in list
+    //if b is last element in list
+    //if a and b are somewhere in the middle
+
+    if (list->first == a) { //a is first element in list
+        a->prev = b;
+        a->next = b->next;
+        b->prev = NULL;
+        b->next = a;
+        list->first = b;
+
+    } else if (list->last == b) { //b is last element in list
+        b->prev = a->prev;
+        b->next = a;
+        a->prev = b;
+        a->next = NULL;
+        list->last = a;
+
+    } else { //a and b are somewhere in the middle of list
+        a->next = b->next;
+        b->prev = a->prev;
+        a->prev = b;
+        b->next = a;
+
+    }
+}
+
+int List_bubble_sort(List *list, List_compare cmp) {
+    check(list, "Can't sort NULL list using compare function.");
+    check(cmp, "Can't sort list using NULL compare function.");
+
+    int n = List_count(list);
+    int new_n = n;
+
+    while (n > 1) {
+        ListNode *cur = list->first;
+
+        for (int i=0; i<n-1; i++) {
+            check(cur && cur->next, "Count of list doesn't match the actual list.");
+        check(cur->value && cur->next->value, "Can't compare/sort NULL values.");
+
+            printf("%d: %s\n", n, cur->value);
+            if (cmp(cur->value, cur->next->value) > 0) {
+                printf("%s %s\n", cur->value, cur->next->value);
+                swap_nodes(list, cur, cur->next);
+                printf("%s %s\n", cur->value, cur->next->value);
+                cur = cur->prev;
+                new_n = i;
+            }
+
+            cur = cur->next;
+        }
+        n = new_n;
+    }
+
+    //we cant use LIST_FOREACH because we need to change cur but we cant because there is a hidden _node var that actually effects cur
+
+    return 0;
+
+error:
+    return NULL; //dont know if i can return NULL or should i exit(1)
+}
+
+List *List_merge_sort(List* list, List_compare cmp) {
+    check(list, "Can't sort NULL list using compare function.");
+    check(cmp, "Can't sort list using NULL compare function.");
+
+    return list;
+
+error:
+    return NULL; //dont know if i can return NULL or should i exit(1)
+}
