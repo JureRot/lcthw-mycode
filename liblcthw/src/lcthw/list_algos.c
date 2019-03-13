@@ -1,13 +1,13 @@
 #include <lcthw/list_algos.h>
-#include "list_algos.h" //just for writing
-#include "list.h"
+//#include "list_algos.h" //just for writing
+//#include "list.h"
 #include <lcthw/dbg.h>
-#include "dbg.h" //just for writing
+//#include "dbg.h" //just for writing
 
 //a and b are sequential nodes in list
 //spaws the order of a and b
 //example: wxabyz -> wxbayz
-void swap_nodes(List *list, ListNode *a, ListNode *b) {
+void swap_nodes_complicated(List *list, ListNode *a, ListNode *b) { //overengineered
     check(list, "Can't swap nodes in NULL list.");
     check(a && b, "Can't swap NULL nodes in list.");
     check(a->next == b, "b does not follow a.");
@@ -49,8 +49,23 @@ void swap_nodes(List *list, ListNode *a, ListNode *b) {
 error:
     return;
 }
+//way to compliated and not even more robust
+//because value is just a pointer is just logical to just swap those
+//IM STUPID (think before you code ffs)
 
-int List_bubble_sort(List *list, List_compare cmp) {
+inline void swap_nodes(ListNode *a, ListNode *b) { //simple, just swap the values (by zed)
+    check(a && b, "Can't swap NULL nodes in list.");
+    check(a->next == b, "b does not follow a.");
+
+    void *temp = a->value;
+    a->value = b->value;
+    b->value = temp;
+
+error: //fallthrough (even tho not needed)
+    return;
+}
+
+int List_bubble_sort_complicated(List *list, List_compare cmp) {
     check(list, "Can't sort NULL list using compare function.");
     check(cmp, "Can't sort list using NULL compare function.");
 
@@ -66,8 +81,8 @@ int List_bubble_sort(List *list, List_compare cmp) {
             check(cur->value && cur->next->value, "Can't compare/sort NULL values.");
 
             if (cmp(cur->value, cur->next->value) > 0) {
-                swap_nodes(list, cur, cur->next);
-                cur = cur->prev; //go one back to we dont skip over one element after swap
+                swap_nodes_complicated(list, cur, cur->next);
+                cur = cur->prev; //go one back to we dont skip over one element after swap (no need for simple swap where we only swap the values)
                 new_n = i+1; //remember the location of the last swap
             }
             cur = cur->next;
@@ -75,6 +90,7 @@ int List_bubble_sort(List *list, List_compare cmp) {
         n = new_n;
     }
     //we cant use LIST_FOREACH because we need to change cur but we cant because there is a hidden _node var that actually effects cur
+    //WE COULD IF WE USED SIMPLE swap_nodes() (but im too stupid)
 
     //idea:
     //for list of len n
@@ -90,6 +106,40 @@ int List_bubble_sort(List *list, List_compare cmp) {
     //thats why we keep note where the last swap in interation was
     //all the elements after that swap are already sorted and won't ever move
     //so the next iteration will go only until the location of the last swap in previous iteration
+
+    return 0;
+
+error:
+    return NULL; //dont know if i can return NULL or should i exit(1)
+}
+
+int List_bubble_sort(List *list, List_compare cmp) { //bubble sort using simple swap_nodes and LIST_FOREACH but still optimized
+    check(list, "Can't sort NULL list using compare function.");
+    check(cmp, "Can't sort list using NULL compare function.");
+
+    int n = List_count(list);
+    int new_n = 0;
+
+    while (n > 1) {
+        new_n = 0;
+        int i = 0;
+
+        LIST_FOREACH(list, first, next, cur) {
+            check(cur && cur->next, "Count of list does not match the actual list.");
+            check(cur->value && cur->next->value, "Can't compare/sort NULL values.");
+
+            if (cmp(cur->value, cur->next->value) > 0) {
+                swap_nodes(cur, cur->next);
+                new_n = i+1;
+            }
+
+            if (++i >= n-1) { //first increase, than compare (because we need to account for cur->next)
+                break;
+            }
+        }
+
+        n = new_n;
+    }
 
     return 0;
 
