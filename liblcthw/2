@@ -135,7 +135,6 @@ char *all_tests() {
     // Extra Credit
     // time testing
     printf("-- Extra Credit -- (uncomment in list_algos_tests.c to run (takes a few seconds))\n");
-/*
     clock_t start;
     clock_t end;
 
@@ -175,7 +174,6 @@ char *all_tests() {
     printf("many small merge_sort: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
 
     //for multiple sortings of small samples (especially for if they are already sorted) the merge sort acutally isnt that good (has a lot of overhead)
-    printf("\n");
 
     //ONE BIG SORT
     //bubble_sort_complicated
@@ -204,257 +202,78 @@ char *all_tests() {
 
     //but sorting a large list is WAY faster using merge sort
     //also there is an actual difference between complicated and simple bubble_sort (simple is faster, quite a lot)
-    printf("\n");
 
     //TESTING BIT O NOTATION
     //bubble_sort_complicated
     printf("bubble_sort_complicated:\n");
-    //1000
+    //50
     List *dynamic_words = create_words();
-    for (int i=0; i<199; i++) {
+    for (int i=0; i<9; i++) {
         dynamic_words = List_join(dynamic_words, create_words());
     }
     start = clock();
     rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
     end = clock();
     List_destroy(dynamic_words);
-    printf("\t1000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //2000
-    dynamic_words = create_words();
-    for (int i=0; i<399; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t2000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //4000
-    dynamic_words = create_words();
-    for (int i=0; i<799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t4000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //8000
-    dynamic_words = create_words();
-    for (int i=0; i<1599; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t8000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //16000
-    dynamic_words = create_words();
-    for (int i=0; i<3199; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t16000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //32000
-    dynamic_words = create_words();
-    for (int i=0; i<6399; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t32000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //64000
-    dynamic_words = create_words();
-    for (int i=0; i<12799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t64000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+    printf("\t50: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
 
-    printf("\n");
-    //bubble_sort
-    printf("bubble_sort:\n");
-    //1000
-    dynamic_words = create_words();
-    for (int i=0; i<199; i++) {
+    //100
+    List *dynamic_words = create_words();
+    for (int i=0; i<19; i++) {
         dynamic_words = List_join(dynamic_words, create_words());
     }
     start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
+    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
     end = clock();
     List_destroy(dynamic_words);
-    printf("\t1000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //2000
-    dynamic_words = create_words();
-    for (int i=0; i<399; i++) {
+    printf("\n100: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+/*
+    //200
+    List *dynamic_words = create_words();
+    for (int i=0; i<39; i++) {
         dynamic_words = List_join(dynamic_words, create_words());
     }
     start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
+    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
     end = clock();
     List_destroy(dynamic_words);
-    printf("\t2000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //4000
-    dynamic_words = create_words();
-    for (int i=0; i<799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t4000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //8000
-    dynamic_words = create_words();
-    for (int i=0; i<1599; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t8000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //16000
-    dynamic_words = create_words();
-    for (int i=0; i<3199; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t16000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //32000
-    dynamic_words = create_words();
-    for (int i=0; i<6399; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t32000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //64000
-    dynamic_words = create_words();
-    for (int i=0; i<12799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    rc = List_bubble_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(dynamic_words);
-    printf("\t64000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+    printf("200: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
 
-    printf("\n");
-    //merge_sort
-    printf("merge_sort:\n");
-    //1000
-    dynamic_words = create_words();
-    for (int i=0; i<199; i++) {
+    //400
+    List *dynamic_words = create_words();
+    for (int i=0; i<79; i++) {
         dynamic_words = List_join(dynamic_words, create_words());
     }
     start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
+    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
     end = clock();
-    List_destroy(res);
-    printf("\t1000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //2000
-    dynamic_words = create_words();
-    for (int i=0; i<399; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t2000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //4000
-    dynamic_words = create_words();
-    for (int i=0; i<799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t4000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //8000
-    dynamic_words = create_words();
-    for (int i=0; i<1599; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t8000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //16000
-    dynamic_words = create_words();
-    for (int i=0; i<3199; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t16000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //32000
-    dynamic_words = create_words();
-    for (int i=0; i<6399; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t32000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //64000
-    dynamic_words = create_words();
-    for (int i=0; i<12799; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t64000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //128000
-    dynamic_words = create_words();
-    for (int i=0; i<25599; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t128000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
-    //256000
-    dynamic_words = create_words();
-    for (int i=0; i<51199; i++) {
-        dynamic_words = List_join(dynamic_words, create_words());
-    }
-    start = clock();
-    res = List_merge_sort(dynamic_words, (List_compare) strcmp);
-    end = clock();
-    List_destroy(res);
-    printf("\t256000: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+    List_destroy(dynamic_words);
+    printf("400: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
 
-    //both bubble sorts have exponential o notation O(n^2)
-    //merge sort has theoreticyl O(n*log(n)) but in this program it seems quite linear (O(2n))
+    //800
+    List *dynamic_words = create_words();
+    for (int i=0; i<159; i++) {
+        dynamic_words = List_join(dynamic_words, create_words());
+    }
+    start = clock();
+    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
+    end = clock();
+    List_destroy(dynamic_words);
+    printf("800: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
 
-    //one more thing -> i can't comfirm this extra credit part has no mem leaks (valgrind is way to slow)
-*/
+    //1600
+    List *dynamic_words = create_words();
+    for (int i=0; i<319; i++) {
+        dynamic_words = List_join(dynamic_words, create_words());
+    }
+    start = clock();
+    rc = List_bubble_sort_complicated(dynamic_words, (List_compare) strcmp);
+    end = clock();
+    List_destroy(dynamic_words);
+    printf("1600: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+    */
 
     return NULL;
 }
-RUN_TESTS(all_tests);
 
+RUN_TESTS(all_tests);

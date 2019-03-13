@@ -1,4 +1,4 @@
-DEBUG tests/list_algos_tests.c:211: ----- RUNNING: ./tests/list_algos_tests
+DEBUG tests/list_algos_tests.c:459: ----- RUNNING: ./tests/list_algos_tests
 DEBUG tests/list_algos_tests.c:131: ----- test_bubble_sort_complicated
 DEBUG tests/list_algos_tests.c:132: ----- test_bubble_sort
 DEBUG tests/list_algos_tests.c:133: ----- test_merge_sort
