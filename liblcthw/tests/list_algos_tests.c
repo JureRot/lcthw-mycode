@@ -3,6 +3,7 @@
 //#include "../src/lcthw/list.h" //only for writing purposes
 #include <assert.h>
 #include <string.h>
+#include <time.h> //for ec
 
 char *values[] = { "XXXX", "1234", "abcd", "xjvef", "NDSS" };
 
@@ -14,6 +15,20 @@ List *create_words() {
 
     for (int i=0; i<NUM_VALUES; i++) {
         List_push(words, values[i]);
+    }
+
+    return words;
+}
+
+//for extra credit
+List *create_big_words() {
+    //int i = 0;
+    List *words = List_create();
+
+    for (int j=0; j<5000; j++) {
+        for (int i=0; i<NUM_VALUES; i++) {
+            List_push(words, values[i]);
+        }
     }
 
     return words;
@@ -116,6 +131,79 @@ char *all_tests() {
     mu_run_test(test_bubble_sort_complicated);
     mu_run_test(test_bubble_sort);
     mu_run_test(test_merge_sort);
+
+    // Extra Credit
+    printf("-- Extra Credit -- (uncomment in list_algos_tests.c to run (takes a few seconds))\n");
+    /*
+    // time testing
+    clock_t start;
+    clock_t end;
+
+    //lots of small sorts
+    //bubble_sort_complicated
+    start = clock();
+    for (int i=0; i<1000000; i++) { //for every algo we run 1000000 * 2 sortings, one unsorted and one already sorted
+        List *words = create_words();
+        int rc = List_bubble_sort_complicated(words, (List_compare) strcmp);
+        rc = List_bubble_sort_complicated(words, (List_compare) strcmp);
+        List_destroy(words);
+    }
+    end = clock();
+    printf("many small bubble_sort_complicated: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //bubble_sort
+    start = clock();
+    for (int i=0; i<1000000; i++) {
+        List *words = create_words();
+        int rc = List_bubble_sort(words, (List_compare) strcmp);
+        rc = List_bubble_sort(words, (List_compare) strcmp);
+        List_destroy(words);
+    }
+    end = clock();
+    printf("many small bubble_sort: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //merge_sort
+    start = clock();
+    for (int i=0; i<1000000; i++) {
+        List *words = create_words();
+        List *res = List_merge_sort(words, (List_compare) strcmp);
+        res = List_merge_sort(res, (List_compare) strcmp);
+        //List_destroy(words);
+        List_destroy(res);
+    }
+    end = clock();
+    printf("many small merge_sort: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //for multiple sortings of small samples (especially for if they are already sorted) the merge sort acutally isnt that good (has a lot of overhead)
+
+    //one big sort
+    //bubble_sort_complicated
+    List *big_words = create_big_words();
+    start = clock();
+    int rc = List_bubble_sort_complicated(big_words, (List_compare) strcmp);
+    end = clock();
+    List_destroy(big_words);
+    printf("one big bubble_sort_complicated: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //bubble_sort
+    big_words = create_big_words();
+    start = clock();
+    rc = List_bubble_sort(big_words, (List_compare) strcmp);
+    end = clock();
+    List_destroy(big_words);
+    printf("one big bubble_sort: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //bubble_sort
+    big_words = create_big_words();
+    start = clock();
+    List *res = List_merge_sort(big_words, (List_compare) strcmp);
+    end = clock();
+    List_destroy(big_words);
+    printf("one big merge_sort: %fs\n", (double)(end-start) / CLOCKS_PER_SEC);
+
+    //but sorting a large list is WAY faster using merge sort
+    //also there is an actual difference between complicated and simple bubble_sort (simple is faster, quite a lot)
+    */
 
     return NULL;
 }
