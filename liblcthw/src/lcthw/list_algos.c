@@ -236,3 +236,13 @@ error:
     //until we arive back at the start where we merge first half of the original list (now sorted) to the other (also sorted) half of the original list and get a full sorted list
     //(this recursion is DFS)
 }
+
+//WHY SORTING A DOUBLE LINKE LIST IS NOT THE SMARTES IDEA
+//  - we don't have acces to the nodes in the middle of the list, only to the firs and last. so if we need to get to the node in the middle, we need to traverse practically the whole list and cant use bisection or something like that to quickyl get to some specific node
+//  - and because of this (that the actuall nodes dont mean much, is all in the links betweeen them) means that all the time we are working with double linked list, we have to be working with actual working lists (not just individual floating noeds somewhere). This means to rearange we need to split the list into small lists and rearange them instead of just rearanging the nodes (* it can be done with rearanging the values, but in general we usually dont do that)
+//  - also inserting the the beginning or the end is simple, but inserting in the middle is not so (we need to go over the list one node by one and insert in ther right spot) (same goes for removing from the middle)
+
+// Extra Credit
+void List_insert_sorted(List *list, void *value, List_compare cmp) {
+
+}
