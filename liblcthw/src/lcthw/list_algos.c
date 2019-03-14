@@ -244,5 +244,10 @@ error:
 
 // Extra Credit
 void List_insert_sorted(List *list, void *value, List_compare cmp) {
+    check(list, "Can't insert value into NULL list using compare function.");
+    check(value, "Can't insert NULL value into list using compare function.");
+    check(cmp, "Can't insert value into list using NULL compare function.");
 
+error: //fallthrough (even if not needed)
+    return;
 }
