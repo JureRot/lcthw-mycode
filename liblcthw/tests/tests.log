@@ -1,7 +1,8 @@
-DEBUG tests/list_algos_tests.c:459: ----- RUNNING: ./tests/list_algos_tests
-DEBUG tests/list_algos_tests.c:131: ----- test_bubble_sort_complicated
-DEBUG tests/list_algos_tests.c:132: ----- test_bubble_sort
-DEBUG tests/list_algos_tests.c:133: ----- test_merge_sort
+DEBUG tests/list_algos_tests.c:489: ----- RUNNING: ./tests/list_algos_tests
+DEBUG tests/list_algos_tests.c:159: ----- test_bubble_sort_complicated
+DEBUG tests/list_algos_tests.c:160: ----- test_bubble_sort
+DEBUG tests/list_algos_tests.c:161: ----- test_merge_sort
+DEBUG tests/list_algos_tests.c:163: ----- test_insert_sorted
 DEBUG tests/list_algos_zed_tests.c:91: ----- RUNNING: ./tests/list_algos_zed_tests
 DEBUG tests/list_algos_zed_tests.c:85: ----- test_bubble_sort
 DEBUG tests/list_algos_zed_tests.c:86: ----- test_merge_sort

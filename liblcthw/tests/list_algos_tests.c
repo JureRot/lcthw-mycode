@@ -125,12 +125,42 @@ char *test_merge_sort() {
     return NULL;
 }
 
+char *test_insert_sorted() {
+    List *words = create_words();
+
+    int rc = List_bubble_sort(words, (List_compare) strcmp);
+
+    //insert beginning
+    List_insert_sorted(words, "01", (List_compare) strcmp);
+    mu_assert(List_count(words) == NUM_VALUES+1, "insert_sorted didn't insert value/increase count when inserting to beginning.");
+    mu_assert(is_sorted(words), "Words are not sorted after insert_sorted.");
+    mu_assert(strcmp(words->first->value, "01") == 0, "insert_sorted didn't insert to right spot at the beginning.");
+
+    //insert end
+    List_insert_sorted(words, "zz", (List_compare) strcmp);
+    mu_assert(List_count(words) == NUM_VALUES+2, "insert_sorted didn't insert value/increase count when inserting to end.");
+    mu_assert(is_sorted(words), "Words are not sorted after insert_sorted.");
+    mu_assert(strcmp(words->last->value, "zz") == 0, "insert_sorted didn't insert to right spot at the end.");
+
+    //insert middle
+    List_insert_sorted(words, "02", (List_compare) strcmp);
+    mu_assert(List_count(words) == NUM_VALUES+3, "insert_sorted didn't insert value/increase count when inserting to middle.");
+    mu_assert(is_sorted(words), "Words are not sorted after insert_sorted.");
+    mu_assert(strcmp(words->first->next->value, "02") == 0, "insert_sorted didn't insert to right spot in the middle.");
+
+    List_destroy(words);
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
     mu_run_test(test_bubble_sort_complicated);
     mu_run_test(test_bubble_sort);
     mu_run_test(test_merge_sort);
+    // Extra credit
+    mu_run_test(test_insert_sorted);
 
     // Extra Credit
     // time testing

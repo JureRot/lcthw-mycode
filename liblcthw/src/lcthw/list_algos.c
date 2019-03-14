@@ -244,10 +244,40 @@ error:
 
 // Extra Credit
 void List_insert_sorted(List *list, void *value, List_compare cmp) {
+    //we assume the list is sorted (maybe we could have a chekc for that but we dont have is_sorted func)
     check(list, "Can't insert value into NULL list using compare function.");
     check(value, "Can't insert NULL value into list using compare function.");
     check(cmp, "Can't insert value into list using NULL compare function.");
 
-error: //fallthrough (even if not needed)
+    //we first check if smaller than first or bigger than last (so we can just unshift of push) (we would have to chekc if prev or next null in the foreach anyway)
+    if ((List_count(list) == 0) || (cmp(value, List_first(list)) <= 0)) { //if list is empty or value smaller or equal to first element we insert to the beginning
+        List_unshift(list, value);
+        goto error; //this is just return (not an error)
+    }
+    if (cmp(value, List_last(list)) > 0) { //if value bigger than the last element we insert it to the end
+        List_push(list, value);
+        goto error; //just to return
+    }
+    //we do this mainly if we fill a list in sorted way (so every new insert will be bigger than the prev biggest (will be pushed to the end)) and so we dont need to go over the whole list every time
+
+    ListNode *node = calloc(1, sizeof(ListNode)); //create the node
+    check_mem(node);
+
+    node->value = value; //and set its value
+
+    LIST_FOREACH(list, first, next, cur) {
+        int cmp_result = cmp(value, cur->value);
+        if (cmp(value, cur->value) <= 0) { //if value smaller of equal to cur, we insert it before cur
+            //cur cant be first or last (we sort that out above)
+            node->next = cur;
+            node->prev = cur->prev;
+            cur->prev->next = node;
+            cur->prev = node;
+            list->count++;
+            break;
+        }
+    }
+
+error: //fallthrough
     return;
 }
