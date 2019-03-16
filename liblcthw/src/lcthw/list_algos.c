@@ -281,3 +281,24 @@ void List_insert_sorted(List *list, void *value, List_compare cmp) {
 error: //fallthrough
     return;
 }
+
+List *List_merge_bottom_up(List *list, List_compare cmp) {
+    check(list, "Can't bottom-up merge sort NULL list using compare function.");
+    check(cmp, "Can't bottom-up merge sort list using NULL compare function.");
+
+    for (int width=1; width<List_count(list); width*=2) {
+        for (int i=0; i<List_count(list); i += 2*width) {
+            printf("width: %d, i: %d\n", width, i);
+            //treba merge sortat del of i dolzine width in i+with dolzine width skp
+            //ce se list krajsi od omenjene se more to upostevat
+            //sam ne vem kko naj to nardim ker ni to array
+            //ne vem ce se sploh da na dost eleganten in preprost nacin
+        }
+    }
+
+
+    return list;
+
+error:
+    return NULL;
+}

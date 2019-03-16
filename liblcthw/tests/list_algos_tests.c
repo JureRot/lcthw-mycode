@@ -153,6 +153,26 @@ char *test_insert_sorted() {
     return NULL;
 }
 
+char *test_merge_bottom_up() {
+    List *words = create_words();
+
+    // should work on list that needs sorting
+    List *res = List_merge_bottom_up(words, (List_compare) strcmp);
+    mu_assert(is_sorted(res), "Words are not sorted after bottom-up merge sort");
+    mu_assert(List_count(res) == NUM_VALUES, "Bottom-up merge sort didn't return the full list.");
+
+    List *res2 = List_merge_bottom_up(res, (List_compare) strcmp);
+    mu_assert(is_sorted(res2), "Should still be sorted after bottom-up merge sort on sorted.");
+    mu_assert(List_count(res2) == NUM_VALUES, "Lenght of list should still be the same after bottom-up merge sort on sorted.");
+
+    List_destroy(res2);
+    //List_destroy(res); //don't need to destroy those because our List_merge_sort() does that for us
+    //List_destroy(words);
+    //may need to uncoment for zeds version
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
@@ -160,6 +180,7 @@ char *all_tests() {
     mu_run_test(test_bubble_sort);
     mu_run_test(test_merge_sort);
     // Extra credit
+    //mu_run_test(test_merge_bottom_up); //ne vem ce se da
     mu_run_test(test_insert_sorted);
 
     // Extra Credit
