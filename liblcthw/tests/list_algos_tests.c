@@ -180,7 +180,7 @@ char *all_tests() {
     mu_run_test(test_bubble_sort);
     mu_run_test(test_merge_sort);
     // Extra credit
-    //mu_run_test(test_merge_bottom_up); //ne vem ce se da
+    //mu_run_test(test_merge_bottom_up); //not done
     mu_run_test(test_insert_sorted);
 
     // Extra Credit

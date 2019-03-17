@@ -282,10 +282,30 @@ error: //fallthrough
     return;
 }
 
+//gets first node node and the widht of the section
+//sorts section from first and lendght 2*width
+//if list ends before that, we account for that
+//we return the pointer to the last node in this selection
+ListNode *swap_section(List *list, ListNode *first, int width) {
+    check(first, "Can't use NULL a the first reference");
+
+    //we will build a new list that has just that section but sorted (usint push)
+    //we will connect it to the original list (before first -> section -> after first+2*width)
+    //or if it the whole list, we just change list pointer to the secetion
+
+    //fk this its hard using linked lists
+
+    return first;
+
+error:
+    return NULL;
+}
+
 List *List_merge_bottom_up(List *list, List_compare cmp) {
     check(list, "Can't bottom-up merge sort NULL list using compare function.");
     check(cmp, "Can't bottom-up merge sort list using NULL compare function.");
 
+    /*
     for (int width=1; width<List_count(list); width*=2) {
         for (int i=0; i<List_count(list); i += 2*width) {
             printf("width: %d, i: %d\n", width, i);
@@ -295,6 +315,9 @@ List *List_merge_bottom_up(List *list, List_compare cmp) {
             //ne vem ce se sploh da na dost eleganten in preprost nacin
         }
     }
+    */
+
+    ListNode *new = swap_section(list, list->first, 3);
 
 
     return list;
