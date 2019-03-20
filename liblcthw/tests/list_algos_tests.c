@@ -128,7 +128,8 @@ char *test_merge_sort() {
 char *test_insert_sorted() {
     List *words = create_words();
 
-    int rc = List_bubble_sort(words, (List_compare) strcmp);
+    //int rc = List_bubble_sort(words, (List_compare) strcmp);
+    List_bubble_sort(words, (List_compare) strcmp); //dont need the variable
 
     //insert beginning
     List_insert_sorted(words, "01", (List_compare) strcmp);
@@ -153,6 +154,7 @@ char *test_insert_sorted() {
     return NULL;
 }
 
+/* -- NOT IMPLEMENTED --
 char *test_merge_bottom_up() {
     List *words = create_words();
 
@@ -172,6 +174,7 @@ char *test_merge_bottom_up() {
 
     return NULL;
 }
+*/
 
 char *all_tests() {
     mu_suite_start();
@@ -180,7 +183,7 @@ char *all_tests() {
     mu_run_test(test_bubble_sort);
     mu_run_test(test_merge_sort);
     // Extra credit
-    //mu_run_test(test_merge_bottom_up); //not done
+    //mu_run_test(test_merge_bottom_up); //not implemented
     mu_run_test(test_insert_sorted);
 
     // Extra Credit

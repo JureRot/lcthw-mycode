@@ -17,7 +17,6 @@ List *List_merge_sort(List *list, List_compare cmp);
 void List_insert_sorted(List* list, void *value, List_compare cmp);
 
 //gets a list and a compariation function and returns a new list sorted uising bottom up merge sort
-//NOT IMPLEMENTED
-List *List_merge_bottom_up(List *list, List_compare cmp);
+//List *List_merge_bottom_up(List *list, List_compare cmp); //NOT IMPLEMENTED
 
 #endif

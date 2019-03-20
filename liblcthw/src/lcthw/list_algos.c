@@ -110,7 +110,8 @@ int List_bubble_sort_complicated(List *list, List_compare cmp) {
     return 0;
 
 error:
-    return NULL; //dont know if i can return NULL or should i exit(1)
+    //return NULL; //dont know if i can return NULL or should i exit(1)
+    return -1;
 }
 
 int List_bubble_sort(List *list, List_compare cmp) { //bubble sort using simple swap_nodes and LIST_FOREACH but still optimized
@@ -144,7 +145,8 @@ int List_bubble_sort(List *list, List_compare cmp) { //bubble sort using simple 
     return 0;
 
 error:
-    return NULL; //dont know if i can return NULL or should i exit(1)
+    //return NULL; //dont know if i can return NULL or should i exit(1)
+    return -1;
 }
 
 //gets two already sorted arrays and joins them into one sorted aray using cmp to compare values
@@ -266,7 +268,7 @@ void List_insert_sorted(List *list, void *value, List_compare cmp) {
     node->value = value; //and set its value
 
     LIST_FOREACH(list, first, next, cur) {
-        int cmp_result = cmp(value, cur->value);
+        //int cmp_result = cmp(value, cur->value);
         if (cmp(value, cur->value) <= 0) { //if value smaller of equal to cur, we insert it before cur
             //cur cant be first or last (we sort that out above)
             node->next = cur;
@@ -282,6 +284,7 @@ error: //fallthrough
     return;
 }
 
+/* -- MERGE BOTTOM-UP IS HARD TO IMPLEMENT ON DOUBLELINKED LIST --
 //gets first node node and the widht of the section
 //sorts section from first and lendght 2*width
 //if list ends before that, we account for that
@@ -305,7 +308,6 @@ List *List_merge_bottom_up(List *list, List_compare cmp) {
     check(list, "Can't bottom-up merge sort NULL list using compare function.");
     check(cmp, "Can't bottom-up merge sort list using NULL compare function.");
 
-    /*
     for (int width=1; width<List_count(list); width*=2) {
         for (int i=0; i<List_count(list); i += 2*width) {
             printf("width: %d, i: %d\n", width, i);
@@ -315,7 +317,6 @@ List *List_merge_bottom_up(List *list, List_compare cmp) {
             //ne vem ce se sploh da na dost eleganten in preprost nacin
         }
     }
-    */
 
     ListNode *new = swap_section(list, list->first, 3);
 
@@ -325,3 +326,4 @@ List *List_merge_bottom_up(List *list, List_compare cmp) {
 error:
     return NULL;
 }
+*/

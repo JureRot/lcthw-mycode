@@ -7,11 +7,11 @@ DEBUG tests/darray_tests.c:107: ----- test_remove
 DEBUG tests/darray_tests.c:108: ----- test_expand_contract
 DEBUG tests/darray_tests.c:109: ----- test_push_pop
 DEBUG tests/darray_tests.c:110: ----- test_destroy
-DEBUG tests/list_algos_tests.c:510: ----- RUNNING: ./tests/list_algos_tests
-DEBUG tests/list_algos_tests.c:179: ----- test_bubble_sort_complicated
-DEBUG tests/list_algos_tests.c:180: ----- test_bubble_sort
-DEBUG tests/list_algos_tests.c:181: ----- test_merge_sort
-DEBUG tests/list_algos_tests.c:184: ----- test_insert_sorted
+DEBUG tests/list_algos_tests.c:513: ----- RUNNING: ./tests/list_algos_tests
+DEBUG tests/list_algos_tests.c:182: ----- test_bubble_sort_complicated
+DEBUG tests/list_algos_tests.c:183: ----- test_bubble_sort
+DEBUG tests/list_algos_tests.c:184: ----- test_merge_sort
+DEBUG tests/list_algos_tests.c:187: ----- test_insert_sorted
 DEBUG tests/list_algos_zed_tests.c:91: ----- RUNNING: ./tests/list_algos_zed_tests
 DEBUG tests/list_algos_zed_tests.c:85: ----- test_bubble_sort
 DEBUG tests/list_algos_zed_tests.c:86: ----- test_merge_sort
