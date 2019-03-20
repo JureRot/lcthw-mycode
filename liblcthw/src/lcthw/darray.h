@@ -6,6 +6,14 @@
 #include <lcthw/dbg.h>
 //#include "dbg.h" //for writing only
 
+//typedef structure of darray
+//int end is the index of the first free element in contents (after the last element)
+//int max is the index/number of the max number of elements in contents
+//size_t element_size is the sizeof data type in contents
+//size_t expand_rate is the rate for expand and contract
+//void **contents is the pointer to the void pointer build sequentially (void pointer acting as array (block of memory of pointers))
+//    so contents is a pointer to the first void pointer in the block of memory of size(element_size * max) (that void pointer can be of any type and points to the actual value of that element)
+//    it doesn't mean to be completely full, the end var tells us how much it is full
 typedef struct DArray {
     int end;
     int max;
