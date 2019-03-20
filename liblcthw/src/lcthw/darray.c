@@ -33,6 +33,8 @@ error:
 
 //goes over the whole array and frees every value in contents that is not NULL
 void DArray_clear(DArray *array) {
+    check(array, "Can't clear NULL array.");
+
     //int i = 0;
     if (array->element_size > 0) {
         for (int i=0; i < array->max; i++) {
@@ -41,6 +43,9 @@ void DArray_clear(DArray *array) {
             }
         }
     }
+
+error: //fallthrough
+    return;
 }
 
 //helping inline function for resizing
@@ -52,6 +57,8 @@ void DArray_clear(DArray *array) {
 //and assigns array->contents to the new location
 //returns 0 on success, -1 on error
 static inline int DArray_resize(DArray *array, size_t newsize) {
+    check(array, "Can't resize NULL array.");
+
     array->max = newsize;
     check(array->max > 0, "The newsize must be more thant zero.");
 
@@ -71,6 +78,8 @@ error:
 //expands the array to old_max + expand_rate (using resize help inline func) and sets the memory from old_max to new_max to zero
 //returns 0 on success, -1 on error
 int DArray_expand(DArray *array) {
+    check(array, "Can't expand NULL array.");
+
     size_t old_max = array->max;
     check(DArray_resize(array, array->max + array->expand_rate) == 0, "Failed to expand array to new size: %d", array->max + (int)array->expand_rate);
 
@@ -87,25 +96,40 @@ error:
 //    if end bigger (there is more elements than expand_rate), we set to the min size of array (which is end (number of elements in it))
 //returns o on success, -1 on error
 int DArray_contract(DArray *array) {
+    check(array, "Can't contract NULL array.");
+
     int new_size = array->end < (int)array->expand_rate ? (int)array->expand_rate : array->end;
 
     return DArray_resize(array, new_size + 1);
+
+error:
+    return -1;
 }
 
 //frees contents block and the array itself
 void DArray_destroy(DArray *array) {
+    check(array, "Can't destroy NULL array.");
+
     if (array) {
         if (array->contents) {
             free(array->contents);
         }
         free(array);
     }
+
+error: //fallthrough
+    return;
 }
 
 //clears the contents and destroy the contents and array
 void DArray_clear_destroy(DArray *array) {
+    check(array, "Can't clear and destroy NULL array.");
+
     DArray_clear(array);
     DArray_destroy(array);
+
+error: //fallthrough
+    return;
 }
 
 //pushes el element to the end of the array
@@ -113,6 +137,9 @@ void DArray_clear_destroy(DArray *array) {
 //and expands the array if neccessary (if end/num elements equal or greater than max elements)
 //returns 0 on success, -1 on error (from DArray_expand)
 int DArray_push(DArray *array, void *el) {
+    check(array, "Can't push element to NULL array.");
+    //check(array, "Can't push NULL element to array."); //we could allow NULL values
+
     array->contents[array->end] = el;
     array->end++;
 
@@ -121,6 +148,9 @@ int DArray_push(DArray *array, void *el) {
     } else {
             return 0;
     }
+
+error:
+    return -1;
 }
 
 //removes the last element in array
@@ -128,6 +158,7 @@ int DArray_push(DArray *array, void *el) {
 //and contracts the array if neccessary (I DONT UNDERSTAND THE MODULO HERE)
 //retuns value of popped element on success, NULL on error (problem if value of element is NULL, we can't detect error)
 void *DArray_pop(DArray *array) {
+    check(array, "Can't pop from NULL array.");
     check(array->end - 1 >= 0, "Attempt to pop from empty darray.");
 
     void *el = DArray_remove(array, array->end - 1);
@@ -146,3 +177,18 @@ error:
 //basically we have nondynamic array (a block of memory filled with pointers to the actual values)encasted in out strucutre
 //this structure allows us to expand and contract this nondynamic array so that it appears dynamic
 //it also allows us to acces and fill the array and all that jazz
+
+//darray pros:
+//    iteration: we can for-loop over and dont need to walk throu the pointer (just over them by increasing one)
+//    indexing: you can access specific element in array without the need to iterate over all of elements infront of it
+//    destroying: you can just free the contents and the array, in the list you need to walk over it the whole list and free every node, and than free the list
+//    coloning: we can just clone the contents and the struct, dont need to iterate over every element in it
+//    sorting: because we can access individual elements directly, we have much more efficient and more sorting algorithms
+//    large data: when storing large amount of data we dont have the overhead of storing two additional pointers for every element
+//darray cons:
+//    insert/remove front (shift/unshift): hard to do it efficiently, and usually need to copy all the values
+//    spliting/joining: with linked list we just change a few pointers, here using array we need to copy the values that are split or joined
+//    small data: when storing small amounts of data the list will be better because it has only what it needs, while array has some overhead for future inserts
+
+//thats why dynamic array is usually more useful of a data structure in every-day coding
+//use list for when we need stack or queue
