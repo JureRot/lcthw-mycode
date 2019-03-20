@@ -64,7 +64,7 @@ static inline void *DArray_get(DArray *array, int i) {
     return array->contents[i];
 
 error:
-    return;
+    return NULL;
 }
 
 static inline void *DArray_remove(DArray *array, int i) {
