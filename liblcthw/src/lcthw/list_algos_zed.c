@@ -1,7 +1,8 @@
 #include <lcthw/list_algos_zed.h>
 #include <lcthw/dbg.h>
 
-inline void ListNode_swap(ListNode *a, ListNode *b) {
+//SHOULD BE INLINE BUT DOESN'T WORK ON MAC (inline void ListNode_swap(...) {...})
+void ListNode_swap(ListNode *a, ListNode *b) {
     void *temp = a->value;
     a->value = b->value;
     b->value = temp;
@@ -32,7 +33,8 @@ int List_bubble_sort_zed(List *list, List_compare cmp) {
     //basically runs over whole list until in whole iteration no change; ergo its sorted
 }
 
-inline List *List_merge(List *left, List *right, List_compare cmp) {
+//SHOULD BE INLINE BUT DOESN'T WORK ON MAC (inline List *List_merge(...) {...})
+List *List_merge(List *left, List *right, List_compare cmp) {
     List *result = List_create();
     void *val = NULL;
 

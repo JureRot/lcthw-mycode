@@ -53,7 +53,8 @@ error:
 //because value is just a pointer is just logical to just swap those
 //IM STUPID (think before you code ffs)
 
-inline void swap_nodes(ListNode *a, ListNode *b) { //simple, just swap the values (by zed)
+//SHOULD BE INLINE BUT DOESN'T WORK ON MAC (inline void swap_nodes(...) {...})
+void swap_nodes(ListNode *a, ListNode *b) { //simple, just swap the values (by zed)
     check(a && b, "Can't swap NULL nodes in list.");
     check(a->next == b, "b does not follow a.");
 
