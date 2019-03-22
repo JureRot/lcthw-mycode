@@ -7,7 +7,7 @@
 //#include "dbg.h" //for writing only
 
 //typedef structure of darray
-//int end is the index of the first free element in contents (after the last element)
+//int end is the index of the first free element in contents (after the last element) -> same as number of elements in array
 //int max is the index/number of the max number of elements in contents
 //size_t element_size is the sizeof data type in contents
 //size_t expand_rate is the rate for expand and contract

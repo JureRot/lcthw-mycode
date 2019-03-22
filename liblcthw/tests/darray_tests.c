@@ -97,6 +97,46 @@ char *test_push_pop() {
     return NULL;
 }
 
+//ec
+char *test_first_last() {
+    //create darray
+    array = DArray_create(sizeof(int), 100);
+    //push some values
+    for (int i=1; i<4; i++) {
+        int *val = DArray_new(array);
+        *val = i;
+        DArray_push(array, val);
+    }
+
+    mu_assert(*(int *)DArray_first(array) == 1, "First value is not right.");
+    mu_assert(*(int *)DArray_get(array, 1) == 2, "Second value is not right.");
+    mu_assert(*(int *)DArray_last(array) == 3, "Last value is not right.");
+    //need to do *(int *) because first, last and get return a void * to the element so we need to cast it to an actual poiter type (int *) and get the value of it *
+
+    DArray_clear_destroy(array);
+
+    return NULL;
+}
+
+char *test_end_count_max() {
+    //create darray
+    array = DArray_create(sizeof(int), 100);
+    //push some values
+    for (int i=1; i<4; i++) {
+        int *val = DArray_new(array);
+        *val = i;
+        DArray_push(array, val);
+    }
+
+    mu_assert(DArray_end(array) == 3, "Wrong end value.");
+    mu_assert(DArray_count(array) == 3, "Wrong count value.");
+    mu_assert(DArray_max(array) == 100, "Wrong max value.");
+
+    DArray_clear_destroy(array);
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
@@ -108,6 +148,9 @@ char *all_tests() {
     mu_run_test(test_expand_contract);
     mu_run_test(test_push_pop);
     mu_run_test(test_destroy);
+    // Extra Credit
+    mu_run_test(test_first_last);
+    mu_run_test(test_end_count_max);
 
     return NULL;
 }
