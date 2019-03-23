@@ -152,6 +152,10 @@ char *all_tests() {
     mu_run_test(test_first_last);
     mu_run_test(test_end_count_max);
 
+    //other Extra Credit
+    //there should be some other performance tests using time.h but that is just alot of wirting and i've done something like that list_alogs_tests so i don't want do do it again
+    //another thing is to have darray_expand and darray_contract work not by static amoutn but by 2x or something like that and again to test that (again something i dont have the will to do rn)
+
     return NULL;
 }
 
