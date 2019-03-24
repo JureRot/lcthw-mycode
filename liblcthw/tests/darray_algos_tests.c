@@ -6,6 +6,8 @@
 int testcmp(char **a, char **b) {
     return strcmp(*a, *b);
 }
+//char ** because qsort gives pointer to the pointers in contents
+//qsort, heapsort and merge sort are scanning the array and handing pointers to each element in the array to your comparison function. since we have pointers in contents this is a pointer to a pointer (thus char **)
 
 DArray *create_words() {
     DArray *result = DArray_create(0, 5);
