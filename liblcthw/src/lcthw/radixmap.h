@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h> //size_t defined in stdlib, not stdint
 
+
 typedef union RMElement {
     uint64_t raw;
     struct {

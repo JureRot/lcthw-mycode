@@ -1,7 +1,7 @@
 #include "minunit.h"
 #include <lcthw/darray_algos.h>
-#include "../src/lcthw/darray_algos.h" //just for writting
-#include "../src/lcthw/darray.h" //just for writting
+//#include "../src/lcthw/darray_algos.h" //just for writting
+//#include "../src/lcthw/darray.h" //just for writting
 
 int testcmp(char **a, char **b) {
     return strcmp(*a, *b);
