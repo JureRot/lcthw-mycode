@@ -1,5 +1,5 @@
-CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)
-LDFLAGS=$(OPTLIBS)
+CFLAGS=-g -O2 -Wall -Wextra -Isrc $(shell pkg-config --cflags libbsd) -rdynamic -DNDEBUG $(OPTFLAGS)
+LDFLAGS=$(shell pkg-config --libs libbsd) -ldl $(OPTLIBS)
 PREFIX?=/usr/local
 
 SOURCES=$(wildcard src/**/*.c src/*.c)
@@ -18,7 +18,7 @@ SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 
 all: $(TARGET) $(SO_TARGET) tests
 
-dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
+dev: CFLAGS=-g -Wall -Isrc -Wextra %(shell pkg-config --cflags libbsd) $(OPTFLAGS)
 dev: all
 
 $(TARGET): CFLAGS += -fPIC
