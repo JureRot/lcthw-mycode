@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <lcthw/radixmap.h>
-#include "radixmap.h" //for writing only
+//#include "radixmap.h" //for writing only
 #include <lcthw/dbg.h>
-#include "dbg.h" //for writing only
+//#include "dbg.h" //for writing only
 
 RadixMap *RadixMap_create(size_t max) {
     RadixMap *map = calloc(1, sizeof(RadixMap));
