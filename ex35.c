@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
 
 typedef enum {
     TYPE_INT,
@@ -22,10 +24,12 @@ struct Variant {
 typedef struct Variant Variant; //don't know what this is  //don't know what this is
 
 struct Testing { //for testing something
-    int bla;
     union {
-        int a;
-        int b;
+        uint16_t ab;
+        struct {
+            uint8_t a;
+            uint8_t b;
+        } sub;
     } data;
 };
 typedef struct Testing Testing;
@@ -71,11 +75,27 @@ int main(int argc, char *argv[]) {
     printf("test int: %f\n", test.data.as_float);
     //you can see that after assigning as_float we muddled the as_int because they share the same memory
 
-    Testing test2 = { .bla = 0, .data.a = 123 };
-    printf("\ntest2 a: %d, b: %d\n", test2.data.a, test2.data.b);
-    test2.data.b = 321;
-    printf("after change test2 a: %d, b: %d\n", test2.data.a, test2.data.b);
-    //I DONT UNDERSTAND HOW WE USE UNION KEY AND VALUE IN RADIXMAP IF ASSIGNING THE FIRST RUINS THE SECOND
+    Testing test2 = { .data.ab = 1 };
+    printf("\ntest2 ab : %d, a: %d, b: %d\n", test2.data.ab, test2.data.sub.a, test2.data.sub.b);
+
+    //change ab
+    printf("change ab\n");
+    test2.data.ab = 2;
+    printf("test2 ab : %d, a: %d, b: %d\n", test2.data.ab, test2.data.sub.a, test2.data.sub.b);
+
+    //change a
+    printf("change a\n");
+    test2.data.sub.a = 4;
+    printf("test2 ab : %d, a: %d, b: %d\n", test2.data.ab, test2.data.sub.a, test2.data.sub.b);
+
+    //change b
+    printf("change b\n");
+    test2.data.sub.b = 8;
+    printf("test2 ab : %d, a: %d, b: %d\n", test2.data.ab, test2.data.sub.a, test2.data.sub.b);
+
+    //OK I THINK I GET IT BUT ITS A BIT WEIRD TO WORK WITH THAT
+    //NEED TO WRAP YOUR HEAD AROUND ALL OF THIS
+    //interesting the b is upper bites and a is the lower ones
 
     return 0;
 }
