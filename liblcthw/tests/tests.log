@@ -1,3 +1,10 @@
+DEBUG tests/darray_algos_tests.c:65: ----- RUNNING: ./tests/darray_algos_tests
+DEBUG tests/darray_algos_tests.c:60: ----- test_qsort
+DEBUG tests/darray_algos_tests.c:35: --- Testing qsort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:61: ----- test_heapsort
+DEBUG tests/darray_algos_tests.c:35: --- Testing heapsort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:62: ----- test_mergesort
+DEBUG tests/darray_algos_tests.c:35: --- Testing mergesort sorting algorithm ---
 DEBUG tests/darray_tests.c:162: ----- RUNNING: ./tests/darray_tests
 DEBUG tests/darray_tests.c:143: ----- test_create
 DEBUG tests/darray_tests.c:144: ----- test_new
