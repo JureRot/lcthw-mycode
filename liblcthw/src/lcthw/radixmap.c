@@ -34,7 +34,7 @@ void RadixMap_destroy(RadixMap *map) {
     if (map) {
         free(map->contents);
         free(map->temp);
-        free(map->contents);
+        free(map);
     }
 }
 
