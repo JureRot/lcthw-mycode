@@ -186,6 +186,7 @@ RMElement *RadixMap_find(RadixMap *map, uint32_t to_find) { //binary search
     //if middle equal; we found our element
     //our half is now our whole array
     //repeat
+    //if we exit the loop, it doesn't exist
 
     return NULL;
 }
@@ -218,14 +219,18 @@ int RadixMap_delete(RadixMap *map, RMElement *el) {
     check(el != NULL, "Can't delete a NULL element.");
 
     el->data.key = UINT32_MAX; //we set elements key to max (our domain is until including max-1, so this is out of our domain (cant be searched or sorted))
-    //DONT KNOW HOW THIS IS HELPING (POINTER STILL IN MAP.CONTENTS)
+    //
+    //basically we set the key to the max possible value (but this is one more than its allowed for add and find)
+    //when we sort after this, element will be pushed all the way to the end
+    //but because we decrease the map->end after, it will seem as if there is nothing there
+    //if we add new elements, they will just override our old deleted ones
 
     if (map->end > 1) {
         // don't bother re-sorting a map of lenght 1
         RadixMap_sort(map); //we sort our new array without element
     }
 
-    map->end--;
+    map->end--; //we decrease end after sorting, so the deleted element is pushed to the end, and than we "snipp" it of
 
     return 0;
 

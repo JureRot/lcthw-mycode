@@ -145,6 +145,10 @@ char *all_tests() {
     mu_run_test(test_to_understand_radix); //run to understand the working
     mu_run_test(test_to_understand_random);
 
+    //add timing
+    //improve RadixMap_add by only sorting from lowest possible location of the new key till the end of the arry (not the whole array all the time)
+    //improve RadixMap_add by only sorting in the range between smallest and biggest key
+
     return NULL;
 }
 
