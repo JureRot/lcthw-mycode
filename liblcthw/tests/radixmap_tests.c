@@ -94,7 +94,7 @@ void print_map(RadixMap *map) {
 
 }
 
-char *test_to_understand() {
+char *test_to_understand_radix() {
     RadixMap *map = RadixMap_create(6);
     mu_assert(map != NULL, "fail on create");
     mu_assert(map->max == 6, "wrong max");
@@ -122,12 +122,28 @@ char *test_to_understand() {
     return NULL;
 }
 
+char *test_to_understand_random() {
+    uint32_t rng = rand();
+    //printf("rng: %" PRIu32 ", shifted: %" PRIu32 ", or rand: %" PRIu32 "\n", rng, rng<<16, rng | rng<<16);
+
+    //rng | rng<<16 would look something like that
+    //in the above code we dont use the same random number twice (we get two different ones)
+    //
+    //    0001000101011001 0011100000001100 (rng)
+    // or 0011100000001100 0000000000000000 (shifted)
+    //    ---------------------------------
+    //    0011100101011101 0011100000001100 (ORd (or key in the above code))
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
     srand(time(NULL));
 
     mu_run_test(test_operations);
-    mu_run_test(test_to_understand); //run to understand the working
+    mu_run_test(test_to_understand_radix); //run to understand the working
+    mu_run_test(test_to_understand_random);
 
     return NULL;
 }

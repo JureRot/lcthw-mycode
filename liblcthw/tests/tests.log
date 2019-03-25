@@ -34,6 +34,7 @@ DEBUG tests/list_tests.c:203: ----- test_split
 DEBUG tests/list_tests.c:204: ----- test_remove
 DEBUG tests/list_tests.c:205: ----- test_shift
 DEBUG tests/list_tests.c:206: ----- test_destroy
-DEBUG tests/radixmap_tests.c:135: ----- RUNNING: ./tests/radixmap_tests
-DEBUG tests/radixmap_tests.c:129: ----- test_operations
-DEBUG tests/radixmap_tests.c:130: ----- test_to_understand
+DEBUG tests/radixmap_tests.c:151: ----- RUNNING: ./tests/radixmap_tests
+DEBUG tests/radixmap_tests.c:144: ----- test_operations
+DEBUG tests/radixmap_tests.c:145: ----- test_to_understand_radix
+DEBUG tests/radixmap_tests.c:146: ----- test_to_understand_random
