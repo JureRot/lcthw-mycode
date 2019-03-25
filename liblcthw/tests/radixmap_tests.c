@@ -2,6 +2,7 @@
 #include <lcthw/radixmap.h>
 //#include "../src/lcthw/radixmap.h" //just for writing
 #include <time.h>
+#include <inttypes.h>
 
 static int make_random(RadixMap *map) {
     size_t i = 0;
@@ -85,11 +86,48 @@ static char *test_operations() {
     return NULL;
 }
 
+void print_map(RadixMap *map) {
+    for (int i=0; i<map->end; i++) {
+        printf("i: %d, raw: %" PRIu64 ", key: %" PRIu32", value= %" PRIu32"\n", i, map->contents[i].raw, map->contents[i].data.key, map->contents[i].data.value);
+    }
+    printf("\n");
+
+}
+
+char *test_to_understand() {
+    RadixMap *map = RadixMap_create(6);
+    mu_assert(map != NULL, "fail on create");
+    mu_assert(map->max == 6, "wrong max");
+    mu_assert(map->end == 0, "wrong end/num_elements");
+
+    mu_assert(RadixMap_add(map, 302, 3) == 0, "failed on first add");
+    //print_map(map);
+    mu_assert(RadixMap_add(map, 303, 1) == 0, "failed on second add");
+    //print_map(map);
+    mu_assert(RadixMap_add(map, 301, 4) == 0, "failed on third add");
+    //print_map(map);
+    mu_assert(RadixMap_add(map, 304, 1) == 0, "failed on fourth add");
+    //print_map(map);
+    mu_assert(RadixMap_add(map, 305, 123) == 0, "failed on fifht add");
+    //print_map(map);
+
+    //raw je sestavlen iz value-ja in key-ja
+    //ce sta value in key 4-mestna in raw 8-mesten
+    //recmo da je key 123 in value 456 je raw 04560123 (najprej value nato key)
+    //(to je isto predstavljen v ex35.c kjer so b biti levi od a v ab)
+    //ocitno struct-i tko delajo (od odspodi navzgor)
+
+    RadixMap_destroy(map);
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
     srand(time(NULL));
 
     mu_run_test(test_operations);
+    mu_run_test(test_to_understand); //run to understand the working
 
     return NULL;
 }

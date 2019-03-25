@@ -36,7 +36,7 @@ RadixMap *RadixMap_create(size_t max);
 //destroys RadixMap (contents, temp and map itself)
 void RadixMap_destroy(RadixMap *map);
 
-//sorts the RedixMap
+//sorts the RedixMap by key of RMElement
 void RadixMap_sort(RadixMap *map);
 
 //finds element in RadixMap by key
@@ -44,7 +44,7 @@ void RadixMap_sort(RadixMap *map);
 RMElement *RadixMap_find(RadixMap *map, uint32_t key);
 
 //adds new elements with key and value to the array
-//makes sure the array stays sorted
+//makes sure the array stays sorted by key
 //returns 0 on success, -1 on error
 int RadixMap_add(RadixMap *map, uint32_t key, uint32_t value);
 
