@@ -63,7 +63,7 @@ static char *test_operations() {
     mu_assert(make_random(map), "Didn't make a random fake RadixMap.");
 
     RadixMap_sort(map);
-    mu_assert(check_order(map), "Failed to properlysort the RadixMap");
+    mu_assert(check_order(map), "Failed to properly sort the RadixMap");
 
     mu_assert(test_search(map), "Failed the search test.");
     mu_assert(check_order(map), "RadixMap didn't stay sorted after search.");
@@ -137,6 +137,60 @@ char *test_to_understand_random() {
     return NULL;
 }
 
+char *test_add_fast() {
+    RadixMap *map =RadixMap_create(15);
+
+    RadixMap_add(map, 4, 111);
+    RadixMap_add(map, 8, 222);
+    RadixMap_add(map, 9, 333);
+    RadixMap_add(map, 4, 444);
+    RadixMap_add(map, 6, 555);
+    RadixMap_add(map, 2, 666);
+    //a2b44cd6e8f9g
+    //tests:
+    //a) front
+    //b) before block of same
+    //c) in block of same (after but same)
+    //d) after block of same (after and different)
+    //e) between two values
+    //f) after one value (same as value, create block)
+    //g) end
+
+    //a
+    RadixMap_add_fast(map, 1, 999);
+    mu_assert(check_order(map), "wrong order after a)");
+    mu_assert(map->end == 7, "wrong order after a)");
+    //b
+    RadixMap_add_fast(map, 3, 999);
+    mu_assert(check_order(map), "wrong order after b)");
+    mu_assert(map->end == 8, "wrong order after b)");
+    //c
+    RadixMap_add_fast(map, 4, 999);
+    mu_assert(check_order(map), "wrong order after c)");
+    mu_assert(map->end == 9, "wrong order after c)");
+    //d
+    RadixMap_add_fast(map, 5, 999);
+    mu_assert(check_order(map), "wrong order after d)");
+    mu_assert(map->end == 10, "wrong order after d)");
+    //e
+    RadixMap_add_fast(map, 7, 999);
+    mu_assert(check_order(map), "wrong order after e)");
+    mu_assert(map->end == 11, "wrong order after e)");
+    //f
+    RadixMap_add_fast(map, 8, 999);
+    mu_assert(check_order(map), "wrong order after f)");
+    mu_assert(map->end == 12, "wrong order after f)");
+    //g
+    RadixMap_add_fast(map, 10, 999);
+    mu_assert(check_order(map), "wrong order after g)");
+    mu_assert(map->end == 13, "wrong order after g)");
+
+
+    RadixMap_destroy(map);
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
     srand(time(NULL));
@@ -145,8 +199,66 @@ char *all_tests() {
     mu_run_test(test_to_understand_radix); //run to understand the working
     mu_run_test(test_to_understand_random);
 
-    //add timing
-    //improve RadixMap_add by only sorting from lowest possible location of the new key till the end of the arry (not the whole array all the time)
+    // Extra Credit
+    //test add_fast
+    mu_run_test(test_add_fast);
+
+    printf("-- Extra Credit -- (uncomment in radixmap_tests.c to run (takes a few seconds))\n");
+/*
+    //some timing tests
+    clock_t start;
+    clock_t end;
+    RadixMap *map;
+
+    //normal add, many small arrays
+    start = clock();
+    for (int j=0; j<3000; j++) {
+        map = RadixMap_create(10);
+        for (int i=0; i<9; i++) {
+            RadixMap_add(map, (uint32_t)rand(), i);
+        }
+        RadixMap_destroy(map);
+    }
+    end = clock();
+    printf("normal many small (3000 times 10 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //probably alot of overhead because all of the create destroy
+
+    //normal add, one big add
+    start = clock();
+    map = RadixMap_create(30000);
+    for (int i=0; i<29999; i++) {
+        RadixMap_add(map, (uint32_t)rand(), i);
+    }
+    RadixMap_destroy(map);
+    end = clock();
+    printf("normal one big (30000 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //fast add, many small arrays
+    start = clock();
+    for (int j=0; j<3000; j++) {
+        map = RadixMap_create(10);
+        for (int i=0; i<9; i++) {
+            RadixMap_add_fast(map, (uint32_t)rand(), i);
+        }
+        RadixMap_destroy(map);
+    }
+    end = clock();
+    printf("fast many small (3000 times 10 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //probably alot of overhead because all of the create destroy
+
+    //fast add, one big add
+    start = clock();
+    map = RadixMap_create(30000);
+    for (int i=0; i<29999; i++) {
+        RadixMap_add_fast(map, (uint32_t)rand(), i);
+    }
+    RadixMap_destroy(map);
+    end = clock();
+    printf("fast one big (30000 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //THIS IS PRETTY MUCH TWICE AS FAST ON BIG ARRAYS (SMALL SPEED INCREASE ON SMALL ARRAYS)
+*/
+
     //improve RadixMap_add by only sorting in the range between smallest and biggest key
 
     return NULL;

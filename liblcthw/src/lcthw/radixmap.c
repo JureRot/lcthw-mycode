@@ -237,3 +237,54 @@ int RadixMap_delete(RadixMap *map, RMElement *el) {
 error:
     return -1;
 }
+
+int RadixMap_find_minimum(RadixMap *map, uint32_t to_find) { //binary search
+    int low = 0;
+    int high = map->end - 1;
+    RMElement *data = map->contents;
+    int minimum = NULL;
+
+    while (low <= high) {
+        int middle = low + (high - low) / 2;
+        uint32_t key = data[middle].data.key;
+
+        if (to_find <= key) {
+            high = middle - 1;
+            minimum = middle;
+        } else if (to_find > key) {
+            low = middle + 1;
+            minimum = middle;
+        }
+    }
+
+    return minimum;
+}
+
+//extra credit
+int RadixMap_add_fast(RadixMap *map, uint32_t key, uint32_t value) {
+    check(key < UINT32_MAX, "Key can't be greater or equal to UINT32_MAX.");
+
+    RMElement element = { .data = { .key = key, .value = value } };
+
+    //find the minimum position of the new element
+    int minimum = RadixMap_find_minimum(map, key);
+    //printf("min i: %d, key: %" PRIu32 ", value: %" PRIu32 "\n", minimum, map->contents[minimum].data.key, map->contents[minimum].data.value);
+
+    check(map->end+1 < map->max, "RadixMap is full.");
+
+    map->contents[map->end++] = element;
+
+    //sort only from the minimum till the end
+    uint64_t *source = &map->contents[minimum].raw; //we dont set the source and dest from zero
+    uint64_t *temp = &map->temp[minimum].raw;
+
+    radix_sort(0, map->end-minimum, source, temp); //we decrease the end by where we start
+    radix_sort(1, map->end-minimum, temp, source);
+    radix_sort(2, map->end-minimum, source, temp);
+    radix_sort(3, map->end-minimum, temp, source);
+
+    return 0;
+
+error:
+    return -1;
+}

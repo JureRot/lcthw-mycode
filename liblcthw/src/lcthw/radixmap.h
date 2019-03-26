@@ -52,4 +52,13 @@ int RadixMap_add(RadixMap *map, uint32_t key, uint32_t value);
 //returns 0 on success, -1 on error
 int RadixMap_delete(RadixMap *map, RMElement *el);
 
+//extra credit
+//faster add that doesnt sort the whole array just from the min till the end
+int RadixMap_add_fast(RadixMap *map, uint32_t key, uint32_t value);
+
+//THERE IS ANOTHER POSSIBLE IMPROVEMENT BUT I DO NOT UNDERSTAND IT
+//Keep track of the biggest key currently being used, and than only sort enough digits to handle that key. You can also keep track of the smallest number, and than only sort the digits necessary for the range. To do this, you'll have to start caring about CPU integer ordering (endianness)
+//
+//int RadixMap_add_fast2(RadixMap *map, uint32_t key, uint32_t value);
+
 #endif
