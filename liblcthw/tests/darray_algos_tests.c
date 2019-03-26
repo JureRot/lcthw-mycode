@@ -2,6 +2,7 @@
 #include <lcthw/darray_algos.h>
 //#include "../src/lcthw/darray_algos.h" //just for writting
 //#include "../src/lcthw/darray.h" //just for writting
+#include <time.h>
 
 int testcmp(char **a, char **b) {
     return strcmp(*a, *b);
@@ -64,6 +65,10 @@ char *test_my_heapsort() {
     return  run_sort_test(DArray_my_heapsort, "my_heapsort");
 }
 
+char *test_my_mergesort() {
+    return  run_sort_test(DArray_my_mergesort, "my_mergesort");
+}
+
 char *all_tests() {
     mu_suite_start();
 
@@ -74,14 +79,18 @@ char *all_tests() {
     // Extra Credit
     mu_run_test(test_my_qsort);
     mu_run_test(test_my_heapsort);
+    mu_run_test(test_my_mergesort);
 
-    //test my_mergesort
+    printf("-- Extra Credit -- (uncomment in darray_algos_tests.c to run (takes a few seconds))\n");
+
     //timing tests on all sorts
+    clock_t start;
+    clock_t end;
 
+    //add timing test for all 6 algos both many small sorts and one big
 
-    DArray *words = create_words();
-    int rc = DArray_my_heapsort(words, (DArray_compare) testcmp);
-    DArray_destroy(words);
+    //printf("fast one big (30000 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
 
     return NULL;
 }

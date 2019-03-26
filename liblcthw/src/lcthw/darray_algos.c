@@ -135,11 +135,78 @@ error:
     return -1;
 }
 
+#define min(a, b) (((a)<(b)) ? (a) : (b))
+
+void my_merge_parts(void **array, int first, int second, int after, void **dest, DArray_compare cmp) {
+    int i = first;
+    int end_of_first = second; //end_of_second is after
+
+    if (second == after) { //there is noting in second array
+        while (i<second) { //we write everything in first to dest (should be sorted)
+            dest[i++] = array[first++];
+        }
+        return; //and return to break
+    }
+    //this is ran when there is nothing in the second array
+    //this is probably when the array is not the square of 2 and there is some remaining elements at the end which are not enough to fill two of these arrays (maybe not even one)
+
+    while ((first < end_of_first) && (second < after)) {
+        if (cmp(&array[first], &array[second]) <= 0) { //if first smaller or equal
+            dest[i++] = array[first++];
+        } else { //if second smaller
+            dest[i++] = array[second++];
+        }
+    }
+
+    //we need to add the remaining of the nonempty part to dest
+    if (first == end_of_first) { //if first ran out of elements
+        while (second < after) {
+            dest[i++] = array[second++];
+        }
+
+    } else { //if second ran out of elements
+        while (first < end_of_first) {
+            dest[i++] = array[first++];
+        }
+    }
+
+}
+
 int DArray_my_mergesort(DArray *array, DArray_compare cmp) {
     check(array, "Can't use my_mergesort using compare function on NULL array.");
     check(cmp, "Can't use my_mergesort using NULL compare function on array.");
 
-    //BOTTOM-UP MERGE SORT WOULD BE BETTER HERE
+    for (int i=1; i<=array->end; i*=2) {
+        void **dest = calloc(array->max, sizeof(void *)); //we reserve place for sorted
+
+        for (int j=0; j<array->end; j+=2*i) {
+            my_merge_parts(array->contents, j, min(j+i, array->end), min(j+2*i, array->end), dest, cmp);
+        }
+
+        free(array->contents); //free the original contents
+        array->contents = dest; //and rewire the new [partly] sorted one
+    }
+
+    //i is the width of the subarrays we are merging
+    //we start with 1 (as individual elements)
+    //and increase by *2 (2, 4, 8, ...) until only one can cover the whole array
+    //
+    //j is the beginning of the first subarray currently merging
+    //it increases by 2*i because we always merge two subarrays
+    //
+    //inside nested for loop we call merge_parts
+    //it takes:
+    //    the original array (->contents),
+    //    three ints:
+    //        start of first subarray
+    //        first element after first / start of second subarray
+    //        fist element after second
+    //    dest array where we will put the new (partaly) sorted array
+    //    and cmp function
+    //
+    //after nested for loop we free the original ->contents and replace it with dest array
+
+    return 0;
 
 error:
     return -1;
