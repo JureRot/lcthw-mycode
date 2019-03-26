@@ -60,24 +60,28 @@ char *test_my_qsort() {
     return  run_sort_test(DArray_my_qsort, "my_qsort");
 }
 
+char *test_my_heapsort() {
+    return  run_sort_test(DArray_my_heapsort, "my_heapsort");
+}
+
 char *all_tests() {
     mu_suite_start();
 
     mu_run_test(test_qsort);
     mu_run_test(test_heapsort);
     mu_run_test(test_mergesort);
-    mu_run_test(test_my_qsort);
 
-    //test my_heapsort
+    // Extra Credit
+    mu_run_test(test_my_qsort);
+    mu_run_test(test_my_heapsort);
+
     //test my_mergesort
     //timing tests on all sorts
 
 
-    /*
     DArray *words = create_words();
-    int rc = DArray_my_qsort(words, (DArray_compare) testcmp);
+    int rc = DArray_my_heapsort(words, (DArray_compare) testcmp);
     DArray_destroy(words);
-    */
 
     return NULL;
 }
