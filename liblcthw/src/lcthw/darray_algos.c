@@ -214,5 +214,50 @@ error:
     return -1;
 }
 
-//add DArray_find that uses binary search on sorted darray to return (i guess) the index
+int DArray_find(DArray *array, void *el, DArray_compare cmp) {
+    check(array, "Can't find element in NULL array using compare function.");
+    check(el, "Can't find NULL element in array using compare function.");
+    check(cmp, "Can't find element in array using NULL compare function.");
+
+    int low = 0;
+    int high = array->end - 1;
+    //int mid = -1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int compare = cmp(&el, &array->contents[mid]);
+
+        if (compare == 0) { //el is equal to middle, so we return indes of middle
+            return mid;
+        } else if (compare < 0) { //el smaller than current middle, go to lower half
+            high = mid - 1;
+        } else if (compare > 0) { //el bigger than current middle, go to highter half
+            low = mid + 1;
+        }
+    }
+
+    //similar can be used for DArray_sort_add but there we need to return the min possible location, even if there is no match
+
+error: //fallthrough
+    return -1;
+}
+
+
+int DArray_sort_add(DArray *array, void *el, DArray_compare cmp) {
+    check(array, "Can't sort_add element in NULL array using compare function.");
+    check(el, "Can't sort_add NULL element in array using compare function.");
+    check(cmp, "Can't sort_add element in array using NULL compare function.");
+
+    //presume array is sorted
+    //we need to find the minimum location of new element (we did something like this already)
+    //than we add it to the end
+    //check if we need to expand darray
+    //and sort darray from minimum till the end
+
+    return 0;
+
+error:
+    return -1;
+}
+
 //add DArray_sort_add that inserts an element intto sorted array and keeps it sorted (can use find to sort only the minimum ammount)

@@ -32,4 +32,13 @@ int DArray_my_heapsort(DArray *array, DArray_compare cmp);
 //returns 0 on success, -1 on error
 int DArray_my_mergesort(DArray *array, DArray_compare cmp);
 
+//finds the index of element in array
+//returns index of el in array on success or -1 on error
+int DArray_find(DArray *array, void *el, DArray_compare cmp);
+
+//inserts el to already sorted array in a way it remains sorted
+//returns 0 on success, -1 on error
+int DArray_sort_add(DArray *array, void *el, DArray_compare cmp);
+
+
 #endif

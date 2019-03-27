@@ -81,6 +81,31 @@ void push_words(DArray *array, int count) {
     }
 }
 
+char *test_find() {
+    DArray *array = DArray_create(0, 5);
+    push_words(array, 1);
+    DArray_qsort(array, (DArray_compare) testcmp);
+    mu_assert(is_sorted(array), "Should start with sorted array.");
+
+    int rc = DArray_find(array, "oioj", (DArray_compare) testcmp);
+
+    mu_assert(rc == 3, "DArray_find returned wrong number.");
+    mu_assert(is_sorted(array), "Array not sorted after find.");
+
+    rc = DArray_find(array, "13234", (DArray_compare) testcmp);
+    mu_assert(rc == 0, "Second DArray_find returned wrong number.");
+    mu_assert(is_sorted(array), "Array not sorted after second find.");
+
+    DArray_destroy(array);
+
+    return NULL;
+}
+char *test_sort_add() {
+    //create, push_words, sort, add, check end, check sorted, repeat, destroy
+
+    return NULL;
+}
+
 char *all_tests() {
     mu_suite_start();
 
@@ -92,6 +117,9 @@ char *all_tests() {
     mu_run_test(test_my_qsort);
     mu_run_test(test_my_heapsort);
     mu_run_test(test_my_mergesort);
+
+    mu_run_test(test_find);
+    mu_run_test(test_sort_add);
 
     printf("-- Extra Credit -- (uncomment in darray_algos_tests.c to run (takes a few seconds))\n");
 /*
@@ -235,8 +263,6 @@ char *all_tests() {
     //
     //in general qsort is the best to use (dont know if implements any imporovements (insertion sort on small, choosing pivot, ...))
 */
-
-
 
 
     return NULL;
