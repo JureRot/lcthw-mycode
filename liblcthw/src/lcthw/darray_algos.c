@@ -214,13 +214,5 @@ error:
     return -1;
 }
 
-/*
- * IMPORTANT:
- *
- * heapsort and mergesort are part of BSD libraries and do not work by default on linux
- * (need to install libbsd-dev or something like that, and need to link with -lbsd flag)
- *
- * this should not be needed because qsort is better than both of those
- *
- * for this exercise we will do it on osx or manjaro and than comment out the parts that dont work so it will run on ubuntu
- */
+//add DArray_find that uses binary search on sorted darray to return (i guess) the index
+//add DArray_sort_add that inserts an element intto sorted array and keeps it sorted (can use find to sort only the minimum ammount)
