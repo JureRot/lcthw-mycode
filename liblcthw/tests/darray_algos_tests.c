@@ -49,6 +49,7 @@ char *test_qsort() {
     return run_sort_test(DArray_qsort, "qsort");
 }
 
+/* HEAPSORT AND MERGESORT ONLY WORK ON BSD
 char *test_heapsort() {
     return run_sort_test(DArray_heapsort, "heapsort");
 }
@@ -56,6 +57,7 @@ char *test_heapsort() {
 char *test_mergesort() {
     return run_sort_test(DArray_mergesort, "mergesort");
 }
+*/
 
 char *test_my_qsort() {
     return  run_sort_test(DArray_my_qsort, "my_qsort");
@@ -69,12 +71,22 @@ char *test_my_mergesort() {
     return  run_sort_test(DArray_my_mergesort, "my_mergesort");
 }
 
+void push_words(DArray *array, int count) {
+    char *words[] = { "asdfasfd", "werwar", "13234", "asdfasfd", "oioj" };
+
+    for (int n=0; n<count; n++) { //we push all 5 words to array count times
+        for (int i=0; i<5; i++) {
+            DArray_push(array, words[i]);
+        }
+    }
+}
+
 char *all_tests() {
     mu_suite_start();
 
     mu_run_test(test_qsort);
-    mu_run_test(test_heapsort);
-    mu_run_test(test_mergesort);
+    //mu_run_test(test_heapsort); //heapsort and merge sort only work on BSD
+    //mu_run_test(test_mergesort);
 
     // Extra Credit
     mu_run_test(test_my_qsort);
@@ -82,14 +94,149 @@ char *all_tests() {
     mu_run_test(test_my_mergesort);
 
     printf("-- Extra Credit -- (uncomment in darray_algos_tests.c to run (takes a few seconds))\n");
-
+/*
     //timing tests on all sorts
+    DArray *array = NULL;
     clock_t start;
     clock_t end;
 
-    //add timing test for all 6 algos both many small sorts and one big
+    //qsort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5); //create array
+        push_words(array, 1); //push some values to it
+        DArray_qsort(array, (DArray_compare) testcmp); //sort
+        DArray_destroy(array); //and cleanup
+    }
+    end = clock();
+    printf("qsort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
 
-    //printf("fast one big (30000 inserts): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //qsort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_qsort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("qsort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //heapsort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5);
+        push_words(array, 1);
+        DArray_heapsort(array, (DArray_compare) testcmp);
+        DArray_destroy(array);
+    }
+    end = clock();
+    printf("heapsort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
+
+    //heapsort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_heapsort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("heapsort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //mergesort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5);
+        push_words(array, 1);
+        DArray_mergesort(array, (DArray_compare) testcmp);
+        DArray_destroy(array);
+    }
+    end = clock();
+    printf("mergesort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
+
+    //mergesort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_mergesort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("mergesort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //my_qsort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5);
+        push_words(array, 1);
+        DArray_my_qsort(array, (DArray_compare) testcmp);
+        DArray_destroy(array);
+    }
+    end = clock();
+    printf("my_qsort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
+
+    //my_qsort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_my_qsort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("my_qsort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //my_heapsort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5);
+        push_words(array, 1);
+        DArray_my_heapsort(array, (DArray_compare) testcmp);
+        DArray_destroy(array);
+    }
+    end = clock();
+    printf("my_heapsort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
+
+    //my_heapsort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_my_heapsort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("my_heapsort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //my_mergesort many small
+    start = clock();
+    for (int i=0; i<10000; i++) {
+        array = DArray_create(0, 5);
+        push_words(array, 1);
+        DArray_my_mergesort(array, (DArray_compare) testcmp);
+        DArray_destroy(array);
+    }
+    end = clock();
+    printf("my_mergesort many small (10000 sorts of 5 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+    //will have some overhead from all create and destroy
+
+    //my_mergesort one big
+    array = DArray_create(0, 50000);
+    push_words(array, 10000);
+    start = clock();
+    DArray_my_mergesort(array, (DArray_compare) testcmp);
+    end = clock();
+    DArray_destroy(array);
+    printf("my_mergesort one big (1 sort of 50000 items): %fs\n", (double)(end-start)/CLOCKS_PER_SEC);
+
+    //RESULTS
+    //already made algos are better than mine (no surprise here)
+    //especially my_qsort (segfaults on big arrays)
+    //mergesort is great for big arrays
+    //heapsort is a bit worse than both because it uses heap (other data structure)
+    //quick sort is all around good
+    //
+    //in general qsort is the best to use (dont know if implements any imporovements (insertion sort on small, choosing pivot, ...))
+*/
+
+
 
 
     return NULL;
