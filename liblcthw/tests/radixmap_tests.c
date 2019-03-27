@@ -87,7 +87,7 @@ static char *test_operations() {
 }
 
 void print_map(RadixMap *map) {
-    for (int i=0; i<map->end; i++) {
+    for (unsigned int i=0; i<map->end; i++) { //unsigned just to remove warning when compiling
         printf("i: %d, raw: %" PRIu64 ", key: %" PRIu32", value= %" PRIu32"\n", i, map->contents[i].raw, map->contents[i].data.key, map->contents[i].data.value);
     }
     printf("\n");
@@ -123,7 +123,7 @@ char *test_to_understand_radix() {
 }
 
 char *test_to_understand_random() {
-    uint32_t rng = rand();
+    //uint32_t rng = rand();
     //printf("rng: %" PRIu32 ", shifted: %" PRIu32 ", or rand: %" PRIu32 "\n", rng, rng<<16, rng | rng<<16);
 
     //rng | rng<<16 would look something like that
@@ -197,7 +197,7 @@ char *all_tests() {
 
     mu_run_test(test_operations);
     mu_run_test(test_to_understand_radix); //run to understand the working
-    mu_run_test(test_to_understand_random);
+    //mu_run_test(test_to_understand_random);
 
     // Extra Credit
     //test add_fast

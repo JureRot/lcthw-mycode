@@ -39,5 +39,4 @@ DEBUG tests/list_tests.c:206: ----- test_destroy
 DEBUG tests/radixmap_tests.c:267: ----- RUNNING: ./tests/radixmap_tests
 DEBUG tests/radixmap_tests.c:198: ----- test_operations
 DEBUG tests/radixmap_tests.c:199: ----- test_to_understand_radix
-DEBUG tests/radixmap_tests.c:200: ----- test_to_understand_random
 DEBUG tests/radixmap_tests.c:204: ----- test_add_fast

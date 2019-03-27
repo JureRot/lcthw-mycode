@@ -43,12 +43,6 @@ void RadixMap_destroy(RadixMap *map) {
 //macro for getting sepecific byte of larger numbers (such as uint32 and uint64)
 //smaller y is the less important (righter byte) of the number
 
-void print_count(uint64_t *count) {
-    for (int i=0; i<256; i++) {
-        printf("%d", count[i]);
-    }
-    printf("\n");
-}
 
 //inline may NOT work on osx
 static inline void radix_sort(short offset, uint64_t max, uint64_t *source, uint64_t *dest) {
@@ -242,7 +236,7 @@ int RadixMap_find_minimum(RadixMap *map, uint32_t to_find) { //binary search
     int low = 0;
     int high = map->end - 1;
     RMElement *data = map->contents;
-    int minimum = NULL;
+    int minimum = -1;
 
     while (low <= high) {
         int middle = low + (high - low) / 2;
