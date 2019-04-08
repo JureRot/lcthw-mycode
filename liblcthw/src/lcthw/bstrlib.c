@@ -23,6 +23,7 @@
 #include <ctype.h>
 #include <limits.h>
 #include "bstrlib.h"
+//#include <lcthw/bstrlib.h> //to work on mac
 
 /* Optionally include a mechanism for debugging memory */
 
