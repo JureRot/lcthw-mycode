@@ -102,6 +102,7 @@ char *test_find() {
 }
 char *test_sort_add() {
     //create, push_words, sort, add, check end, check sorted, repeat, destroy
+    int rc = 0;
 
     DArray *array = DArray_create(0, 8);
     push_words(array, 1);
@@ -109,11 +110,11 @@ char *test_sort_add() {
 
     //add front
     char *a = "111";
-    int rc = DArray_sort_add(array, a, (DArray_compare) testcmp);
+    rc = DArray_sort_add(array, a, (DArray_compare) testcmp);
     mu_assert(rc == 0, "sort_add returned error");
     mu_assert(is_sorted(array), "Should be sorted after sort_add");
     mu_assert(DArray_end(array) == 6, "Should have 6 elements");
-    mu_assert(testcmp(DArray_first(array), a) == 0, "new element should be first in array");
+    mu_assert(strcmp(DArray_first(array), a) == 0, "new element should be first in array");
 
     //add end
     char *b = "zzz";
@@ -121,7 +122,7 @@ char *test_sort_add() {
     mu_assert(rc == 0, "sort_add returned error");
     mu_assert(is_sorted(array), "Should be sorted after sort_add");
     mu_assert(DArray_end(array) == 7, "Should have 6 elements");
-    mu_assert(testcmp(DArray_last(array), b) == 0, "new element should be last in array");
+    mu_assert(strcmp(DArray_last(array), b) == 0, "new element should be last in array");
 
     //add middle
     char *c = "444";
@@ -129,7 +130,7 @@ char *test_sort_add() {
     mu_assert(rc == 0, "sort_add returned error");
     mu_assert(is_sorted(array), "Should be sorted after sort_add");
     mu_assert(DArray_end(array) == 8, "Should have 6 elements");
-    mu_assert(testcmp(array->contents[2], c) == 0, "new element should be third in array");
+    mu_assert(strcmp(array->contents[2], c) == 0, "new element should be third in array");
 
     DArray_destroy(array);
 
@@ -148,8 +149,8 @@ char *all_tests() {
     mu_run_test(test_my_heapsort);
     mu_run_test(test_my_mergesort);
 
-    mu_run_test(test_find);
     mu_run_test(test_sort_add);
+    mu_run_test(test_find);
 
     printf("-- Extra Credit -- (uncomment in darray_algos_tests.c to run (takes a few seconds))\n");
 /*

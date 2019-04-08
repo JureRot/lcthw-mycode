@@ -242,6 +242,27 @@ error: //fallthrough
     return -1;
 }
 
+int my_find_min(DArray *array, void *el, DArray_compare cmp) {
+    int low = 0;
+    int high = array->end - 1;
+    int mid = 0;
+
+    while (low <= high) {
+        mid = low + (high - low) / 2;
+        int compare = cmp(&el, &array->contents[mid]);
+
+        if (compare == 0) { //el is equal to middle, so we return indes of middle
+            return mid;
+        } else if (compare < 0) { //el smaller than current middle, go to lower half
+            high = mid - 1;
+        } else if (compare > 0) { //el bigger than current middle, go to highter half
+            low = mid + 1;
+        }
+    }
+
+    return mid;
+}
+
 
 int DArray_sort_add(DArray *array, void *el, DArray_compare cmp) {
     check(array, "Can't sort_add element in NULL array using compare function.");
@@ -254,7 +275,12 @@ int DArray_sort_add(DArray *array, void *el, DArray_compare cmp) {
     //check if we need to expand darray
     //and sort darray from minimum till the end
 
-    return 0;
+    int min = my_find_min(array, el, cmp);
+    int psh = DArray_push(array, el);
+    int srt = my_qsort_recur(array->contents, min, array->end-1, min, array->end-1, cmp);
+
+
+    return (psh && srt);
 
 error:
     return -1;
