@@ -1,21 +1,21 @@
-DEBUG tests/bstr_tests.c:131: ----- RUNNING: ./tests/bstr_tests
-DEBUG tests/bstr_tests.c:110: ----- bfromcstr_test
-DEBUG tests/bstr_tests.c:111: ----- blk2bstr_test
-DEBUG tests/bstr_tests.c:112: ----- bstrcpy_test
-DEBUG tests/bstr_tests.c:113: ----- bassign_test
-DEBUG tests/bstr_tests.c:114: ----- bassigncstr_test
-DEBUG tests/bstr_tests.c:115: ----- bassignblk_test
-DEBUG tests/bstr_tests.c:116: ----- bdestroy_test
-DEBUG tests/bstr_tests.c:117: ----- bconcat_test
-DEBUG tests/bstr_tests.c:118: ----- bstricmp_test
-DEBUG tests/bstr_tests.c:119: ----- biseq_test
-DEBUG tests/bstr_tests.c:120: ----- binstr_test
-DEBUG tests/bstr_tests.c:121: ----- bfindreplace_test
-DEBUG tests/bstr_tests.c:122: ----- bsplit_test
-DEBUG tests/bstr_tests.c:123: ----- bformat_test
-DEBUG tests/bstr_tests.c:124: ----- blength_test
-DEBUG tests/bstr_tests.c:125: ----- bdata_test
-DEBUG tests/bstr_tests.c:126: ----- bchar_test
+DEBUG tests/bstr_tests.c:133: ----- RUNNING: ./tests/bstr_tests
+DEBUG tests/bstr_tests.c:111: ----- bfromcstr_test
+DEBUG tests/bstr_tests.c:112: ----- blk2bstr_test
+DEBUG tests/bstr_tests.c:113: ----- bstrcpy_test
+DEBUG tests/bstr_tests.c:114: ----- bassign_test
+DEBUG tests/bstr_tests.c:115: ----- bassigncstr_test
+DEBUG tests/bstr_tests.c:116: ----- bassignblk_test
+DEBUG tests/bstr_tests.c:117: ----- bdestroy_test
+DEBUG tests/bstr_tests.c:118: ----- bconcat_test
+DEBUG tests/bstr_tests.c:119: ----- bstricmp_test
+DEBUG tests/bstr_tests.c:120: ----- biseq_test
+DEBUG tests/bstr_tests.c:121: ----- binstr_test
+DEBUG tests/bstr_tests.c:122: ----- bfindreplace_test
+DEBUG tests/bstr_tests.c:123: ----- bsplit_test
+DEBUG tests/bstr_tests.c:124: ----- bformat_test
+DEBUG tests/bstr_tests.c:125: ----- blength_test
+DEBUG tests/bstr_tests.c:126: ----- bdata_test
+DEBUG tests/bstr_tests.c:127: ----- bchar_test
 DEBUG tests/darray_algos_tests.c:302: ----- RUNNING: ./tests/darray_algos_tests
 DEBUG tests/darray_algos_tests.c:143: ----- test_qsort
 DEBUG tests/darray_algos_tests.c:38: --- Testing qsort sorting algorithm ---

@@ -1,6 +1,7 @@
+//may need more includes (stdio, stdlib, ....)
 #include "minunit.h"
 #include <lcthw/bstrlib.h>
-#include "../src/lcthw/bstrlib.h" //just for writing
+//#include "../src/lcthw/bstrlib.h" //just for writing
 
 char *bfromcstr_test() {
     //create a bstring from a C style constant
@@ -124,6 +125,7 @@ char *all_test() {
     mu_run_test(blength_test);
     mu_run_test(bdata_test);
     mu_run_test(bchar_test);
+
 
     return NULL;
 }
