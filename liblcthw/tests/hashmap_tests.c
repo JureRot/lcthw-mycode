@@ -14,12 +14,14 @@ struct tagbstring expect1 = bsStatic("THE VALUE 1");
 struct tagbstring expect2 = bsStatic("THE VALUE 2");
 struct tagbstring expect3 = bsStatic("THE VALUE 3");
 
+//traverse function that increments the traverse_called (counts number of nodes)
 static int traverse_good_cb(HashmapNode *node) {
     debug("KEY: %s", bdata((bstring) node->key));
     traverse_called++;
     return 0;
 }
 
+//same as traverse_good_cb, but fails on the third node on purpose
 static int traverse_fail_cb(HashmapNode *node) {
     debug("KEY: %s", bdata((bstring) node->key));
     traverse_called++;
