@@ -1,0 +1,1669 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Address	ex17.c	/^struct Address {$/;"	s	file:
+Address	ex17ec.c	/^struct Address {$/;"	s	file:
+Address_print	ex17.c	/^void Address_print(struct Address *addr) {$/;"	f
+Address_print	ex17ec.c	/^void Address_print(struct Address *addr) {$/;"	f
+B64_ERR	bstrlib-master/bstraux.c	379;"	d	file:
+B64_PAD	bstrlib-master/bstraux.c	378;"	d	file:
+BLACK_EYES	ex24.c	/^    BLACK_EYES,$/;"	e	enum:EyeColor	file:
+BLACK_EYES	ex24ec.c	/^    BLACK_EYES,$/;"	e	enum:EyeColor	file:
+BLUE_EYES	ex24.c	/^    BLUE_EYES,$/;"	e	enum:EyeColor	file:
+BLUE_EYES	ex24ec.c	/^    BLUE_EYES,$/;"	e	enum:EyeColor	file:
+BROWN_EYES	ex24.c	/^    BROWN_EYES,$/;"	e	enum:EyeColor	file:
+BROWN_EYES	ex24ec.c	/^    BROWN_EYES,$/;"	e	enum:EyeColor	file:
+BSSSC_BUFF_LEN	ex36/bstrlib.c	2439;"	d	file:
+BSSSC_BUFF_LEN	liblcthw/src/lcthw/bstrlib.c	2440;"	d	file:
+BSTRAUX_INCLUDE	bstrlib-master/bstraux.h	17;"	d
+BSTRLIB_BSAFE_INCLUDE	bstrlib-master/bsafe.h	18;"	d
+BSTRLIB_CANNOT_USE_IOSTREAM	bstrlib-master/bstrwrap.h	27;"	d
+BSTRLIB_CANNOT_USE_STL	bstrlib-master/bstrwrap.h	24;"	d
+BSTRLIB_CAN_USE_IOSTREAM	bstrlib-master/bstrwrap.h	40;"	d
+BSTRLIB_CAN_USE_STL	bstrlib-master/bstrwrap.h	34;"	d
+BSTRLIB_INCLUDE	ex36/bstrlib.h	15;"	d
+BSTRLIB_INCLUDE	liblcthw/src/lcthw/bstrlib.h	15;"	d
+BSTRLIB_NOVSNP	bstrlib-master/bstrwrap.cpp	529;"	d	file:
+BSTRLIB_NOVSNP	ex36/bstrlib.c	2901;"	d	file:
+BSTRLIB_NOVSNP	ex36/bstrlib.h	28;"	d
+BSTRLIB_NOVSNP	liblcthw/src/lcthw/bstrlib.c	2902;"	d	file:
+BSTRLIB_NOVSNP	liblcthw/src/lcthw/bstrlib.h	28;"	d
+BSTRLIB_THROWS_EXCEPTIONS	bstrlib-master/bstrwrap.h	47;"	d
+BSTRLIB_UNICODE_UTILITIES	bstrlib-master/buniutil.h	16;"	d
+BSTRWRAP_INCLUDE	bstrlib-master/bstrwrap.h	15;"	d
+BSTR_BS_BUFF_LENGTH_GET	ex36/bstrlib.h	34;"	d
+BSTR_BS_BUFF_LENGTH_GET	liblcthw/src/lcthw/bstrlib.h	34;"	d
+BSTR_ERR	ex36/bstrlib.h	32;"	d
+BSTR_ERR	liblcthw/src/lcthw/bstrlib.h	32;"	d
+BSTR_OK	ex36/bstrlib.h	33;"	d
+BSTR_OK	liblcthw/src/lcthw/bstrlib.h	33;"	d
+BSTR_VER_MAJOR	ex36/bstrlib.h	40;"	d
+BSTR_VER_MAJOR	liblcthw/src/lcthw/bstrlib.h	40;"	d
+BSTR_VER_MINOR	ex36/bstrlib.h	41;"	d
+BSTR_VER_MINOR	liblcthw/src/lcthw/bstrlib.h	41;"	d
+BSTR_VER_UPDATE	ex36/bstrlib.h	42;"	d
+BSTR_VER_UPDATE	liblcthw/src/lcthw/bstrlib.h	42;"	d
+BS_BUFF_SZ	bstrlib-master/bstrwrap.cpp	1628;"	d	file:
+BS_BUFF_SZ	ex36/bstrlib.c	1886;"	d	file:
+BS_BUFF_SZ	liblcthw/src/lcthw/bstrlib.c	1887;"	d	file:
+BWS_BUFF_SZ	bstrlib-master/bstraux.c	1008;"	d	file:
+Bstrlib	bstrlib-master/bstrwrap.cpp	/^namespace Bstrlib {$/;"	n	file:
+Bstrlib	bstrlib-master/bstrwrap.h	/^namespace Bstrlib {$/;"	n
+ByteOf	liblcthw/src/lcthw/radixmap.c	42;"	d	file:
+CBCharWriteProtected	bstrlib-master/bstrwrap.h	/^	CBCharWriteProtected (const struct tagbstring& c, int i) : s(c), idx((unsigned int)i) {$/;"	f	class:Bstrlib::CBCharWriteProtected
+CBCharWriteProtected	bstrlib-master/bstrwrap.h	/^class CBCharWriteProtected {$/;"	c	namespace:Bstrlib
+CBStream	bstrlib-master/bstrwrap.cpp	/^CBStream::CBStream (bNread readPtr, void * parm) {$/;"	f	class:Bstrlib::CBStream
+CBStream	bstrlib-master/bstrwrap.h	/^struct CBStream {$/;"	s	namespace:Bstrlib
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString () {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (char c) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (char c, int len) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const CBString& b) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const CBStringList& l) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const char *s) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const struct CBStringList& l, char sep) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const struct CBStringList& l, const CBString& sep) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const struct CBStringList& l, unsigned char sep) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const tagbstring& x) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (const void * blk, int len) { $/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (int len, const char *s) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.cpp	/^CBString::CBString (unsigned char c) {$/;"	f	class:Bstrlib::CBString
+CBString	bstrlib-master/bstrwrap.h	/^struct CBString : public tagbstring {$/;"	s	namespace:Bstrlib
+CBStringException	bstrlib-master/bstrwrap.h	/^	CBStringException (const std::string inmsg) : msg(inmsg) {}$/;"	f	struct:Bstrlib::CBStringException
+CBStringException	bstrlib-master/bstrwrap.h	/^struct CBStringException : public std::exception {$/;"	s	namespace:Bstrlib
+CBStringList	bstrlib-master/bstrwrap.h	/^struct CBStringList : public std::vector<CBString> {$/;"	s	namespace:Bstrlib
+CFCLEN	ex36/bstrlib.c	1356;"	d	file:
+CFCLEN	ex36/bstrlib.c	1368;"	d	file:
+CFCLEN	liblcthw/src/lcthw/bstrlib.c	1357;"	d	file:
+CFCLEN	liblcthw/src/lcthw/bstrlib.c	1369;"	d	file:
+CFLAGS	Makefile	/^CFLAGS=-Wall -g -DNDEBUG -lm$/;"	m
+CFLAGS	c-skeleton/Makefile	/^CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)$/;"	m
+CFLAGS	c-skeleton/Makefile	/^dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)$/;"	m
+CFLAGS	c-skeleton_ex29/Makefile	/^CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)$/;"	m
+CFLAGS	c-skeleton_ex29/Makefile	/^dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)$/;"	m
+CFLAGS	c-skeleton_ex30/Makefile	/^CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)$/;"	m
+CFLAGS	c-skeleton_ex30/Makefile	/^dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)$/;"	m
+CFLAGS	liblcthw/Makefile	/^CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)$/;"	m
+CFLAGS	liblcthw/Makefile	/^dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)$/;"	m
+Connection	ex17.c	/^struct Connection {$/;"	s	file:
+Connection	ex17ec.c	/^struct Connection {$/;"	s	file:
+DArray	liblcthw/src/lcthw/darray.h	/^typedef struct DArray {$/;"	s
+DArray	liblcthw/src/lcthw/darray.h	/^} DArray;$/;"	t	typeref:struct:DArray
+DArray_clear	liblcthw/src/lcthw/darray.c	/^void DArray_clear(DArray *array) {$/;"	f
+DArray_clear_destroy	liblcthw/src/lcthw/darray.c	/^void DArray_clear_destroy(DArray *array) {$/;"	f
+DArray_compare	liblcthw/src/lcthw/darray_algos.h	/^typedef int (*DArray_compare) (const void *a, const void *b);$/;"	t
+DArray_contract	liblcthw/src/lcthw/darray.c	/^int DArray_contract(DArray *array) {$/;"	f
+DArray_count	liblcthw/src/lcthw/darray.h	44;"	d
+DArray_create	liblcthw/src/lcthw/darray.c	/^DArray *DArray_create(size_t element_size, size_t initial_max) {$/;"	f
+DArray_destroy	liblcthw/src/lcthw/darray.c	/^void DArray_destroy(DArray *array) {$/;"	f
+DArray_end	liblcthw/src/lcthw/darray.h	43;"	d
+DArray_expand	liblcthw/src/lcthw/darray.c	/^int DArray_expand(DArray *array) {$/;"	f
+DArray_find	liblcthw/src/lcthw/darray_algos.c	/^int DArray_find(DArray *array, void *el, DArray_compare cmp) {$/;"	f
+DArray_first	liblcthw/src/lcthw/darray.h	41;"	d
+DArray_free	liblcthw/src/lcthw/darray.h	86;"	d
+DArray_get	liblcthw/src/lcthw/darray.h	/^static inline void *DArray_get(DArray *array, int i) {$/;"	f
+DArray_last	liblcthw/src/lcthw/darray.h	42;"	d
+DArray_max	liblcthw/src/lcthw/darray.h	45;"	d
+DArray_my_heapsort	liblcthw/src/lcthw/darray_algos.c	/^int DArray_my_heapsort(DArray *array, DArray_compare cmp) {$/;"	f
+DArray_my_mergesort	liblcthw/src/lcthw/darray_algos.c	/^int DArray_my_mergesort(DArray *array, DArray_compare cmp) {$/;"	f
+DArray_my_qsort	liblcthw/src/lcthw/darray_algos.c	/^int DArray_my_qsort(DArray *array, DArray_compare cmp) {$/;"	f
+DArray_new	liblcthw/src/lcthw/darray.h	/^static inline void *DArray_new(DArray *array) {$/;"	f
+DArray_pop	liblcthw/src/lcthw/darray.c	/^void *DArray_pop(DArray *array) {$/;"	f
+DArray_push	liblcthw/src/lcthw/darray.c	/^int DArray_push(DArray *array, void *el) {$/;"	f
+DArray_qsort	liblcthw/src/lcthw/darray_algos.c	/^int DArray_qsort(DArray *array, DArray_compare cmp) {$/;"	f
+DArray_remove	liblcthw/src/lcthw/darray.h	/^static inline void *DArray_remove(DArray *array, int i) {$/;"	f
+DArray_resize	liblcthw/src/lcthw/darray.c	/^static inline int DArray_resize(DArray *array, size_t newsize) {$/;"	f	file:
+DArray_set	liblcthw/src/lcthw/darray.h	/^static inline void DArray_set(DArray *array, int i, void *el) {$/;"	f
+DArray_sort_add	liblcthw/src/lcthw/darray_algos.c	/^int DArray_sort_add(DArray *array, void *el, DArray_compare cmp) {$/;"	f
+DEFAULT_EXPAND_RATE	liblcthw/src/lcthw/darray.h	47;"	d
+DEFAULT_NUMBER_OF_BUCKETS	liblcthw/src/lcthw/hashmap.h	8;"	d
+Database	ex17.c	/^struct Database {$/;"	s	file:
+Database	ex17ec.c	/^struct Database {$/;"	s	file:
+Database_close	ex17.c	/^void Database_close(struct Connection *conn) {$/;"	f
+Database_close	ex17ec.c	/^void Database_close(struct Connection *conn) {$/;"	f
+Database_create	ex17.c	/^void Database_create(struct Connection *conn) {$/;"	f
+Database_create	ex17ec.c	/^void Database_create(struct Connection *conn, int data, int rows) {$/;"	f
+Database_delete	ex17.c	/^void Database_delete(struct Connection *conn, int id) {$/;"	f
+Database_delete	ex17ec.c	/^void Database_delete(struct Connection *conn, int id) {$/;"	f
+Database_find	ex17ec.c	/^void Database_find(struct Connection *conn, char *pattern) {$/;"	f
+Database_get	ex17.c	/^void Database_get(struct Connection *conn, int id) {$/;"	f
+Database_get	ex17ec.c	/^void Database_get(struct Connection *conn, int id) {$/;"	f
+Database_list	ex17.c	/^void Database_list(struct Connection *conn) {$/;"	f
+Database_list	ex17ec.c	/^void Database_list(struct Connection *conn) {$/;"	f
+Database_load	ex17.c	/^void Database_load(struct Connection *conn) {$/;"	f
+Database_load	ex17ec.c	/^void Database_load(struct Connection *conn) {$/;"	f
+Database_open	ex17.c	/^struct Connection *Database_open(const char *filename, char mode) {$/;"	f
+Database_open	ex17ec.c	/^struct Connection *Database_open(const char *filename, char mode) {$/;"	f
+Database_set	ex17.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email) {$/;"	f
+Database_set	ex17ec.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email, const char *phone) {$/;"	f
+Database_write	ex17.c	/^void Database_write(struct Connection *conn) {$/;"	f
+Database_write	ex17ec.c	/^void Database_write(struct Connection *conn) {$/;"	f
+EIGHT_CHAR_STRING	bstrlib-master/bstest.c	146;"	d	file:
+EMPTY_STRING	bstrlib-master/bstest.c	144;"	d	file:
+EXCEPTION_EXPECTED	bstrlib-master/test.cpp	134;"	d	file:
+EYE_COLOR_NAME	ex24.c	/^const char *EYE_COLOR_NAME[] = {$/;"	v
+EYE_COLOR_NAME	ex24ec.c	/^const char *EYE_COLOR_NAME[] = {$/;"	v
+EyeColor	ex24.c	/^typedef enum EyeColor {$/;"	g	file:
+EyeColor	ex24.c	/^} EyeColor;$/;"	t	typeref:enum:EyeColor	file:
+EyeColor	ex24ec.c	/^typedef enum EyeColor {$/;"	g	file:
+EyeColor	ex24ec.c	/^} EyeColor;$/;"	t	typeref:enum:EyeColor	file:
+GREEN_EYES	ex24.c	/^    GREEN_EYES,$/;"	e	enum:EyeColor	file:
+GREEN_EYES	ex24ec.c	/^    GREEN_EYES,$/;"	e	enum:EyeColor	file:
+Hashmap	liblcthw/src/lcthw/hashmap.h	/^typedef struct Hashmap {$/;"	s
+Hashmap	liblcthw/src/lcthw/hashmap.h	/^} Hashmap;$/;"	t	typeref:struct:Hashmap
+HashmapNode	liblcthw/src/lcthw/hashmap.h	/^typedef struct HashmapNode {$/;"	s
+HashmapNode	liblcthw/src/lcthw/hashmap.h	/^} HashmapNode;$/;"	t	typeref:struct:HashmapNode
+Hashmap_compare	liblcthw/src/lcthw/hashmap.h	/^typedef int (*Hashmap_compare) (void *a, void *b);$/;"	t
+Hashmap_create	liblcthw/src/lcthw/hashmap.c	/^Hashmap *Hashmap_create(Hashmap_compare compare, Hashmap_hash hash) {$/;"	f
+Hashmap_delete	liblcthw/src/lcthw/hashmap.c	/^void *Hashmap_delete(Hashmap *map, void *key) {$/;"	f
+Hashmap_destroy	liblcthw/src/lcthw/hashmap.c	/^void Hashmap_destroy(Hashmap *map) {$/;"	f
+Hashmap_find_bucket	liblcthw/src/lcthw/hashmap.c	/^static inline DArray *Hashmap_find_bucket(Hashmap *map, void *key, int create, uint32_t *hash_out) {$/;"	f	file:
+Hashmap_get	liblcthw/src/lcthw/hashmap.c	/^void *Hashmap_get(Hashmap *map, void *key) {$/;"	f
+Hashmap_get_node	liblcthw/src/lcthw/hashmap.c	/^static inline int Hashmap_get_node(Hashmap *map, uint32_t hash, DArray *bucket, void *key) {$/;"	f	file:
+Hashmap_hash	liblcthw/src/lcthw/hashmap.h	/^typedef uint32_t (*Hashmap_hash) (void *key);$/;"	t
+Hashmap_node_create	liblcthw/src/lcthw/hashmap.c	/^static inline HashmapNode *Hashmap_node_create(int hash, void *key, void *data) {$/;"	f	file:
+Hashmap_set	liblcthw/src/lcthw/hashmap.c	/^int Hashmap_set(Hashmap *map, void *key, void *data) {$/;"	f
+Hashmap_traverse	liblcthw/src/lcthw/hashmap.c	/^int Hashmap_traverse(Hashmap *map, Hashmap_traverse_cb traverse_cb) {$/;"	f
+Hashmap_traverse_cb	liblcthw/src/lcthw/hashmap.h	/^typedef int (*Hashmap_traverse_cb) (HashmapNode *node);$/;"	t
+INITIAL_STATIC_FIND_INDEX_COUNT	ex36/bstrlib.c	1658;"	d	file:
+INITIAL_STATIC_FIND_INDEX_COUNT	liblcthw/src/lcthw/bstrlib.c	1659;"	d	file:
+INIT_SECURE_INPUT_LENGTH	bstrlib-master/bstraux.c	955;"	d	file:
+LDFLAGS	liblcthw/Makefile	/^LDFLAGS=$(OPTLIBS)$/;"	m
+LIBS	c-skeleton/Makefile	/^LIBS=-ldl $(OPTLIBS)$/;"	m
+LIBS	c-skeleton_ex29/Makefile	/^LIBS=-ldl $(OPTLIBS)$/;"	m
+LIBS	c-skeleton_ex30/Makefile	/^LIBS=-ldl $(OPTLIBS)$/;"	m
+LIST_FOREACH	liblcthw/src/lcthw/list.h	67;"	d
+LONG_BITS_QTY	ex36/bstrlib.c	1353;"	d	file:
+LONG_BITS_QTY	liblcthw/src/lcthw/bstrlib.c	1354;"	d	file:
+LONG_LOG_BITS_QTY	ex36/bstrlib.c	1352;"	d	file:
+LONG_LOG_BITS_QTY	liblcthw/src/lcthw/bstrlib.c	1353;"	d	file:
+LONG_STRING	bstrlib-master/bstest.c	147;"	d	file:
+LONG_TYPE	ex36/bstrlib.c	1354;"	d	file:
+LONG_TYPE	liblcthw/src/lcthw/bstrlib.c	1355;"	d	file:
+LOTS_OF_S	bstrlib-master/bstest.c	2649;"	d	file:
+List	liblcthw/src/lcthw/list.h	/^typedef struct List {$/;"	s
+List	liblcthw/src/lcthw/list.h	/^} List;$/;"	t	typeref:struct:List
+ListNode	liblcthw/src/lcthw/list.h	/^typedef struct ListNode {$/;"	s
+ListNode	liblcthw/src/lcthw/list.h	/^} ListNode;$/;"	t	typeref:struct:ListNode
+ListNode_swap	liblcthw/src/lcthw/list_algos_zed.c	/^void ListNode_swap(ListNode *a, ListNode *b) {$/;"	f
+List_bubble_sort	liblcthw/src/lcthw/list_algos.c	/^int List_bubble_sort(List *list, List_compare cmp) { \/\/bubble sort using simple swap_nodes and LIST_FOREACH but still optimized$/;"	f
+List_bubble_sort_complicated	liblcthw/src/lcthw/list_algos.c	/^int List_bubble_sort_complicated(List *list, List_compare cmp) {$/;"	f
+List_bubble_sort_zed	liblcthw/src/lcthw/list_algos_zed.c	/^int List_bubble_sort_zed(List *list, List_compare cmp) {$/;"	f
+List_clear	liblcthw/src/lcthw/list.c	/^void List_clear(List *list) {$/;"	f
+List_clear_destroy	liblcthw/src/lcthw/list.c	/^void List_clear_destroy(List *list) { \/\/fast (only one loop)$/;"	f
+List_compare	liblcthw/src/lcthw/list_algos.h	/^typedef int (*List_compare) (const void *a, const void *b);$/;"	t
+List_compare	liblcthw/src/lcthw/list_algos_zed.h	/^typedef int (*List_compare) (const void *a, const void *b);$/;"	t
+List_copy	liblcthw/src/lcthw/list.c	/^List *List_copy(List *list) {$/;"	f
+List_count	liblcthw/src/lcthw/list.h	35;"	d
+List_create	liblcthw/src/lcthw/list.c	/^List *List_create() {$/;"	f
+List_destroy	liblcthw/src/lcthw/list.c	/^void List_destroy(List *list) {$/;"	f
+List_first	liblcthw/src/lcthw/list.h	37;"	d
+List_insert_sorted	liblcthw/src/lcthw/list_algos.c	/^void List_insert_sorted(List *list, void *value, List_compare cmp) {$/;"	f
+List_join	liblcthw/src/lcthw/list.c	/^List *List_join(List *list1, List *list2) {$/;"	f
+List_last	liblcthw/src/lcthw/list.h	39;"	d
+List_merge	liblcthw/src/lcthw/list_algos_zed.c	/^List *List_merge(List *left, List *right, List_compare cmp) {$/;"	f
+List_merge_sort	liblcthw/src/lcthw/list_algos.c	/^List *List_merge_sort(List* list, List_compare cmp) {$/;"	f
+List_merge_sort_zed	liblcthw/src/lcthw/list_algos_zed.c	/^ List *List_merge_sort_zed(List *list, List_compare cmp) {$/;"	f
+List_pop	liblcthw/src/lcthw/list.c	/^void *List_pop(List *list) { \/\/pops the last element (from the end)$/;"	f
+List_push	liblcthw/src/lcthw/list.c	/^void List_push(List *list, void *value) { \/\/adds to the end$/;"	f
+List_remove	liblcthw/src/lcthw/list.c	/^void *List_remove(List *list, ListNode *node) {$/;"	f
+List_shift	liblcthw/src/lcthw/list.c	/^void *List_shift(List *list) { \/\/pop from the front$/;"	f
+List_split	liblcthw/src/lcthw/list.c	/^List *List_split(List *list, ListNode *node) {$/;"	f
+List_unshift	liblcthw/src/lcthw/list.c	/^void List_unshift(List *list, void *value) { \/\/push to the front$/;"	f
+MAX_DATA	ex17.c	7;"	d	file:
+MAX_DATA	ex24.c	4;"	d	file:
+MAX_DATA	ex24ec.c	5;"	d	file:
+MAX_DATA	ex24testing.c	6;"	d	file:
+MAX_DATA	ex25.c	6;"	d	file:
+MAX_DATA	ex25ec.c	7;"	d	file:
+MAX_DATA	logfind.c	8;"	d	file:
+MAX_LINE	logfind_zed.c	/^const size_t MAX_LINE = 1024;$/;"	v
+MAX_OB_LEN	bstrlib-master/bstraux.c	795;"	d	file:
+MAX_ROWS	ex17.c	8;"	d	file:
+MY_NAME	ex22_main.c	/^const char *MY_NAME = "Zed A. Shaw";$/;"	v
+NDEBUG	c-skeleton/tests/minunit.h	1;"	d
+NDEBUG	c-skeleton_ex30/tests/minunit.h	1;"	d
+NDEBUG	ex27_1.c	1;"	d	file:
+NDEBUG	liblcthw/src/lcthw/hashmap.c	1;"	d	file:
+NDEBUG	liblcthw/tests/minunit.h	1;"	d
+NDEBUG	liblcthw/tests/minunit_changed.h	1;"	d
+NDEBUG	logfind_zed.c	1;"	d	file:
+NDEBUG	minunit.h	1;"	d
+NULL	bstrlib-master/utf8util.c	19;"	d	file:
+NULL	bstrlib-master/utf8util.c	21;"	d	file:
+NUM_LINES	ex24testing.c	7;"	d	file:
+NUM_VALUES	liblcthw/tests/list_algos_tests.c	10;"	d	file:
+NUM_VALUES	liblcthw/tests/list_algos_zed_tests.c	9;"	d	file:
+OBJECTS	c-skeleton/Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+OBJECTS	c-skeleton_ex29/Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+OBJECTS	c-skeleton_ex30/Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+OBJECTS	liblcthw/Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+OTHER_EYES	ex24.c	/^    OTHER_EYES,$/;"	e	enum:EyeColor	file:
+OTHER_EYES	ex24ec.c	/^    OTHER_EYES,$/;"	e	enum:EyeColor	file:
+PREFIX	c-skeleton/Makefile	/^PREFIX?=\/usr\/local$/;"	m
+PREFIX	c-skeleton_ex29/Makefile	/^PREFIX?=\/usr\/local$/;"	m
+PREFIX	c-skeleton_ex30/Makefile	/^PREFIX?=\/usr\/local$/;"	m
+PREFIX	liblcthw/Makefile	/^PREFIX?=\/usr\/local$/;"	m
+Person	ex16.c	/^struct Person {$/;"	s	file:
+Person	ex16ec.c	/^struct Person {$/;"	s	file:
+Person	ex24.c	/^typedef struct Person {$/;"	s	file:
+Person	ex24.c	/^} Person;$/;"	t	typeref:struct:Person	file:
+Person	ex24ec.c	/^typedef struct Person {$/;"	s	file:
+Person	ex24ec.c	/^} Person;$/;"	t	typeref:struct:Person	file:
+Person_create	ex16.c	/^struct Person *Person_create(char *name, int age, int height, int weight) { \/\/gets argumetns and returns pointer of type struct Person$/;"	f
+Person_create	ex16ec.c	/^struct Person Person_create(char *name, int age, int height, int weight) {$/;"	f
+Person_destroy	ex16.c	/^void Person_destroy(struct Person *who) { \/\/this is manual garbage collection$/;"	f
+Person_destroy	ex16ec.c	/^void Person_destroy(struct Person who) {$/;"	f
+Person_print	ex16.c	/^void Person_print(struct Person *who) {$/;"	f
+Person_print	ex16ec.c	/^void Person_print(struct Person who) {$/;"	f
+RMElement	liblcthw/src/lcthw/radixmap.h	/^typedef union RMElement {$/;"	u
+RMElement	liblcthw/src/lcthw/radixmap.h	/^} RMElement;$/;"	t	typeref:union:RMElement
+RUN_TEST	c-skeleton/tests/minunit.h	27;"	d
+RUN_TEST	c-skeleton_ex30/tests/minunit.h	27;"	d
+RUN_TEST	minunit.h	27;"	d
+RUN_TESTS	liblcthw/tests/minunit.h	27;"	d
+RUN_TESTS	liblcthw/tests/minunit_changed.h	27;"	d
+RadixMap	liblcthw/src/lcthw/radixmap.h	/^typedef struct RadixMap {$/;"	s
+RadixMap	liblcthw/src/lcthw/radixmap.h	/^} RadixMap;$/;"	t	typeref:struct:RadixMap
+RadixMap_add	liblcthw/src/lcthw/radixmap.c	/^int RadixMap_add(RadixMap *map, uint32_t key, uint32_t value) {$/;"	f
+RadixMap_add_fast	liblcthw/src/lcthw/radixmap.c	/^int RadixMap_add_fast(RadixMap *map, uint32_t key, uint32_t value) {$/;"	f
+RadixMap_create	liblcthw/src/lcthw/radixmap.c	/^RadixMap *RadixMap_create(size_t max) {$/;"	f
+RadixMap_delete	liblcthw/src/lcthw/radixmap.c	/^int RadixMap_delete(RadixMap *map, RMElement *el) {$/;"	f
+RadixMap_destroy	liblcthw/src/lcthw/radixmap.c	/^void RadixMap_destroy(RadixMap *map) {$/;"	f
+RadixMap_find	liblcthw/src/lcthw/radixmap.c	/^RMElement *RadixMap_find(RadixMap *map, uint32_t to_find) { \/\/binary search$/;"	f
+RadixMap_find_minimum	liblcthw/src/lcthw/radixmap.c	/^int RadixMap_find_minimum(RadixMap *map, uint32_t to_find) { \/\/binary search$/;"	f
+RadixMap_sort	liblcthw/src/lcthw/radixmap.c	/^void RadixMap_sort(RadixMap *map) {$/;"	f
+SHORT_STRING	bstrlib-master/bstest.c	145;"	d	file:
+SOURCES	c-skeleton/Makefile	/^SOURCES=$(wildcard src\/**\/*.c src\/*.c)$/;"	m
+SOURCES	c-skeleton_ex29/Makefile	/^SOURCES=$(wildcard src\/**\/*.c src\/*.c)$/;"	m
+SOURCES	c-skeleton_ex30/Makefile	/^SOURCES=$(wildcard src\/**\/*.c src\/*.c)$/;"	m
+SOURCES	liblcthw/Makefile	/^SOURCES=$(wildcard src\/**\/*.c src\/*.c)$/;"	m
+SO_TARGET	c-skeleton_ex29/Makefile	/^SO_TARGET=$(patsubst %.a,%.so,$(TARGET))$/;"	m
+SO_TARGET	c-skeleton_ex30/Makefile	/^SO_TARGET=$(patsubst %.a,%.so,$(TARGET))$/;"	m
+SO_TARGET	liblcthw/Makefile	/^SO_TARGET=$(patsubst %.a,%.so,$(TARGET))$/;"	m
+START_VSNBUFF	bstrlib-master/bstrwrap.cpp	541;"	d	file:
+START_VSNBUFF	bstrlib-master/bstrwrap.cpp	557;"	d	file:
+START_VSNBUFF	ex36/bstrlib.c	2913;"	d	file:
+START_VSNBUFF	ex36/bstrlib.c	2929;"	d	file:
+START_VSNBUFF	liblcthw/src/lcthw/bstrlib.c	2914;"	d	file:
+START_VSNBUFF	liblcthw/src/lcthw/bstrlib.c	2930;"	d	file:
+TARGET	c-skeleton/Makefile	/^TARGET=build\/libYOUR_LIBRARY.a$/;"	m
+TARGET	c-skeleton_ex29/Makefile	/^TARGET=build\/libex29.a #we set the name of the lib here$/;"	m
+TARGET	c-skeleton_ex30/Makefile	/^TARGET=build\/libex30.a #we set the name of the lib here$/;"	m
+TARGET	liblcthw/Makefile	/^TARGET=build\/liblcthw.a$/;"	m
+TEMP_UCS4_BUFFER_SIZE	bstrlib-master/buniutil.c	202;"	d	file:
+TESTS	c-skeleton/Makefile	/^TESTS=$(patsubst %.c,%,$(TEST_SRC))$/;"	m
+TESTS	c-skeleton_ex29/Makefile	/^TESTS=$(patsubst %.c,%,$(TEST_SRC))$/;"	m
+TESTS	c-skeleton_ex30/Makefile	/^TESTS=$(patsubst %.c,%,$(TEST_SRC))$/;"	m
+TESTS	liblcthw/Makefile	/^TESTS=$(patsubst %.c,%,$(TEST_SRC))$/;"	m
+TEST_SRC	c-skeleton/Makefile	/^TEST_SRC=$(wildcard tests\/*_tests.c)$/;"	m
+TEST_SRC	c-skeleton_ex29/Makefile	/^TEST_SRC=$(wildcard tests\/*_tests.c)$/;"	m
+TEST_SRC	c-skeleton_ex30/Makefile	/^TEST_SRC=$(wildcard tests\/*_tests.c)$/;"	m
+TEST_SRC	liblcthw/Makefile	/^TEST_SRC=$(wildcard tests\/*_tests.c)$/;"	m
+THE_AGE	ex22.c	/^static int THE_AGE = 37;$/;"	v	file:
+THE_SIZE	ex22.c	/^int THE_SIZE = 1000;$/;"	v
+TYPE_FLOAT	ex35.c	/^    TYPE_FLOAT,$/;"	e	enum:__anon1	file:
+TYPE_INT	ex35.c	/^    TYPE_INT,$/;"	e	enum:__anon1	file:
+TYPE_STRING	ex35.c	/^    TYPE_STRING,$/;"	e	enum:__anon1	file:
+Testing	ex35.c	/^struct Testing { \/\/for testing something$/;"	s	file:
+Testing	ex35.c	/^typedef struct Testing Testing;$/;"	t	typeref:struct:Testing	file:
+UNICODE__CODE_POINT__REPLACEMENT_CHARACTER	bstrlib-master/buniutil.c	19;"	d	file:
+UNUSED	bstrlib-master/bstraux.c	30;"	d	file:
+UTF8_UNICODE_UTILITIES	bstrlib-master/utf8util.h	15;"	d
+UU_DECODE_BYTE	bstrlib-master/bstraux.c	500;"	d	file:
+UU_ENCODE_BYTE	bstrlib-master/bstraux.c	720;"	d	file:
+UU_MAX_LINELEN	bstrlib-master/bstraux.c	507;"	d	file:
+Variant	ex35.c	/^struct Variant {$/;"	s	file:
+Variant	ex35.c	/^typedef struct Variant Variant; \/\/don't know what this is  \/\/don't know what this is$/;"	t	typeref:struct:Variant	file:
+VariantType	ex35.c	/^} VariantType;$/;"	t	typeref:enum:__anon1	file:
+Variant_print	ex35.c	/^void Variant_print(Variant *var) {$/;"	f
+_CRT_SECURE_NO_WARNINGS	bstrlib-master/bstraux.c	18;"	d	file:
+_CRT_SECURE_NO_WARNINGS	bstrlib-master/bstrwrap.cpp	15;"	d	file:
+_CRT_SECURE_NO_WARNINGS	bstrlib-master/test.cpp	15;"	d	file:
+_CRT_SECURE_NO_WARNINGS	ex36/bstrlib.c	15;"	d	file:
+_CRT_SECURE_NO_WARNINGS	liblcthw/src/lcthw/bstrlib.c	15;"	d	file:
+_DArray_h	liblcthw/src/lcthw/darray.h	2;"	d
+__dbg_h__	c-skeleton/src/dbg.h	2;"	d
+__dbg_h__	c-skeleton/tests/dbg.h	2;"	d
+__dbg_h__	c-skeleton_ex29/src/dbg.h	2;"	d
+__dbg_h__	c-skeleton_ex29/tests/dbg.h	2;"	d
+__dbg_h__	c-skeleton_ex30/src/dbg.h	2;"	d
+__dbg_h__	c-skeleton_ex30/tests/dbg.h	2;"	d
+__dbg_h__	dbg.h	2;"	d
+__dbg_h__	dbg_ec.h	2;"	d
+__dbg_h__	liblcthw/src/lcthw/dbg.h	2;"	d
+__dbg_h__	liblcthw/tests/dbg.h	2;"	d
+__duffsdev_h__	duffsdev.h	2;"	d
+_bDeclTbstrIdx	bstrlib-master/test.cpp	1624;"	d	file:
+_ex22_h	ex22.h	2;"	d
+_lcthw_Hashmap_h	liblcthw/src/lcthw/hashmap.h	2;"	d
+_minunit_h	c-skeleton/tests/minunit.h	3;"	d
+_minunit_h	c-skeleton_ex30/tests/minunit.h	3;"	d
+_minunit_h	liblcthw/tests/minunit.h	3;"	d
+_minunit_h	liblcthw/tests/minunit_changed.h	3;"	d
+_minunit_h	minunit.h	3;"	d
+_radixmap_h	liblcthw/src/lcthw/radixmap.h	2;"	d
+a	ex35.c	/^            uint8_t a;$/;"	m	struct:Testing::__anon3::__anon4	file:
+a	liblcthw/tests/list_tests.c	/^List *a = NULL;$/;"	v
+ab	ex35.c	/^        uint16_t ab;$/;"	m	union:Testing::__anon3	file:
+age	ex16.c	/^    int age;$/;"	m	struct:Person	file:
+age	ex16ec.c	/^    int age;$/;"	m	struct:Person	file:
+age	ex24.c	/^    int age;$/;"	m	struct:Person	file:
+age	ex24ec.c	/^    int age;$/;"	m	struct:Person	file:
+all_test	liblcthw/tests/bstr_tests.c	/^RUN_TESTS(all_test);$/;"	v
+all_test	liblcthw/tests/bstr_tests.c	/^char *all_test() {$/;"	f
+all_tests	c-skeleton_ex30/tests/libex30_tests.c	/^RUN_TEST(all_tests);$/;"	v
+all_tests	c-skeleton_ex30/tests/libex30_tests.c	/^char *all_tests() {$/;"	f
+all_tests	c-skeleton_ex30/tests/template_tests.c	/^RUN_TEST(all_tests);$/;"	v
+all_tests	c-skeleton_ex30/tests/template_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/darray_algos_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/darray_algos_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/darray_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/darray_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/hashmap_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/hashmap_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/list_algos_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/list_algos_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/list_algos_zed_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/list_algos_zed_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/list_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/list_tests.c	/^char *all_tests() {$/;"	f
+all_tests	liblcthw/tests/radixmap_tests.c	/^RUN_TESTS(all_tests);$/;"	v
+all_tests	liblcthw/tests/radixmap_tests.c	/^char *all_tests() {$/;"	f
+alloc	bstrlib-master/bstrwrap.cpp	/^void CBString::alloc (int len) {$/;"	f	class:Bstrlib::CBString
+array	liblcthw/tests/darray_tests.c	/^static DArray *array = NULL;$/;"	v	file:
+as_float	ex35.c	/^        float as_float;$/;"	m	union:Variant::__anon2	file:
+as_integer	ex35.c	/^        int as_integer;$/;"	m	union:Variant::__anon2	file:
+as_string	ex35.c	/^        char *as_string;$/;"	m	union:Variant::__anon2	file:
+b	bstrlib-master/bstest.c	/^	bstring b;$/;"	m	struct:tagBss	file:
+b	bstrlib-master/bstest.c	/^    bstring b;$/;"	m	struct:sbstr	file:
+b	ex35.c	/^            uint8_t b;$/;"	m	struct:Testing::__anon3::__anon4	file:
+b	ex36/bstrlib.c	/^	bstring b;$/;"	m	struct:genBstrList	file:
+b	liblcthw/src/lcthw/bstrlib.c	/^	bstring b;$/;"	m	struct:genBstrList	file:
+b	liblcthw/tests/list_tests.c	/^List *b = NULL;$/;"	v
+b64ETable	bstrlib-master/bstraux.c	/^static char b64ETable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+\/";$/;"	v	file:
+bAscTime	bstrlib-master/bstraux.h	60;"	d
+bAssign	bstrlib-master/bstraux.h	32;"	d
+bBase64Decode	bstrlib-master/bstraux.h	45;"	d
+bBase64DecodeEx	bstrlib-master/bstraux.c	/^bstring bBase64DecodeEx (const_bstring b, int * boolTruncError) {$/;"	f
+bBase64Encode	bstrlib-master/bstraux.c	/^bstring bBase64Encode (const_bstring b) {$/;"	f
+bBlockCopy	ex36/bstrlib.c	75;"	d	file:
+bBlockCopy	liblcthw/src/lcthw/bstrlib.c	76;"	d	file:
+bCTime	bstrlib-master/bstraux.h	61;"	d
+bCaselessCmp	bstrlib-master/bstraux.h	43;"	d
+bCaselessNCmp	bstrlib-master/bstraux.h	44;"	d
+bCatBlk	bstrlib-master/bstraux.h	37;"	d
+bCatCstr	bstrlib-master/bstraux.h	36;"	d
+bCatStatic	bstrlib-master/bstraux.h	38;"	d
+bDeclTbstr	bstrlib-master/test.cpp	1627;"	d	file:
+bDeclTbstr	bstrlib-master/test.cpp	1629;"	d	file:
+bFill	bstrlib-master/bstraux.c	/^int bFill (bstring b, char c, int len) {$/;"	f
+bGlue3	bstrlib-master/test.cpp	1621;"	d	file:
+bGlue3_aux	bstrlib-master/test.cpp	1620;"	d	file:
+bHead	bstrlib-master/bstraux.c	/^bstring bHead (bstring b, int n) {$/;"	f
+bInsertChrs	bstrlib-master/bstraux.c	/^int bInsertChrs (bstring b, int pos, int len, unsigned char c, unsigned char fill) {$/;"	f
+bJustifyCenter	bstrlib-master/bstraux.c	/^int bJustifyCenter (bstring b, int width, int space) {$/;"	f
+bJustifyLeft	bstrlib-master/bstraux.c	/^int bJustifyLeft (bstring b, int space) {$/;"	f
+bJustifyMargin	bstrlib-master/bstraux.c	/^int bJustifyMargin (bstring b, int width, int space) {$/;"	f
+bJustifyRight	bstrlib-master/bstraux.c	/^int bJustifyRight (bstring b, int width, int space) {$/;"	f
+bLowercase	bstrlib-master/bstraux.h	42;"	d
+bMultiCatCstr	bstrlib-master/test.cpp	1618;"	d	file:
+bMultiCatCstrNeedNULLAsLastArgument	bstrlib-master/test.cpp	/^int bMultiCatCstrNeedNULLAsLastArgument (bstring dst, ...) {$/;"	f
+bMultiConcat	bstrlib-master/test.cpp	1617;"	d	file:
+bMultiConcatNeedNULLAsLastArgument	bstrlib-master/test.cpp	/^int bMultiConcatNeedNULLAsLastArgument (bstring dst, ...) {$/;"	f
+bNetStr2Bstr	bstrlib-master/bstraux.c	/^bstring bNetStr2Bstr (const char * buff) {$/;"	f
+bNgetc	ex36/bstrlib.h	/^typedef int (*bNgetc) (void *parm);$/;"	t
+bNgetc	liblcthw/src/lcthw/bstrlib.h	/^typedef int (*bNgetc) (void *parm);$/;"	t
+bNread	ex36/bstrlib.h	/^typedef size_t (* bNread) (void *buff, size_t elsize, size_t nelem, void *parm);$/;"	t
+bNread	liblcthw/src/lcthw/bstrlib.h	/^typedef size_t (* bNread) (void *buff, size_t elsize, size_t nelem, void *parm);$/;"	t
+bNwrite	bstrlib-master/bstraux.h	/^typedef int (* bNwrite) (const void * buf, size_t elsize, size_t nelem, void * parm);$/;"	t
+bReplaceAll	bstrlib-master/bstraux.h	40;"	d
+bReplicate	bstrlib-master/bstraux.c	/^int bReplicate (bstring b, int n) {$/;"	f
+bReverse	bstrlib-master/bstraux.c	/^int bReverse (bstring b) {$/;"	f
+bSGMLEncode	bstrlib-master/bstraux.c	/^int bSGMLEncode (bstring b) {$/;"	f
+bSecureDestroy	bstrlib-master/bstraux.h	93;"	d
+bSecureInput	bstrlib-master/bstraux.c	/^bstring bSecureInput (int maxlen, int termchar, bNgetc vgetchar, void * vgcCtx) {$/;"	f
+bSecureWriteProtect	bstrlib-master/bstraux.h	100;"	d
+bSetChar	bstrlib-master/bstraux.c	/^int bSetChar (bstring b, int pos, char c) {$/;"	f
+bSetCstrChar	bstrlib-master/bstraux.c	/^int bSetCstrChar (bstring b, int pos, char c) {$/;"	f
+bStr2NetStr	bstrlib-master/bstraux.c	/^char * bStr2NetStr (const_bstring b) {$/;"	f
+bStrchr	bstrlib-master/bstraux.h	34;"	d
+bStrchrFast	bstrlib-master/bstraux.h	35;"	d
+bStream	ex36/bstrlib.c	/^struct bStream {$/;"	s	file:
+bStream	liblcthw/src/lcthw/bstrlib.c	/^struct bStream {$/;"	s	file:
+bStrfTime	bstrlib-master/bstraux.c	/^bstring bStrfTime (const char * fmt, const struct tm * timeptr) {$/;"	f
+bSubs	bstrlib-master/bstraux.h	33;"	d
+bTail	bstrlib-master/bstraux.c	/^bstring bTail (bstring b, int n) {$/;"	f
+bTrunc	bstrlib-master/bstraux.h	39;"	d
+bUppercase	bstrlib-master/bstraux.h	41;"	d
+bUuDecLine	bstrlib-master/bstraux.c	/^static int bUuDecLine (void * parm, int ofs, int len) {$/;"	f	file:
+bUuDecode	bstrlib-master/bstraux.h	46;"	d
+bUuDecodeEx	bstrlib-master/bstraux.c	/^bstring bUuDecodeEx (const_bstring src, int * badlines) {$/;"	f
+bUuEncode	bstrlib-master/bstraux.c	/^bstring bUuEncode (const_bstring src) {$/;"	f
+bUuInOut	bstrlib-master/bstraux.c	/^struct bUuInOut {$/;"	s	file:
+bYDecode	bstrlib-master/bstraux.c	/^bstring bYDecode (const_bstring src) {$/;"	f
+bYEncode	bstrlib-master/bstraux.c	/^bstring bYEncode (const_bstring src) {$/;"	f
+badBstring1	bstrlib-master/bstest.c	/^struct tagbstring badBstring1 = {8,  4, NULL};$/;"	v	typeref:struct:tagbstring
+badBstring2	bstrlib-master/bstest.c	/^struct tagbstring badBstring2 = {2, -5, (unsigned char *) "bogus"};$/;"	v	typeref:struct:tagbstring
+badBstring3	bstrlib-master/bstest.c	/^struct tagbstring badBstring3 = {2,  5, (unsigned char *) "bogus"};$/;"	v	typeref:struct:tagbstring
+badlines	bstrlib-master/bstraux.c	/^	int * badlines;$/;"	m	struct:bUuInOut	file:
+balloc	ex36/bstrlib.c	/^int balloc (bstring b, int olen) {$/;"	f
+balloc	liblcthw/src/lcthw/bstrlib.c	/^int balloc (bstring b, int olen) {$/;"	f
+ballocmin	ex36/bstrlib.c	/^int ballocmin (bstring b, int len) {$/;"	f
+ballocmin	liblcthw/src/lcthw/bstrlib.c	/^int ballocmin (bstring b, int len) {$/;"	f
+base	bstrlib-master/testaux.c	/^	bstring base;$/;"	m	struct:vfgetc	file:
+base64DecodeSymbol	bstrlib-master/bstraux.c	/^static int base64DecodeSymbol (unsigned char alpha) {$/;"	f	file:
+bassign	ex36/bstrlib.c	/^int bassign (bstring a, const_bstring b) {$/;"	f
+bassign	liblcthw/src/lcthw/bstrlib.c	/^int bassign (bstring a, const_bstring b) {$/;"	f
+bassignStatic	ex36/bstrlib.h	227;"	d
+bassignStatic	liblcthw/src/lcthw/bstrlib.h	227;"	d
+bassign_test	liblcthw/tests/bstr_tests.c	/^char *bassign_test() {$/;"	f
+bassignblk	ex36/bstrlib.c	/^int bassignblk (bstring a, const void * s, int len) {$/;"	f
+bassignblk	liblcthw/src/lcthw/bstrlib.c	/^int bassignblk (bstring a, const void * s, int len) {$/;"	f
+bassignblk_test	liblcthw/tests/bstr_tests.c	/^char *bassignblk_test() {$/;"	f
+bassigncstr	ex36/bstrlib.c	/^int bassigncstr (bstring a, const char * str) {$/;"	f
+bassigncstr	liblcthw/src/lcthw/bstrlib.c	/^int bassigncstr (bstring a, const char * str) {$/;"	f
+bassigncstr_test	liblcthw/tests/bstr_tests.c	/^char *bassigncstr_test() {$/;"	f
+bassignformat	ex36/bstrlib.c	/^int bassignformat (bstring b, const char * fmt, ...) {$/;"	f
+bassignformat	liblcthw/src/lcthw/bstrlib.c	/^int bassignformat (bstring b, const char * fmt, ...) {$/;"	f
+bassigngets	ex36/bstrlib.c	/^int bassigngets (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bassigngets	liblcthw/src/lcthw/bstrlib.c	/^int bassigngets (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bassignmidstr	ex36/bstrlib.c	/^int bassignmidstr (bstring a, const_bstring b, int left, int len) {$/;"	f
+bassignmidstr	liblcthw/src/lcthw/bstrlib.c	/^int bassignmidstr (bstring a, const_bstring b, int left, int len) {$/;"	f
+bcatStatic	ex36/bstrlib.h	225;"	d
+bcatStatic	liblcthw/src/lcthw/bstrlib.h	225;"	d
+bcatblk	ex36/bstrlib.c	/^int bcatblk (bstring b, const void * s, int len) {$/;"	f
+bcatblk	liblcthw/src/lcthw/bstrlib.c	/^int bcatblk (bstring b, const void * s, int len) {$/;"	f
+bcatcstr	ex36/bstrlib.c	/^int bcatcstr (bstring b, const char * s) {$/;"	f
+bcatcstr	liblcthw/src/lcthw/bstrlib.c	/^int bcatcstr (bstring b, const char * s) {$/;"	f
+bchar	ex36/bstrlib.h	211;"	d
+bchar	liblcthw/src/lcthw/bstrlib.h	211;"	d
+bchar_test	liblcthw/tests/bstr_tests.c	/^char *bchar_test() {$/;"	f
+bchare	ex36/bstrlib.h	210;"	d
+bchare	liblcthw/src/lcthw/bstrlib.h	210;"	d
+bconcat	ex36/bstrlib.c	/^int bconcat (bstring b0, const_bstring b1) {$/;"	f
+bconcat	liblcthw/src/lcthw/bstrlib.c	/^int bconcat (bstring b0, const_bstring b1) {$/;"	f
+bconcat_test	liblcthw/tests/bstr_tests.c	/^char *bconcat_test() {$/;"	f
+bconchar	ex36/bstrlib.c	/^int bconchar (bstring b, char c) {$/;"	f
+bconchar	liblcthw/src/lcthw/bstrlib.c	/^int bconchar (bstring b, char c) {$/;"	f
+bcstrfree	ex36/bstrlib.c	/^int bcstrfree (char * s) {$/;"	f
+bcstrfree	liblcthw/src/lcthw/bstrlib.c	/^int bcstrfree (char * s) {$/;"	f
+bdata	ex36/bstrlib.h	209;"	d
+bdata	liblcthw/src/lcthw/bstrlib.h	209;"	d
+bdata_test	liblcthw/tests/bstr_tests.c	/^char *bdata_test() {$/;"	f
+bdatae	ex36/bstrlib.h	208;"	d
+bdatae	liblcthw/src/lcthw/bstrlib.h	208;"	d
+bdataofs	ex36/bstrlib.h	207;"	d
+bdataofs	liblcthw/src/lcthw/bstrlib.h	207;"	d
+bdataofse	ex36/bstrlib.h	206;"	d
+bdataofse	liblcthw/src/lcthw/bstrlib.h	206;"	d
+bdelete	ex36/bstrlib.c	/^int bdelete (bstring b, int pos, int len) {$/;"	f
+bdelete	liblcthw/src/lcthw/bstrlib.c	/^int bdelete (bstring b, int pos, int len) {$/;"	f
+bdestroy	ex36/bstrlib.c	/^int bdestroy (bstring b) {$/;"	f
+bdestroy	liblcthw/src/lcthw/bstrlib.c	/^int bdestroy (bstring b) {$/;"	f
+bdestroy_test	liblcthw/tests/bstr_tests.c	/^char *bdestroy_test() {$/;"	f
+bfindreplace	ex36/bstrlib.c	/^int bfindreplace (bstring b, const_bstring find, const_bstring repl,$/;"	f
+bfindreplace	liblcthw/src/lcthw/bstrlib.c	/^int bfindreplace (bstring b, const_bstring find, const_bstring repl,$/;"	f
+bfindreplace_test	liblcthw/tests/bstr_tests.c	/^char *bfindreplace_test() {$/;"	f
+bfindreplacecaseless	ex36/bstrlib.c	/^int bfindreplacecaseless (bstring b, const_bstring find, const_bstring repl,$/;"	f
+bfindreplacecaseless	liblcthw/src/lcthw/bstrlib.c	/^int bfindreplacecaseless (bstring b, const_bstring find, const_bstring repl,$/;"	f
+bformat	ex36/bstrlib.c	/^bstring bformat (const char * fmt, ...) {$/;"	f
+bformat	liblcthw/src/lcthw/bstrlib.c	/^bstring bformat (const char * fmt, ...) {$/;"	f
+bformat_test	liblcthw/tests/bstr_tests.c	/^char *bformat_test() {$/;"	f
+bformata	ex36/bstrlib.c	/^int bformata (bstring b, const char * fmt, ...) {$/;"	f
+bformata	liblcthw/src/lcthw/bstrlib.c	/^int bformata (bstring b, const char * fmt, ...) {$/;"	f
+bfromStatic	ex36/bstrlib.h	226;"	d
+bfromStatic	liblcthw/src/lcthw/bstrlib.h	226;"	d
+bfromcstr	ex36/bstrlib.c	/^bstring bfromcstr (const char * str) {$/;"	f
+bfromcstr	liblcthw/src/lcthw/bstrlib.c	/^bstring bfromcstr (const char * str) {$/;"	f
+bfromcstr_test	liblcthw/tests/bstr_tests.c	/^char *bfromcstr_test() {$/;"	f
+bfromcstralloc	ex36/bstrlib.c	/^bstring bfromcstralloc (int mlen, const char * str) {$/;"	f
+bfromcstralloc	liblcthw/src/lcthw/bstrlib.c	/^bstring bfromcstralloc (int mlen, const char * str) {$/;"	f
+bfromcstrrangealloc	ex36/bstrlib.c	/^bstring bfromcstrrangealloc (int minl, int maxl, const char* str) {$/;"	f
+bfromcstrrangealloc	liblcthw/src/lcthw/bstrlib.c	/^bstring bfromcstrrangealloc (int minl, int maxl, const char* str) {$/;"	f
+bgets	ex36/bstrlib.c	/^bstring bgets (bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bgets	liblcthw/src/lcthw/bstrlib.c	/^bstring bgets (bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bgetsa	ex36/bstrlib.c	/^int bgetsa (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bgetsa	liblcthw/src/lcthw/bstrlib.c	/^int bgetsa (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+binchr	ex36/bstrlib.c	/^int binchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchr	liblcthw/src/lcthw/bstrlib.c	/^int binchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrCF	ex36/bstrlib.c	/^static int binchrCF (const unsigned char * data, int len, int pos,$/;"	f	file:
+binchrCF	liblcthw/src/lcthw/bstrlib.c	/^static int binchrCF (const unsigned char * data, int len, int pos,$/;"	f	file:
+binchrr	ex36/bstrlib.c	/^int binchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrr	liblcthw/src/lcthw/bstrlib.c	/^int binchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrrCF	ex36/bstrlib.c	/^static int binchrrCF (const unsigned char * data, int pos,$/;"	f	file:
+binchrrCF	liblcthw/src/lcthw/bstrlib.c	/^static int binchrrCF (const unsigned char * data, int pos,$/;"	f	file:
+binsert	ex36/bstrlib.c	/^int binsert (bstring b1, int pos, const_bstring b2, unsigned char fill) {$/;"	f
+binsert	liblcthw/src/lcthw/bstrlib.c	/^int binsert (bstring b1, int pos, const_bstring b2, unsigned char fill) {$/;"	f
+binsertStatic	ex36/bstrlib.h	228;"	d
+binsertStatic	liblcthw/src/lcthw/bstrlib.h	228;"	d
+binsertblk	ex36/bstrlib.c	/^int binsertblk (bstring b, int pos, const void * blk, int len,$/;"	f
+binsertblk	liblcthw/src/lcthw/bstrlib.c	/^int binsertblk (bstring b, int pos, const void * blk, int len,$/;"	f
+binsertch	ex36/bstrlib.c	/^int binsertch (bstring b, int pos, int len, unsigned char fill) {$/;"	f
+binsertch	liblcthw/src/lcthw/bstrlib.c	/^int binsertch (bstring b, int pos, int len, unsigned char fill) {$/;"	f
+binstr	ex36/bstrlib.c	/^int binstr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstr	liblcthw/src/lcthw/bstrlib.c	/^int binstr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstr_test	liblcthw/tests/bstr_tests.c	/^char *binstr_test() {$/;"	f
+binstrcaseless	ex36/bstrlib.c	/^int binstrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrcaseless	liblcthw/src/lcthw/bstrlib.c	/^int binstrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrr	ex36/bstrlib.c	/^int binstrr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrr	liblcthw/src/lcthw/bstrlib.c	/^int binstrr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrrcaseless	ex36/bstrlib.c	/^int binstrrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrrcaseless	liblcthw/src/lcthw/bstrlib.c	/^int binstrrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+biseq	ex36/bstrlib.c	/^int biseq (const_bstring b0, const_bstring b1) {$/;"	f
+biseq	liblcthw/src/lcthw/bstrlib.c	/^int biseq (const_bstring b0, const_bstring b1) {$/;"	f
+biseqStatic	ex36/bstrlib.h	230;"	d
+biseqStatic	liblcthw/src/lcthw/bstrlib.h	230;"	d
+biseq_test	liblcthw/tests/bstr_tests.c	/^char *biseq_test() {$/;"	f
+biseqblk	ex36/bstrlib.c	/^int biseqblk (const_bstring b, const void * blk, int len) {$/;"	f
+biseqblk	liblcthw/src/lcthw/bstrlib.c	/^int biseqblk (const_bstring b, const void * blk, int len) {$/;"	f
+biseqcaseless	ex36/bstrlib.c	/^int biseqcaseless (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcaseless	liblcthw/src/lcthw/bstrlib.c	/^int biseqcaseless (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcaselessStatic	ex36/bstrlib.h	232;"	d
+biseqcaselessStatic	liblcthw/src/lcthw/bstrlib.h	232;"	d
+biseqcaselessblk	ex36/bstrlib.c	/^int biseqcaselessblk (const_bstring b, const void * blk, int len) {$/;"	f
+biseqcaselessblk	liblcthw/src/lcthw/bstrlib.c	/^int biseqcaselessblk (const_bstring b, const void * blk, int len) {$/;"	f
+biseqcstr	ex36/bstrlib.c	/^int biseqcstr (const_bstring b, const char * s) {$/;"	f
+biseqcstr	liblcthw/src/lcthw/bstrlib.c	/^int biseqcstr (const_bstring b, const char * s) {$/;"	f
+biseqcstrcaseless	ex36/bstrlib.c	/^int biseqcstrcaseless (const_bstring b, const char * s) {$/;"	f
+biseqcstrcaseless	liblcthw/src/lcthw/bstrlib.c	/^int biseqcstrcaseless (const_bstring b, const char * s) {$/;"	f
+bisstemeqStatic	ex36/bstrlib.h	231;"	d
+bisstemeqStatic	liblcthw/src/lcthw/bstrlib.h	231;"	d
+bisstemeqblk	ex36/bstrlib.c	/^int bisstemeqblk (const_bstring b0, const void * blk, int len) {$/;"	f
+bisstemeqblk	liblcthw/src/lcthw/bstrlib.c	/^int bisstemeqblk (const_bstring b0, const void * blk, int len) {$/;"	f
+bisstemeqcaselessStatic	ex36/bstrlib.h	233;"	d
+bisstemeqcaselessStatic	liblcthw/src/lcthw/bstrlib.h	233;"	d
+bisstemeqcaselessblk	ex36/bstrlib.c	/^int bisstemeqcaselessblk (const_bstring b0, const void * blk, int len) {$/;"	f
+bisstemeqcaselessblk	liblcthw/src/lcthw/bstrlib.c	/^int bisstemeqcaselessblk (const_bstring b0, const void * blk, int len) {$/;"	f
+biswriteprotected	ex36/bstrlib.h	315;"	d
+biswriteprotected	liblcthw/src/lcthw/bstrlib.h	315;"	d
+bjoin	ex36/bstrlib.c	/^bstring bjoin (const struct bstrList * bl, const_bstring sep) {$/;"	f
+bjoin	liblcthw/src/lcthw/bstrlib.c	/^bstring bjoin (const struct bstrList * bl, const_bstring sep) {$/;"	f
+bjoinStatic	ex36/bstrlib.h	229;"	d
+bjoinStatic	liblcthw/src/lcthw/bstrlib.h	229;"	d
+bjoinblk	ex36/bstrlib.c	/^bstring bjoinblk (const struct bstrList * bl, const void * blk, int len) {$/;"	f
+bjoinblk	liblcthw/src/lcthw/bstrlib.c	/^bstring bjoinblk (const struct bstrList * bl, const void * blk, int len) {$/;"	f
+bl	ex36/bstrlib.c	/^	struct bstrList * bl;$/;"	m	struct:genBstrList	typeref:struct:genBstrList::bstrList	file:
+bl	liblcthw/src/lcthw/bstrlib.c	/^	struct bstrList * bl;$/;"	m	struct:genBstrList	typeref:struct:genBstrList::bstrList	file:
+bla	ex18analysis.c	/^char *bla(int c) {$/;"	f
+bla_func	ex18analysis.c	/^typedef char *(*bla_func) (int);$/;"	t	file:
+blength	ex36/bstrlib.h	205;"	d
+blength	liblcthw/src/lcthw/bstrlib.h	205;"	d
+blength_test	liblcthw/tests/bstr_tests.c	/^char *blength_test() {$/;"	f
+blengthe	ex36/bstrlib.h	204;"	d
+blengthe	liblcthw/src/lcthw/bstrlib.h	204;"	d
+blk2bstr	ex36/bstrlib.c	/^bstring blk2bstr (const void * blk, int len) {$/;"	f
+blk2bstr	liblcthw/src/lcthw/bstrlib.c	/^bstring blk2bstr (const void * blk, int len) {$/;"	f
+blk2bstr_test	liblcthw/tests/bstr_tests.c	/^char *blk2bstr_test() {$/;"	f
+blk2tbstr	ex36/bstrlib.h	242;"	d
+blk2tbstr	liblcthw/src/lcthw/bstrlib.h	242;"	d
+bltrimws	ex36/bstrlib.c	/^int bltrimws (bstring b) {$/;"	f
+bltrimws	liblcthw/src/lcthw/bstrlib.c	/^int bltrimws (bstring b) {$/;"	f
+bmid2tbstr	ex36/bstrlib.h	248;"	d
+bmid2tbstr	liblcthw/src/lcthw/bstrlib.h	248;"	d
+bmidstr	ex36/bstrlib.c	/^bstring bmidstr (const_bstring b, int left, int len) {$/;"	f
+bmidstr	liblcthw/src/lcthw/bstrlib.c	/^bstring bmidstr (const_bstring b, int left, int len) {$/;"	f
+bninchr	ex36/bstrlib.c	/^int bninchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bninchr	liblcthw/src/lcthw/bstrlib.c	/^int bninchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bninchrr	ex36/bstrlib.c	/^int bninchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bninchrr	liblcthw/src/lcthw/bstrlib.c	/^int bninchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bpattern	ex36/bstrlib.c	/^int bpattern (bstring b, int len) {$/;"	f
+bpattern	liblcthw/src/lcthw/bstrlib.c	/^int bpattern (bstring b, int len) {$/;"	f
+bread	ex36/bstrlib.c	/^bstring bread (bNread readPtr, void * parm) {$/;"	f
+bread	liblcthw/src/lcthw/bstrlib.c	/^bstring bread (bNread readPtr, void * parm) {$/;"	f
+breada	ex36/bstrlib.c	/^int breada (bstring b, bNread readPtr, void * parm) {$/;"	f
+breada	liblcthw/src/lcthw/bstrlib.c	/^int breada (bstring b, bNread readPtr, void * parm) {$/;"	f
+breplace	ex36/bstrlib.c	/^int breplace (bstring b1, int pos, int len, const_bstring b2,$/;"	f
+breplace	liblcthw/src/lcthw/bstrlib.c	/^int breplace (bstring b1, int pos, int len, const_bstring b2,$/;"	f
+brtrimws	ex36/bstrlib.c	/^int brtrimws (bstring b) {$/;"	f
+brtrimws	liblcthw/src/lcthw/bstrlib.c	/^int brtrimws (bstring b) {$/;"	f
+bsFromBstr	bstrlib-master/bstraux.c	/^struct bStream * bsFromBstr (const_bstring b) {$/;"	f
+bsFromBstrRef	bstrlib-master/bstraux.c	/^static struct bStream * bsFromBstrRef (struct tagbstring * t) {$/;"	f	file:
+bsStatic	ex36/bstrlib.h	216;"	d
+bsStatic	ex36/bstrlib.h	219;"	d
+bsStatic	liblcthw/src/lcthw/bstrlib.h	216;"	d
+bsStatic	liblcthw/src/lcthw/bstrlib.h	219;"	d
+bsStaticBlkParms	ex36/bstrlib.h	223;"	d
+bsStaticBlkParms	liblcthw/src/lcthw/bstrlib.h	223;"	d
+bsStaticMlen	ex36/bstrlib.h	214;"	d
+bsStaticMlen	liblcthw/src/lcthw/bstrlib.h	214;"	d
+bsUuCtx	bstrlib-master/bstraux.c	/^struct bsUuCtx {$/;"	s	file:
+bsUuDecode	bstrlib-master/bstraux.c	/^struct bStream * bsUuDecode (struct bStream * sInp, int * badlines) {$/;"	f
+bsUuDecodePart	bstrlib-master/bstraux.c	/^static size_t bsUuDecodePart (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+bsafeShouldExit	bstrlib-master/bsafe.c	/^static int bsafeShouldExit = 1;$/;"	v	file:
+bsbufflength	ex36/bstrlib.c	/^int bsbufflength (struct bStream * s, int sz) {$/;"	f
+bsbufflength	liblcthw/src/lcthw/bstrlib.c	/^int bsbufflength (struct bStream * s, int sz) {$/;"	f
+bscb	ex36/bstrlib.c	/^static int bscb (void * parm, int ofs, int len) {$/;"	f	file:
+bscb	liblcthw/src/lcthw/bstrlib.c	/^static int bscb (void * parm, int ofs, int len) {$/;"	f	file:
+bsclose	ex36/bstrlib.c	/^void * bsclose (struct bStream * s) {$/;"	f
+bsclose	liblcthw/src/lcthw/bstrlib.c	/^void * bsclose (struct bStream * s) {$/;"	f
+bseof	ex36/bstrlib.c	/^int bseof (const struct bStream * s) {$/;"	f
+bseof	liblcthw/src/lcthw/bstrlib.c	/^int bseof (const struct bStream * s) {$/;"	f
+bsetstr	ex36/bstrlib.c	/^int bsetstr (bstring b0, int pos, const_bstring b1, unsigned char fill) {$/;"	f
+bsetstr	liblcthw/src/lcthw/bstrlib.c	/^int bsetstr (bstring b0, int pos, const_bstring b1, unsigned char fill) {$/;"	f
+bsopen	ex36/bstrlib.c	/^struct bStream * bsopen (bNread readPtr, void * parm) {$/;"	f
+bsopen	liblcthw/src/lcthw/bstrlib.c	/^struct bStream * bsopen (bNread readPtr, void * parm) {$/;"	f
+bspeek	ex36/bstrlib.c	/^int bspeek (bstring r, const struct bStream * s) {$/;"	f
+bspeek	liblcthw/src/lcthw/bstrlib.c	/^int bspeek (bstring r, const struct bStream * s) {$/;"	f
+bsplit	ex36/bstrlib.c	/^struct bstrList * bsplit (const_bstring str, unsigned char splitChar) {$/;"	f
+bsplit	liblcthw/src/lcthw/bstrlib.c	/^struct bstrList * bsplit (const_bstring str, unsigned char splitChar) {$/;"	f
+bsplit_test	liblcthw/tests/bstr_tests.c	/^char *bsplit_test() {$/;"	f
+bsplitcb	ex36/bstrlib.c	/^int bsplitcb (const_bstring str, unsigned char splitChar, int pos,$/;"	f
+bsplitcb	liblcthw/src/lcthw/bstrlib.c	/^int bsplitcb (const_bstring str, unsigned char splitChar, int pos,$/;"	f
+bsplits	ex36/bstrlib.c	/^struct bstrList * bsplits (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplits	liblcthw/src/lcthw/bstrlib.c	/^struct bstrList * bsplits (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitscb	ex36/bstrlib.c	/^int bsplitscb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsplitscb	liblcthw/src/lcthw/bstrlib.c	/^int bsplitscb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsplitstr	ex36/bstrlib.c	/^struct bstrList * bsplitstr (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitstr	liblcthw/src/lcthw/bstrlib.c	/^struct bstrList * bsplitstr (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitstrcb	ex36/bstrlib.c	/^int bsplitstrcb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsplitstrcb	liblcthw/src/lcthw/bstrlib.c	/^int bsplitstrcb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsread	ex36/bstrlib.c	/^int bsread (bstring r, struct bStream * s, int n) {$/;"	f
+bsread	liblcthw/src/lcthw/bstrlib.c	/^int bsread (bstring r, struct bStream * s, int n) {$/;"	f
+bsreada	ex36/bstrlib.c	/^int bsreada (bstring r, struct bStream * s, int n) {$/;"	f
+bsreada	liblcthw/src/lcthw/bstrlib.c	/^int bsreada (bstring r, struct bStream * s, int n) {$/;"	f
+bsreadln	ex36/bstrlib.c	/^int bsreadln (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadln	liblcthw/src/lcthw/bstrlib.c	/^int bsreadln (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlna	ex36/bstrlib.c	/^int bsreadlna (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlna	liblcthw/src/lcthw/bstrlib.c	/^int bsreadlna (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlns	ex36/bstrlib.c	/^int bsreadlns (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bsreadlns	liblcthw/src/lcthw/bstrlib.c	/^int bsreadlns (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bsreadlnsa	ex36/bstrlib.c	/^int bsreadlnsa (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bsreadlnsa	liblcthw/src/lcthw/bstrlib.c	/^int bsreadlnsa (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bssplitscb	ex36/bstrlib.c	/^int bssplitscb (struct bStream * s, const_bstring splitStr,$/;"	f
+bssplitscb	liblcthw/src/lcthw/bstrlib.c	/^int bssplitscb (struct bStream * s, const_bstring splitStr,$/;"	f
+bssplitstrcb	ex36/bstrlib.c	/^int bssplitstrcb (struct bStream * s, const_bstring splitStr,$/;"	f
+bssplitstrcb	liblcthw/src/lcthw/bstrlib.c	/^int bssplitstrcb (struct bStream * s, const_bstring splitStr,$/;"	f
+bstr2cstr	ex36/bstrlib.c	/^char * bstr2cstr (const_bstring b, char z) {$/;"	f
+bstr2cstr	liblcthw/src/lcthw/bstrlib.c	/^char * bstr2cstr (const_bstring b, char z) {$/;"	f
+bstrDeclare	bstrlib-master/bstraux.h	27;"	d
+bstrFree	bstrlib-master/bstraux.h	28;"	d
+bstrList	ex36/bstrlib.h	/^struct bstrList {$/;"	s
+bstrList	liblcthw/src/lcthw/bstrlib.h	/^struct bstrList {$/;"	s
+bstrListAlloc	ex36/bstrlib.c	/^int bstrListAlloc (struct bstrList * sl, int msz) {$/;"	f
+bstrListAlloc	liblcthw/src/lcthw/bstrlib.c	/^int bstrListAlloc (struct bstrList * sl, int msz) {$/;"	f
+bstrListAllocMin	ex36/bstrlib.c	/^int bstrListAllocMin (struct bstrList * sl, int msz) {$/;"	f
+bstrListAllocMin	liblcthw/src/lcthw/bstrlib.c	/^int bstrListAllocMin (struct bstrList * sl, int msz) {$/;"	f
+bstrListCreate	ex36/bstrlib.c	/^struct bstrList * bstrListCreate (void) {$/;"	f
+bstrListCreate	liblcthw/src/lcthw/bstrlib.c	/^struct bstrList * bstrListCreate (void) {$/;"	f
+bstrListDestroy	ex36/bstrlib.c	/^int bstrListDestroy (struct bstrList * sl) {$/;"	f
+bstrListDestroy	liblcthw/src/lcthw/bstrlib.c	/^int bstrListDestroy (struct bstrList * sl) {$/;"	f
+bstr__alloc	bstrlib-master/bstrwrap.cpp	30;"	d	file:
+bstr__alloc	ex36/bstrlib.c	/^void* bstr__alloc (size_t sz) {$/;"	f
+bstr__alloc	ex36/bstrlib.c	41;"	d	file:
+bstr__alloc	liblcthw/src/lcthw/bstrlib.c	/^void* bstr__alloc (size_t sz) {$/;"	f
+bstr__alloc	liblcthw/src/lcthw/bstrlib.c	42;"	d	file:
+bstr__free	bstrlib-master/bstrwrap.cpp	34;"	d	file:
+bstr__free	ex36/bstrlib.c	46;"	d	file:
+bstr__free	liblcthw/src/lcthw/bstrlib.c	47;"	d	file:
+bstr__memchr	bstrlib-master/bstrwrap.cpp	58;"	d	file:
+bstr__memchr	ex36/bstrlib.c	70;"	d	file:
+bstr__memchr	liblcthw/src/lcthw/bstrlib.c	71;"	d	file:
+bstr__memcmp	bstrlib-master/bstrwrap.cpp	54;"	d	file:
+bstr__memcmp	ex36/bstrlib.c	66;"	d	file:
+bstr__memcmp	liblcthw/src/lcthw/bstrlib.c	67;"	d	file:
+bstr__memcpy	bstrlib-master/bstrwrap.cpp	42;"	d	file:
+bstr__memcpy	ex36/bstrlib.c	54;"	d	file:
+bstr__memcpy	liblcthw/src/lcthw/bstrlib.c	55;"	d	file:
+bstr__memmove	bstrlib-master/bstrwrap.cpp	46;"	d	file:
+bstr__memmove	ex36/bstrlib.c	58;"	d	file:
+bstr__memmove	liblcthw/src/lcthw/bstrlib.c	59;"	d	file:
+bstr__memset	bstrlib-master/bstrwrap.cpp	50;"	d	file:
+bstr__memset	ex36/bstrlib.c	62;"	d	file:
+bstr__memset	liblcthw/src/lcthw/bstrlib.c	63;"	d	file:
+bstr__realloc	bstrlib-master/bstrwrap.cpp	38;"	d	file:
+bstr__realloc	ex36/bstrlib.c	50;"	d	file:
+bstr__realloc	liblcthw/src/lcthw/bstrlib.c	51;"	d	file:
+bstrchr	ex36/bstrlib.h	100;"	d
+bstrchr	liblcthw/src/lcthw/bstrlib.h	100;"	d
+bstrchrp	ex36/bstrlib.c	/^int bstrchrp (const_bstring b, int c, int pos) {$/;"	f
+bstrchrp	liblcthw/src/lcthw/bstrlib.c	/^int bstrchrp (const_bstring b, int c, int pos) {$/;"	f
+bstrcmp	ex36/bstrlib.c	/^int bstrcmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstrcmp	liblcthw/src/lcthw/bstrlib.c	/^int bstrcmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstrcpy	ex36/bstrlib.c	/^bstring bstrcpy (const_bstring b) {$/;"	f
+bstrcpy	liblcthw/src/lcthw/bstrlib.c	/^bstring bstrcpy (const_bstring b) {$/;"	f
+bstrcpy_test	liblcthw/tests/bstr_tests.c	/^char *bstrcpy_test() {$/;"	f
+bstricmp	ex36/bstrlib.c	/^int bstricmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstricmp	liblcthw/src/lcthw/bstrlib.c	/^int bstricmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstricmp_test	liblcthw/tests/bstr_tests.c	/^char *bstricmp_test() {$/;"	f
+bstring	ex36/bstrlib.h	/^typedef struct tagbstring * bstring;$/;"	t	typeref:struct:tagbstring
+bstring	liblcthw/src/lcthw/bstrlib.h	/^typedef struct tagbstring * bstring;$/;"	t	typeref:struct:tagbstring
+bstringThrow	bstrlib-master/bstrwrap.h	117;"	d
+bstrncmp	ex36/bstrlib.c	/^int bstrncmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrncmp	liblcthw/src/lcthw/bstrlib.c	/^int bstrncmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrnicmp	ex36/bstrlib.c	/^int bstrnicmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrnicmp	liblcthw/src/lcthw/bstrlib.c	/^int bstrnicmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrrchr	ex36/bstrlib.h	101;"	d
+bstrrchr	liblcthw/src/lcthw/bstrlib.h	101;"	d
+bstrrchrp	ex36/bstrlib.c	/^int bstrrchrp (const_bstring b, int c, int pos) {$/;"	f
+bstrrchrp	liblcthw/src/lcthw/bstrlib.c	/^int bstrrchrp (const_bstring b, int c, int pos) {$/;"	f
+bsunread	ex36/bstrlib.c	/^int bsunread (struct bStream * s, const_bstring b) {$/;"	f
+bsunread	liblcthw/src/lcthw/bstrlib.c	/^int bsunread (struct bStream * s, const_bstring b) {$/;"	f
+btfromblk	ex36/bstrlib.h	247;"	d
+btfromblk	liblcthw/src/lcthw/bstrlib.h	247;"	d
+btfromblkltrimws	ex36/bstrlib.h	272;"	d
+btfromblkltrimws	liblcthw/src/lcthw/bstrlib.h	272;"	d
+btfromblkrtrimws	ex36/bstrlib.h	284;"	d
+btfromblkrtrimws	liblcthw/src/lcthw/bstrlib.h	284;"	d
+btfromblktrimws	ex36/bstrlib.h	296;"	d
+btfromblktrimws	liblcthw/src/lcthw/bstrlib.h	296;"	d
+btfromcstr	ex36/bstrlib.h	237;"	d
+btfromcstr	liblcthw/src/lcthw/bstrlib.h	237;"	d
+btolower	ex36/bstrlib.c	/^int btolower (bstring b) {$/;"	f
+btolower	liblcthw/src/lcthw/bstrlib.c	/^int btolower (bstring b) {$/;"	f
+btoupper	ex36/bstrlib.c	/^int btoupper (bstring b) {$/;"	f
+btoupper	liblcthw/src/lcthw/bstrlib.c	/^int btoupper (bstring b) {$/;"	f
+btrimws	ex36/bstrlib.c	/^int btrimws (bstring b) {$/;"	f
+btrimws	liblcthw/src/lcthw/bstrlib.c	/^int btrimws (bstring b) {$/;"	f
+btrunc	ex36/bstrlib.c	/^int btrunc (bstring b, int n) {$/;"	f
+btrunc	liblcthw/src/lcthw/bstrlib.c	/^int btrunc (bstring b, int n) {$/;"	f
+buAppendBlkUTF16	bstrlib-master/buniutil.c	/^int buAppendBlkUTF16 (bstring bu, const cpUcs2* utf16, int len, cpUcs2* bom, cpUcs4 errCh) {$/;"	f
+buAppendBlkUcs4	bstrlib-master/buniutil.c	/^int buAppendBlkUcs4 (bstring b, const cpUcs4* bu, int len, cpUcs4 errCh) {$/;"	f
+buGetBlkUTF16	bstrlib-master/buniutil.c	/^int buGetBlkUTF16 (\/* @out *\/ cpUcs2* ucs2, int len, cpUcs4 errCh, const_bstring bu, int pos) {$/;"	f
+buIsUTF8Content	bstrlib-master/buniutil.c	/^int buIsUTF8Content (const_bstring bu) {$/;"	f
+bubble_sort	ex18.c	/^int* bubble_sort(int* numbers, int count, compare_cb cmp) {$/;"	f
+bubble_sort	ex18ec.c	/^int* bubble_sort(int* numbers, int count, compare_cb cmp) {$/;"	f
+buckets	liblcthw/src/lcthw/hashmap.h	/^    DArray *buckets;$/;"	m	struct:Hashmap
+buff	bstrlib-master/bstraux.c	/^    bstring buff;    \/* Buffer for underwrites                   *\/$/;"	m	struct:bwriteStream	file:
+buff	ex36/bstrlib.c	/^	bstring buff;		\/* Buffer for over-reads *\/$/;"	m	struct:bStream	file:
+buff	liblcthw/src/lcthw/bstrlib.c	/^	bstring buff;		\/* Buffer for over-reads *\/$/;"	m	struct:bStream	file:
+buffLengthGet	bstrlib-master/bstrwrap.cpp	/^int CBStream::buffLengthGet () {$/;"	f	class:Bstrlib::CBStream
+buffLengthSet	bstrlib-master/bstrwrap.cpp	/^int CBStream::buffLengthSet (int sz) {$/;"	f	class:Bstrlib::CBStream
+buildCharField	ex36/bstrlib.c	/^static int buildCharField (struct charField * cf, const_bstring b) {$/;"	f	file:
+buildCharField	liblcthw/src/lcthw/bstrlib.c	/^static int buildCharField (struct charField * cf, const_bstring b) {$/;"	f	file:
+build_max_heap	liblcthw/src/lcthw/darray_algos.c	/^void build_max_heap(void **array, int n, DArray_compare cmp) {$/;"	f
+bvcformata	ex36/bstrlib.c	/^int bvcformata (bstring b, int count, const char * fmt, va_list arg) {$/;"	f
+bvcformata	liblcthw/src/lcthw/bstrlib.c	/^int bvcformata (bstring b, int count, const char * fmt, va_list arg) {$/;"	f
+bvformata	ex36/bstrlib.h	146;"	d
+bvformata	liblcthw/src/lcthw/bstrlib.h	146;"	d
+bwriteStream	bstrlib-master/bstraux.c	/^struct bwriteStream {$/;"	s	file:
+bwriteallow	ex36/bstrlib.h	314;"	d
+bwriteallow	liblcthw/src/lcthw/bstrlib.h	314;"	d
+bwriteprotect	ex36/bstrlib.h	313;"	d
+bwriteprotect	liblcthw/src/lcthw/bstrlib.h	313;"	d
+bwsBuffLength	bstrlib-master/bstraux.c	/^int bwsBuffLength (struct bwriteStream * ws, int sz) {$/;"	f
+bwsClose	bstrlib-master/bstraux.c	/^void * bwsClose (struct bwriteStream * ws) {$/;"	f
+bwsIsEOF	bstrlib-master/bstraux.c	/^int bwsIsEOF (const struct bwriteStream * ws) {$/;"	f
+bwsOpen	bstrlib-master/bstraux.c	/^struct bwriteStream * bwsOpen (bNwrite writeFn, void * parm) {$/;"	f
+bwsWriteBlk	bstrlib-master/bstraux.c	/^int bwsWriteBlk (struct bwriteStream * ws, void * blk, int len) {$/;"	f
+bwsWriteBstr	bstrlib-master/bstraux.c	/^int bwsWriteBstr (struct bwriteStream * ws, const_bstring b) {$/;"	f
+bwsWriteFlush	bstrlib-master/bstraux.c	/^int bwsWriteFlush (struct bwriteStream * ws) {$/;"	f
+can_print_it	ex14.c	/^int can_print_it(char ch) {$/;"	f
+can_print_it	ex14_myway.c	/^int can_print_it(char ch) {$/;"	f
+caselessCmp	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessCmp (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+caselessEqual	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessEqual (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+caselessfind	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessfind (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+caselessfind	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessfind (const char * b, int pos) const {$/;"	f	class:Bstrlib::CBString
+caselessreversefind	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessreversefind (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+caselessreversefind	bstrlib-master/bstrwrap.cpp	/^int CBString::caselessreversefind (const char * b, int pos) const {$/;"	f	class:Bstrlib::CBString
+charField	ex36/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	s	file:
+charField	ex36/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	s	file:
+charField	liblcthw/src/lcthw/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	s	file:
+charField	liblcthw/src/lcthw/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	s	file:
+char_slide_left	ex24ec.c	/^void char_slide_left(char *str, int n) {$/;"	f
+character	bstrlib-master/bstrwrap.h	/^	inline CBCharWriteProtected character (int i) {$/;"	f	struct:Bstrlib::CBString
+character	bstrlib-master/bstrwrap.h	/^	inline unsigned char character (int i) const {$/;"	f	struct:Bstrlib::CBString
+check	c-skeleton/src/dbg.h	28;"	d
+check	c-skeleton/tests/dbg.h	28;"	d
+check	c-skeleton_ex29/src/dbg.h	28;"	d
+check	c-skeleton_ex29/tests/dbg.h	28;"	d
+check	c-skeleton_ex30/src/dbg.h	28;"	d
+check	c-skeleton_ex30/tests/dbg.h	28;"	d
+check	dbg.h	28;"	d
+check	dbg_ec.h	28;"	d
+check	liblcthw/src/lcthw/dbg.h	28;"	d
+check	liblcthw/tests/dbg.h	28;"	d
+check_debug	c-skeleton/src/dbg.h	36;"	d
+check_debug	c-skeleton/tests/dbg.h	36;"	d
+check_debug	c-skeleton_ex29/src/dbg.h	36;"	d
+check_debug	c-skeleton_ex29/tests/dbg.h	36;"	d
+check_debug	c-skeleton_ex30/src/dbg.h	36;"	d
+check_debug	c-skeleton_ex30/tests/dbg.h	36;"	d
+check_debug	dbg.h	36;"	d
+check_debug	dbg_ec.h	36;"	d
+check_debug	liblcthw/src/lcthw/dbg.h	36;"	d
+check_debug	liblcthw/tests/dbg.h	36;"	d
+check_function	c-skeleton_ex30/tests/libex30_tests.c	/^int check_function(const char *func_to_run, const char *data, int expected) {$/;"	f
+check_mem	c-skeleton/src/dbg.h	34;"	d
+check_mem	c-skeleton/tests/dbg.h	34;"	d
+check_mem	c-skeleton_ex29/src/dbg.h	34;"	d
+check_mem	c-skeleton_ex29/tests/dbg.h	34;"	d
+check_mem	c-skeleton_ex30/src/dbg.h	34;"	d
+check_mem	c-skeleton_ex30/tests/dbg.h	34;"	d
+check_mem	dbg.h	34;"	d
+check_mem	dbg_ec.h	34;"	d
+check_mem	liblcthw/src/lcthw/dbg.h	34;"	d
+check_mem	liblcthw/tests/dbg.h	34;"	d
+check_order	liblcthw/tests/radixmap_tests.c	/^static int check_order(RadixMap * map) {$/;"	f	file:
+clean_errno	c-skeleton/src/dbg.h	15;"	d
+clean_errno	c-skeleton/tests/dbg.h	15;"	d
+clean_errno	c-skeleton_ex29/src/dbg.h	15;"	d
+clean_errno	c-skeleton_ex29/tests/dbg.h	15;"	d
+clean_errno	c-skeleton_ex30/src/dbg.h	15;"	d
+clean_errno	c-skeleton_ex30/tests/dbg.h	15;"	d
+clean_errno	dbg.h	15;"	d
+clean_errno	dbg_ec.h	15;"	d
+clean_errno	liblcthw/src/lcthw/dbg.h	15;"	d
+clean_errno	liblcthw/tests/dbg.h	15;"	d
+cnt	liblcthw/src/lcthw/list.c	/^int cnt = 0;$/;"	v
+compare	liblcthw/src/lcthw/hashmap.h	/^    Hashmap_compare compare;$/;"	m	struct:Hashmap
+compare_cb	ex18.c	/^typedef int (*compare_cb) (int a, int b);$/;"	t	file:
+compare_cb	ex18ec.c	/^typedef int (*compare_cb) (int a, int b);$/;"	t	file:
+const_bstring	ex36/bstrlib.h	/^typedef const struct tagbstring * const_bstring;$/;"	t	typeref:struct:tagbstring
+const_bstring	liblcthw/src/lcthw/bstrlib.h	/^typedef const struct tagbstring * const_bstring;$/;"	t	typeref:struct:tagbstring
+content	ex36/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	m	struct:charField	file:
+content	ex36/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	m	struct:charField	file:
+content	liblcthw/src/lcthw/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	m	struct:charField	file:
+content	liblcthw/src/lcthw/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	m	struct:charField	file:
+contents	bstrlib-master/bstest.c	/^	bstring contents;$/;"	m	struct:emuFile	file:
+contents	liblcthw/src/lcthw/darray.h	/^    void **contents;$/;"	m	struct:DArray
+contents	liblcthw/src/lcthw/radixmap.h	/^    RMElement *contents;$/;"	m	struct:RadixMap
+copy	ex27_1.c	/^void copy(char to[], char from[]) {$/;"	f
+copy	liblcthw/tests/list_tests.c	/^List *copy = NULL;$/;"	v
+count	liblcthw/src/lcthw/list.h	/^    int count;$/;"	m	struct:List
+counter	liblcthw/src/lcthw/radixmap.h	/^    uint32_t counter;$/;"	m	struct:RadixMap
+cpUcs2	bstrlib-master/utf8util.h	/^typedef unsigned char	cpUcs2;$/;"	t
+cpUcs2	bstrlib-master/utf8util.h	/^typedef unsigned int	cpUcs2;$/;"	t
+cpUcs2	bstrlib-master/utf8util.h	/^typedef unsigned short	cpUcs2;$/;"	t
+cpUcs4	bstrlib-master/utf8util.h	/^typedef int 			cpUcs4;$/;"	t
+cpUcs4	bstrlib-master/utf8util.h	/^typedef long			cpUcs4;$/;"	t
+create_big_words	liblcthw/tests/list_algos_tests.c	/^List *create_big_words() {$/;"	f
+create_words	liblcthw/tests/darray_algos_tests.c	/^DArray *create_words() {$/;"	f
+create_words	liblcthw/tests/list_algos_tests.c	/^List *create_words() {$/;"	f
+create_words	liblcthw/tests/list_algos_zed_tests.c	/^List *create_words() {$/;"	f
+cstr2bstr	ex36/bstrlib.h	45;"	d
+cstr2bstr	liblcthw/src/lcthw/bstrlib.h	45;"	d
+cstr2tbstr	ex36/bstrlib.h	236;"	d
+cstr2tbstr	liblcthw/src/lcthw/bstrlib.h	236;"	d
+darray_algos_h	liblcthw/src/lcthw/darray_algos.h	2;"	d
+data	bstrlib-master/utf8util.h	/^	unsigned char*	data;$/;"	m	struct:utf8Iterator
+data	ex35.c	/^    } data;$/;"	m	struct:Testing	typeref:union:Testing::__anon3	file:
+data	ex35.c	/^    } data;$/;"	m	struct:Variant	typeref:union:Variant::__anon2	file:
+data	ex36/bstrlib.h	/^	unsigned char * data;$/;"	m	struct:tagbstring
+data	liblcthw/src/lcthw/bstrlib.h	/^	unsigned char * data;$/;"	m	struct:tagbstring
+data	liblcthw/src/lcthw/hashmap.h	/^    void *data;$/;"	m	struct:HashmapNode
+data	liblcthw/src/lcthw/radixmap.h	/^    } data;$/;"	m	union:RMElement	typeref:struct:RMElement::__anon5
+db	ex17.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Connection::Database	file:
+db	ex17ec.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Connection::Database	file:
+debug	c-skeleton/src/dbg.h	11;"	d
+debug	c-skeleton/src/dbg.h	9;"	d
+debug	c-skeleton/tests/dbg.h	11;"	d
+debug	c-skeleton/tests/dbg.h	9;"	d
+debug	c-skeleton_ex29/src/dbg.h	11;"	d
+debug	c-skeleton_ex29/src/dbg.h	9;"	d
+debug	c-skeleton_ex29/tests/dbg.h	11;"	d
+debug	c-skeleton_ex29/tests/dbg.h	9;"	d
+debug	c-skeleton_ex30/src/dbg.h	11;"	d
+debug	c-skeleton_ex30/src/dbg.h	9;"	d
+debug	c-skeleton_ex30/tests/dbg.h	11;"	d
+debug	c-skeleton_ex30/tests/dbg.h	9;"	d
+debug	dbg.h	11;"	d
+debug	dbg.h	9;"	d
+debug	dbg_ec.h	11;"	d
+debug	dbg_ec.h	9;"	d
+debug	liblcthw/src/lcthw/dbg.h	11;"	d
+debug	liblcthw/src/lcthw/dbg.h	9;"	d
+debug	liblcthw/tests/dbg.h	11;"	d
+debug	liblcthw/tests/dbg.h	9;"	d
+default_compare	liblcthw/src/lcthw/hashmap.c	/^static int default_compare(void *a, void *b) {$/;"	f	file:
+default_hash	liblcthw/src/lcthw/hashmap.c	/^static uint32_t default_hash(void *a) {$/;"	f	file:
+die	ex17.c	/^void die(const char *message) {$/;"	f
+die	ex17ec.c	/^void die(struct Connection *conn, const char *message) {$/;"	f
+die	ex18.c	/^void die(const char* message) {$/;"	f
+die	ex18ec.c	/^void die(const char* message) {$/;"	f
+downcase	ex36/bstrlib.c	599;"	d	file:
+downcase	liblcthw/src/lcthw/bstrlib.c	600;"	d	file:
+dst	bstrlib-master/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+duff16	duffsdev.h	36;"	d
+duff32	duffsdev.h	80;"	d
+duff8	duffsdev.h	8;"	d
+duffs_device	ex23.c	/^int duffs_device(char *from, char *to, int count) {$/;"	f
+duffs_device	ex23ec2.c	/^int duffs_device(char *from, char *to, int count) {$/;"	f
+dumpBstring	bstrlib-master/bstest.c	/^static char * dumpBstring (const struct tagbstring * b) {$/;"	f	file:
+dumpBstring	bstrlib-master/test.cpp	/^const char * dumpBstring (const bstring b) {$/;"	f
+dumpCstring	bstrlib-master/bstest.c	/^static char* dumpCstring (const char* s) {$/;"	f	file:
+dumpOut	bstrlib-master/bstest.c	/^static bstring dumpOut[16];$/;"	v	file:
+dumpOut	bstrlib-master/test.cpp	/^static bstring dumpOut[dumpOutQty];$/;"	v	file:
+dumpOutQty	bstrlib-master/test.cpp	26;"	d	file:
+element_size	liblcthw/src/lcthw/darray.h	/^    size_t element_size;$/;"	m	struct:DArray
+email	ex17.c	/^    char email[MAX_DATA];$/;"	m	struct:Address	file:
+email	ex17ec.c	/^    char *email;$/;"	m	struct:Address	file:
+emptyBstring	bstrlib-master/bstest.c	/^struct tagbstring emptyBstring = bsStatic ("");$/;"	v	typeref:struct:tagbstring
+emuFile	bstrlib-master/bstest.c	/^struct emuFile {$/;"	s	file:
+end	liblcthw/src/lcthw/darray.h	/^    int end;$/;"	m	struct:DArray
+end	liblcthw/src/lcthw/radixmap.h	/^    size_t end;$/;"	m	struct:RadixMap
+endSwap	bstrlib-master/buniutil.c	201;"	d	file:
+entry	ex36/bstrlib.h	/^    bstring * entry;$/;"	m	struct:bstrList
+entry	liblcthw/src/lcthw/bstrlib.h	/^    bstring * entry;$/;"	m	struct:bstrList
+eof	bstrlib-master/bstrwrap.cpp	/^int CBStream::eof () const {$/;"	f	class:Bstrlib::CBStream
+error	bstrlib-master/utf8util.h	/^	int           	error;$/;"	m	struct:utf8Iterator
+expand_rate	liblcthw/src/lcthw/darray.h	/^    size_t expand_rate;$/;"	m	struct:DArray
+expect1	liblcthw/tests/hashmap_tests.c	/^struct tagbstring expect1 = bsStatic("THE VALUE 1");$/;"	v	typeref:struct:tagbstring
+expect2	liblcthw/tests/hashmap_tests.c	/^struct tagbstring expect2 = bsStatic("THE VALUE 2");$/;"	v	typeref:struct:tagbstring
+expect3	liblcthw/tests/hashmap_tests.c	/^struct tagbstring expect3 = bsStatic("THE VALUE 3");$/;"	v	typeref:struct:tagbstring
+exvsnprintf	bstrlib-master/bstrwrap.cpp	535;"	d	file:
+exvsnprintf	bstrlib-master/bstrwrap.cpp	540;"	d	file:
+exvsnprintf	bstrlib-master/bstrwrap.cpp	552;"	d	file:
+exvsnprintf	ex36/bstrlib.c	2907;"	d	file:
+exvsnprintf	ex36/bstrlib.c	2912;"	d	file:
+exvsnprintf	ex36/bstrlib.c	2922;"	d	file:
+exvsnprintf	liblcthw/src/lcthw/bstrlib.c	2908;"	d	file:
+exvsnprintf	liblcthw/src/lcthw/bstrlib.c	2913;"	d	file:
+exvsnprintf	liblcthw/src/lcthw/bstrlib.c	2923;"	d	file:
+eyes	ex24.c	/^    EyeColor eyes;$/;"	m	struct:Person	file:
+eyes	ex24ec.c	/^    EyeColor eyes;$/;"	m	struct:Person	file:
+fail_on_purpose	c-skeleton_ex29/src/libex29.c	/^int fail_on_purpose(const char *msg) {$/;"	f
+fail_on_purpose	c-skeleton_ex30/src/libex30.c	/^int fail_on_purpose(const char *msg) {$/;"	f
+fail_on_purpose	libex29.c	/^int fail_on_purpose(const char *msg) {$/;"	f
+fail_on_purpose	libex29_ec.c	/^int fail_on_purpose(int len, const char *msg) {$/;"	f
+file	ex17.c	/^    FILE *file; \/\/FILE is a struct for files, defined by C standard library$/;"	m	struct:Connection	file:
+file	ex17ec.c	/^    FILE *file;$/;"	m	struct:Connection	file:
+file_traverse	logfind.c	/^int file_traverse(int is_or, int count, char *patterns[], char *filename) {$/;"	f
+fill	bstrlib-master/bstrwrap.cpp	/^void CBString::fill (int len, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+find	bstrlib-master/bstrwrap.cpp	/^int CBString::find (char c, int pos) const {$/;"	f	class:Bstrlib::CBString
+find	bstrlib-master/bstrwrap.cpp	/^int CBString::find (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+find	bstrlib-master/bstrwrap.cpp	/^int CBString::find (const char * b, int pos) const {$/;"	f	class:Bstrlib::CBString
+findchr	bstrlib-master/bstrwrap.cpp	/^int CBString::findchr (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+findchr	bstrlib-master/bstrwrap.cpp	/^int CBString::findchr (const char * s, int pos) const {$/;"	f	class:Bstrlib::CBString
+findreplace	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplace (const CBString& sfind, const CBString& repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplace	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplace (const CBString& sfind, const char * repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplace	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplace (const char * sfind, const CBString& repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplace	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplace (const char * sfind, const char * repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplacecaseless	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplacecaseless (const CBString& sfind, const CBString& repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplacecaseless	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplacecaseless (const CBString& sfind, const char * repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplacecaseless	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplacecaseless (const char * sfind, const CBString& repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplacecaseless	bstrlib-master/bstrwrap.cpp	/^void CBString::findreplacecaseless (const char * sfind, const char * repl, int pos) {$/;"	f	class:Bstrlib::CBString
+findreplaceengine	ex36/bstrlib.c	/^static int findreplaceengine (bstring b, const_bstring find,$/;"	f	file:
+findreplaceengine	liblcthw/src/lcthw/bstrlib.c	/^static int findreplaceengine (bstring b, const_bstring find,$/;"	f	file:
+first	bstrlib-master/bstest.c	/^	int first;$/;"	m	struct:tagBss	file:
+first	liblcthw/src/lcthw/list.h	/^    ListNode *first;$/;"	m	struct:List
+first_name	ex24.c	/^    char first_name[MAX_DATA];$/;"	m	struct:Person	file:
+first_name	ex24ec.c	/^    char first_name[MAX_DATA];$/;"	m	struct:Person	file:
+format	bstrlib-master/bstrwrap.cpp	/^void CBString::format (const char * fmt, ...) {$/;"	f	class:Bstrlib::CBString
+formata	bstrlib-master/bstrwrap.cpp	/^void CBString::formata (const char * fmt, ...) {$/;"	f	class:Bstrlib::CBString
+found_it	logfind_zed.c	/^int found_it(int use_or, int found_count, int search_len) {$/;"	f
+fruit_weigths	ex37.py	/^fruit_weigths = { "Apples": 10, "Oranges": 100, "Grapes": 1.0, }$/;"	v
+genBstrList	ex36/bstrlib.c	/^struct genBstrList {$/;"	s	file:
+genBstrList	liblcthw/src/lcthw/bstrlib.c	/^struct genBstrList {$/;"	s	file:
+get_age	ex22.c	/^int get_age() {$/;"	f
+get_middle_node	liblcthw/src/lcthw/list_algos.c	/^ListNode *get_middle_node(List *list) {$/;"	f
+getline	bstrlib-master/bstrwrap.cpp	/^std::istream& getline (std::istream& sin, CBString& b, char terminator) {$/;"	f	namespace:Bstrlib
+gets	bstrlib-master/bsafe.c	/^char * (gets) (char * buf) {$/;"	f
+gets	bstrlib-master/bstrwrap.cpp	/^int CBString::gets (bNgetc getcPtr, void * parm, char terminator) {$/;"	f	class:Bstrlib::CBString
+hash	liblcthw/src/lcthw/hashmap.h	/^    Hashmap_hash hash;$/;"	m	struct:Hashmap
+hash	liblcthw/src/lcthw/hashmap.h	/^    uint32_t hash;$/;"	m	struct:HashmapNode
+height	ex16.c	/^    int height;$/;"	m	struct:Person	file:
+height	ex16ec.c	/^    int height;$/;"	m	struct:Person	file:
+id	ex17.c	/^    int id;$/;"	m	struct:Address	file:
+id	ex17ec.c	/^    int id;$/;"	m	struct:Address	file:
+idx	bstrlib-master/bstrwrap.h	/^	unsigned int idx;$/;"	m	class:Bstrlib::CBCharWriteProtected
+income	ex24.c	/^    float income;$/;"	m	struct:Person	file:
+income	ex24ec.c	/^    float income;$/;"	m	struct:Person	file:
+incorrectBstring	bstrlib-master/bstest.c	/^static int incorrectBstring (const struct tagbstring * b) {$/;"	f	file:
+insert	bstrlib-master/bstrwrap.cpp	/^void CBString::insert (int pos, const CBString& b, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+insert	bstrlib-master/bstrwrap.cpp	/^void CBString::insert (int pos, const char * s, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+insertchrs	bstrlib-master/bstrwrap.cpp	/^void CBString::insertchrs (int pos, int len, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+instr_fnptr	ex36/bstrlib.c	/^typedef int (*instr_fnptr) (const_bstring s1, int pos, const_bstring s2);$/;"	t	file:
+instr_fnptr	liblcthw/src/lcthw/bstrlib.c	/^typedef int (*instr_fnptr) (const_bstring s1, int pos, const_bstring s2);$/;"	t	file:
+internal_bwswriteout	bstrlib-master/bstraux.c	1043;"	d	file:
+invertCharField	ex36/bstrlib.c	/^static void invertCharField (struct charField * cf) {$/;"	f	file:
+invertCharField	liblcthw/src/lcthw/bstrlib.c	/^static void invertCharField (struct charField * cf) {$/;"	f	file:
+io	bstrlib-master/bstraux.c	/^	struct bUuInOut io;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bUuInOut	file:
+isEOF	bstrlib-master/bstraux.c	/^    int isEOF;       \/* track stream's EOF state                 *\/$/;"	m	struct:bwriteStream	file:
+isEOF	ex36/bstrlib.c	/^	int isEOF;			\/* track file's EOF state *\/$/;"	m	struct:bStream	file:
+isEOF	liblcthw/src/lcthw/bstrlib.c	/^	int isEOF;			\/* track file's EOF state *\/$/;"	m	struct:bStream	file:
+isLegalUnicodeCodePoint	bstrlib-master/utf8util.c	26;"	d	file:
+isLegalUnicodeCodePoint	bstrlib-master/utf8util.h	41;"	d
+is_sorted	liblcthw/tests/darray_algos_tests.c	/^int is_sorted(DArray *array) {$/;"	f
+is_sorted	liblcthw/tests/list_algos_tests.c	/^int is_sorted(List *words) {$/;"	f
+is_sorted	liblcthw/tests/list_algos_zed_tests.c	/^int is_sorted(List *words) {$/;"	f
+istreamGetc	bstrlib-master/bstrwrap.cpp	/^static int istreamGetc (void * parm) {$/;"	f	namespace:Bstrlib
+istreamGets	bstrlib-master/bstrwrap.cpp	/^static int istreamGets (void * parm) {$/;"	f	namespace:Bstrlib
+iswriteprotected	bstrlib-master/bstrwrap.h	/^	inline bool iswriteprotected () const { return mlen <= 0; }$/;"	f	struct:Bstrlib::CBString
+join	bstrlib-master/bstrwrap.cpp	/^void CBString::join (const struct CBStringList& l) {$/;"	f	class:Bstrlib::CBString
+join	bstrlib-master/bstrwrap.cpp	/^void CBString::join (const struct CBStringList& l, char sep) {$/;"	f	class:Bstrlib::CBString
+join	bstrlib-master/bstrwrap.cpp	/^void CBString::join (const struct CBStringList& l, const CBString& sep) {$/;"	f	class:Bstrlib::CBString
+join	bstrlib-master/bstrwrap.cpp	/^void CBString::join (const struct CBStringList& l, unsigned char sep) {$/;"	f	class:Bstrlib::CBString
+join_sorted	liblcthw/src/lcthw/list_algos.c	/^List *join_sorted(List *a, List *b, List_compare cmp) {$/;"	f
+key	liblcthw/src/lcthw/hashmap.h	/^    void *key;$/;"	m	struct:HashmapNode
+key	liblcthw/src/lcthw/radixmap.h	/^        uint32_t key;$/;"	m	struct:RMElement::__anon5
+last	liblcthw/src/lcthw/list.h	/^    ListNode *last;$/;"	m	struct:List
+last_name	ex24.c	/^    char last_name[MAX_DATA];$/;"	m	struct:Person	file:
+last_name	ex24ec.c	/^    char last_name[MAX_DATA];$/;"	m	struct:Person	file:
+lcthw_List_algos_h	liblcthw/src/lcthw/list_algos.h	2;"	d
+lcthw_List_algos_zed_h	liblcthw/src/lcthw/list_algos_zed.h	2;"	d
+lcthw_List_h	liblcthw/src/lcthw/list.h	2;"	d
+length	bstrlib-master/bstrwrap.h	/^	inline int length () const {return slen;}$/;"	f	struct:Bstrlib::CBString
+lib	c-skeleton_ex30/tests/libex30_tests.c	/^void *lib = NULL;$/;"	v
+lib_file	c-skeleton_ex30/tests/libex30_tests.c	/^char *lib_file = "build\/libex30.so";$/;"	v
+lib_function	c-skeleton_ex29/tests/ex29_tests.c	/^typedef int (*lib_function) (const char *data); \/\/this func pointer matches  the singnature of every func in libex29$/;"	t	file:
+lib_function	c-skeleton_ex30/tests/libex30_tests.c	/^typedef int (*lib_function) (const char *data);$/;"	t	file:
+lib_function	ex29.c	/^typedef int (*lib_function) (const char *data); \/\/this func pointer matches  the singnature of every func in libex29$/;"	t	file:
+lib_function	ex29_ec.c	/^typedef int (*lib_function) (int len, const char *data); \/\/this func pointer matches  the singnature of every func in libex29_ec$/;"	t	file:
+list	liblcthw/tests/list_tests.c	/^static List *list = NULL;$/;"	v	file:
+list_files	logfind_zed.c	/^int list_files(glob_t *pglob) {$/;"	f
+log_err	c-skeleton/src/dbg.h	17;"	d
+log_err	c-skeleton/tests/dbg.h	17;"	d
+log_err	c-skeleton_ex29/src/dbg.h	17;"	d
+log_err	c-skeleton_ex29/tests/dbg.h	17;"	d
+log_err	c-skeleton_ex30/src/dbg.h	17;"	d
+log_err	c-skeleton_ex30/tests/dbg.h	17;"	d
+log_err	dbg.h	17;"	d
+log_err	dbg_ec.h	17;"	d
+log_err	liblcthw/src/lcthw/dbg.h	17;"	d
+log_err	liblcthw/tests/dbg.h	17;"	d
+log_info	c-skeleton/src/dbg.h	25;"	d
+log_info	c-skeleton/tests/dbg.h	25;"	d
+log_info	c-skeleton_ex29/src/dbg.h	25;"	d
+log_info	c-skeleton_ex29/tests/dbg.h	25;"	d
+log_info	c-skeleton_ex30/src/dbg.h	25;"	d
+log_info	c-skeleton_ex30/tests/dbg.h	25;"	d
+log_info	dbg.h	25;"	d
+log_info	dbg_ec.h	25;"	d
+log_info	liblcthw/src/lcthw/dbg.h	25;"	d
+log_info	liblcthw/tests/dbg.h	25;"	d
+log_warn	c-skeleton/src/dbg.h	21;"	d
+log_warn	c-skeleton/tests/dbg.h	21;"	d
+log_warn	c-skeleton_ex29/src/dbg.h	21;"	d
+log_warn	c-skeleton_ex29/tests/dbg.h	21;"	d
+log_warn	c-skeleton_ex30/src/dbg.h	21;"	d
+log_warn	c-skeleton_ex30/tests/dbg.h	21;"	d
+log_warn	dbg.h	21;"	d
+log_warn	dbg_ec.h	21;"	d
+log_warn	liblcthw/src/lcthw/dbg.h	21;"	d
+log_warn	liblcthw/tests/dbg.h	21;"	d
+logfind_traverse	logfind.c	/^int logfind_traverse(int is_or, int count, char *patterns[]) {$/;"	f
+longBstring	bstrlib-master/bstest.c	/^struct tagbstring longBstring  = bsStatic ("This is a bogus but reasonably long string.  Just long enough to cause some mallocing.");$/;"	v	typeref:struct:tagbstring
+lowercase	c-skeleton_ex29/src/libex29.c	/^int lowercase(const char *msg) {$/;"	f
+lowercase	c-skeleton_ex30/src/libex30.c	/^int lowercase(const char *msg) {$/;"	f
+lowercase	libex29.c	/^int lowercase(const char *msg) {$/;"	f
+lowercase	libex29_ec.c	/^int lowercase(int len, const char *msg) {$/;"	f
+ltrim	bstrlib-master/bstrwrap.cpp	/^void CBString::ltrim (const CBString& b) {$/;"	f	class:Bstrlib::CBString
+m_s	bstrlib-master/bstrwrap.h	/^	struct bStream * m_s;$/;"	m	struct:Bstrlib::CBStream	typeref:struct:Bstrlib::CBStream::bStream
+main	bstrlib-master/bstest.c	/^int main (int argc, char * argv[]) {$/;"	f
+main	bstrlib-master/test.cpp	/^int main () {$/;"	f
+main	bstrlib-master/testaux.c	/^int main () {$/;"	f
+main	c-skeleton_ex29/tests/ex29_tests.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex1.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex10.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex10ec1.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex10ec2.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex10ec3.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex11.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex11ec.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex12.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex13.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex14.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex14_myway.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex14ec.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex15.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex15take2.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex16.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex16ec.c	/^int main (int argc, char *argv[]) {$/;"	f
+main	ex17.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex17ec.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex18.c	/^int main(int argc, char* argv[]) {$/;"	f
+main	ex18analysis.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex18ec.c	/^int main(int argc, char* argv[]) {$/;"	f
+main	ex19.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex22_main.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex23.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex23ec.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex23ec2.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex24.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex24ec.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex24testing.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex25.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex25ec.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex27_1.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex29.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex29_ec.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex3.c	/^int main() {$/;"	f
+main	ex35.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex36/ex36_test.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex7.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex8.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ex9.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	glob_testing.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	logfind.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	logfind_zed.c	/^int main(int argc, char *argv[]) {$/;"	f
+make_random	liblcthw/tests/radixmap_tests.c	/^static int make_random(RadixMap *map) {$/;"	f	file:
+map	liblcthw/tests/hashmap_tests.c	/^Hashmap *map = NULL;$/;"	v
+max	liblcthw/src/lcthw/darray.h	/^    int max;$/;"	m	struct:DArray
+max	liblcthw/src/lcthw/radixmap.h	/^    size_t max;$/;"	m	struct:RadixMap
+maxBuffSz	ex36/bstrlib.c	/^	int maxBuffSz;$/;"	m	struct:bStream	file:
+maxBuffSz	liblcthw/src/lcthw/bstrlib.c	/^	int maxBuffSz;$/;"	m	struct:bStream	file:
+max_data	ex17ec.c	/^    int max_data;$/;"	m	struct:Database	file:
+max_rows	ex17ec.c	/^    int max_rows;$/;"	m	struct:Database	file:
+midstr	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::midstr (int left, int len) const {$/;"	f	class:Bstrlib::CBString
+min	liblcthw/src/lcthw/darray_algos.c	140;"	d	file:
+minBuffSz	bstrlib-master/bstraux.c	/^    int minBuffSz;$/;"	m	struct:bwriteStream	file:
+mlen	ex36/bstrlib.h	/^	int mlen;$/;"	m	struct:tagbstring
+mlen	ex36/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+mlen	liblcthw/src/lcthw/bstrlib.h	/^	int mlen;$/;"	m	struct:tagbstring
+mlen	liblcthw/src/lcthw/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+msg	bstrlib-master/bstrwrap.h	/^	std::string msg;$/;"	m	struct:Bstrlib::CBStringException
+mu_assert	c-skeleton/tests/minunit.h	11;"	d
+mu_assert	c-skeleton_ex30/tests/minunit.h	11;"	d
+mu_assert	liblcthw/tests/minunit.h	11;"	d
+mu_assert	liblcthw/tests/minunit_changed.h	11;"	d
+mu_assert	minunit.h	11;"	d
+mu_run_test	c-skeleton/tests/minunit.h	18;"	d
+mu_run_test	c-skeleton_ex30/tests/minunit.h	18;"	d
+mu_run_test	liblcthw/tests/minunit.h	18;"	d
+mu_run_test	liblcthw/tests/minunit_changed.h	18;"	d
+mu_run_test	minunit.h	18;"	d
+mu_suite_start	c-skeleton/tests/minunit.h	9;"	d
+mu_suite_start	c-skeleton_ex30/tests/minunit.h	9;"	d
+mu_suite_start	liblcthw/tests/minunit.h	9;"	d
+mu_suite_start	liblcthw/tests/minunit_changed.h	9;"	d
+mu_suite_start	minunit.h	9;"	d
+my_find_min	liblcthw/src/lcthw/darray_algos.c	/^int my_find_min(DArray *array, void *el, DArray_compare cmp) {$/;"	f
+my_heapify	liblcthw/src/lcthw/darray_algos.c	/^void my_heapify(void **array, int i, int n, DArray_compare cmp) {$/;"	f
+my_merge_parts	liblcthw/src/lcthw/darray_algos.c	/^void my_merge_parts(void **array, int first, int second, int after, void **dest, DArray_compare cmp) {$/;"	f
+my_print	ex25ec.c	/^void my_print(char *str, ...) {$/;"	f
+my_qsort_recur	liblcthw/src/lcthw/darray_algos.c	/^int my_qsort_recur(void **array, int lo, int hi, int min, int max, DArray_compare cmp) {$/;"	f
+my_swap	liblcthw/src/lcthw/darray_algos.c	/^void my_swap(void **array, int a, int b) {$/;"	f
+name	ex16.c	/^    char *name;$/;"	m	struct:Person	file:
+name	ex16ec.c	/^    char *name;$/;"	m	struct:Person	file:
+name	ex17.c	/^    char name[MAX_DATA];$/;"	m	struct:Address	file:
+name	ex17ec.c	/^    char *name;$/;"	m	struct:Address	file:
+nekineki	ex18analysis.c	/^void nekineki(int c, char *(*f) (int)) {$/;"	f
+nekineki2	ex18analysis.c	/^void nekineki2(int c, bla_func f) {$/;"	f
+next	bstrlib-master/utf8util.h	/^	int           	start, next;$/;"	m	struct:utf8Iterator
+next	liblcthw/src/lcthw/list.h	/^    struct ListNode *next;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+nfindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::nfindchr (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+nfindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::nfindchr (const char * s, int pos) const {$/;"	f	class:Bstrlib::CBString
+normal_copy	ex23.c	/^int normal_copy(char *from, char *to, int count) {$/;"	f
+normal_copy	ex23ec2.c	/^int normal_copy(char *from, char *to, int count) {$/;"	f
+nreversefindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::nreversefindchr (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+nreversefindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::nreversefindchr (const char * s, int pos) const {$/;"	f	class:Bstrlib::CBString
+ofs	bstrlib-master/bstest.c	/^	int ofs;$/;"	m	struct:emuFile	file:
+ofs	bstrlib-master/bstest.c	/^    int ofs;$/;"	m	struct:sbstr	file:
+ofs	bstrlib-master/testaux.c	/^	int ofs;$/;"	m	struct:vfgetc	file:
+operator !=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator != (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator !=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator != (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator !=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator != (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator *	bstrlib-master/bstrwrap.h	/^	inline const CBString operator * (int count) const {$/;"	f	struct:Bstrlib::CBString
+operator *	bstrlib-master/bstrwrap.h	/^inline const CBString operator * (int count, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator *=	bstrlib-master/bstrwrap.h	/^	inline const CBString& operator *= (int count) {$/;"	f	struct:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (char c) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (const char *s) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (const tagbstring& x) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (const unsigned char *s) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString CBString::operator + (unsigned char c) const {$/;"	f	class:Bstrlib::CBString
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString operator + (char c, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString operator + (const char *a, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString operator + (const tagbstring& x, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString operator + (const unsigned char *a, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator +	bstrlib-master/bstrwrap.cpp	/^const CBString operator + (unsigned char c, const CBString& b) {$/;"	f	namespace:Bstrlib
+operator +=	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator += (char c) {$/;"	f	class:Bstrlib::CBString
+operator +=	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator += (const CBString& b) {$/;"	f	class:Bstrlib::CBString
+operator +=	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator += (const char *s) {$/;"	f	class:Bstrlib::CBString
+operator +=	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator += (const tagbstring& x) {$/;"	f	class:Bstrlib::CBString
+operator +=	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator += (unsigned char c) {$/;"	f	class:Bstrlib::CBString
+operator <	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator < (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator <	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator < (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator <	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator < (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator <<	bstrlib-master/bstrwrap.cpp	/^std::ostream& operator << (std::ostream& sout, CBString b) {$/;"	f	namespace:Bstrlib
+operator <<	bstrlib-master/bstrwrap.h	/^	inline CBStream& operator << (const CBString& s) {$/;"	f	struct:Bstrlib::CBStream
+operator <=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator <= (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator <=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator <= (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator <=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator <= (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator = (char c) {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator = (const CBString& b) {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator = (const char *s) {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator = (const tagbstring& x) {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.cpp	/^const CBString& CBString::operator = (unsigned char c) {$/;"	f	class:Bstrlib::CBString
+operator =	bstrlib-master/bstrwrap.h	/^	inline char operator = (char c) {$/;"	f	class:Bstrlib::CBCharWriteProtected
+operator =	bstrlib-master/bstrwrap.h	/^	inline unsigned char operator = (unsigned char c) {$/;"	f	class:Bstrlib::CBCharWriteProtected
+operator ==	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator == (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator ==	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator == (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator ==	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator == (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator >	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator > (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator >	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator > (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator >	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator > (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator >=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator >= (const CBString& b) const {$/;"	f	class:Bstrlib::CBString
+operator >=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator >= (const char * s) const {$/;"	f	class:Bstrlib::CBString
+operator >=	bstrlib-master/bstrwrap.cpp	/^bool CBString::operator >= (const unsigned char * s) const {$/;"	f	class:Bstrlib::CBString
+operator >>	bstrlib-master/bstrwrap.cpp	/^CBString& CBStream::operator >> (CBString& s) {$/;"	f	class:Bstrlib::CBStream
+operator >>	bstrlib-master/bstrwrap.cpp	/^std::istream& operator >> (std::istream& sin, CBString& b) {$/;"	f	namespace:Bstrlib
+operator []	bstrlib-master/bstrwrap.h	/^	inline CBCharWriteProtected operator [] (int i) { return character(i); }$/;"	f	struct:Bstrlib::CBString
+operator []	bstrlib-master/bstrwrap.h	/^	inline unsigned char operator [] (int i) const { return character(i); }$/;"	f	struct:Bstrlib::CBString
+operator const char*	bstrlib-master/bstrwrap.h	/^	inline operator const char* () const { return (const char *)data; }$/;"	f	struct:Bstrlib::CBString
+operator const unsigned char*	bstrlib-master/bstrwrap.h	/^	inline operator const unsigned char* () const { return (const unsigned char *)data; }$/;"	f	struct:Bstrlib::CBString
+operator double	bstrlib-master/bstrwrap.cpp	/^CBString::operator double () const {$/;"	f	class:Bstrlib::CBString
+operator float	bstrlib-master/bstrwrap.cpp	/^CBString::operator float () const {$/;"	f	class:Bstrlib::CBString
+operator int	bstrlib-master/bstrwrap.cpp	/^CBString::operator int () const {$/;"	f	class:Bstrlib::CBString
+operator unsigned char	bstrlib-master/bstrwrap.h	/^	inline operator unsigned char () const {$/;"	f	class:Bstrlib::CBCharWriteProtected
+operator unsigned int	bstrlib-master/bstrwrap.cpp	/^CBString::operator unsigned int () const {$/;"	f	class:Bstrlib::CBString
+parm	bstrlib-master/bstraux.c	/^    void * parm;     \/* The stream handle for core stream        *\/$/;"	m	struct:bwriteStream	file:
+parm	ex36/bstrlib.c	/^	void * parm;		\/* The stream handle for core stream *\/$/;"	m	struct:bStream	file:
+parm	liblcthw/src/lcthw/bstrlib.c	/^	void * parm;		\/* The stream handle for core stream *\/$/;"	m	struct:bStream	file:
+parse_args	logfind_zed.c	/^int parse_args(int *use_or, int *argc, char **argv[]) {$/;"	f
+peek	bstrlib-master/bstrwrap.cpp	/^CBString CBStream::peek () const {$/;"	f	class:Bstrlib::CBStream
+peek	bstrlib-master/bstrwrap.cpp	/^void CBStream::peek (CBString& s) const {$/;"	f	class:Bstrlib::CBStream
+peekAppend	bstrlib-master/bstrwrap.cpp	/^void CBStream::peekAppend (CBString& s) const {$/;"	f	class:Bstrlib::CBStream
+phone	ex17ec.c	/^    int phone[9]; \/\/we dont need to free because its not a pointer and we dont malloc()$/;"	m	struct:Address	file:
+prev	liblcthw/src/lcthw/list.h	/^    struct ListNode *prev;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+print_a_message	c-skeleton_ex29/src/libex29.c	/^int print_a_message(const char *msg) {$/;"	f
+print_a_message	c-skeleton_ex30/src/libex30.c	/^int print_a_message(const char *msg) {$/;"	f
+print_a_message	libex29.c	/^int print_a_message(const char *msg) {$/;"	f
+print_a_message	libex29_ec.c	/^int print_a_message(int len, const char *msg) {$/;"	f
+print_arguments	ex14.c	/^void print_arguments(int argc, char *argv[]) {$/;"	f
+print_arguments	ex14_myway.c	/^void print_arguments(int argc, char *argv[]) {$/;"	f
+print_arguments	ex14ec.c	/^void print_arguments(int argc, char *argv[]) {$/;"	f
+print_element	liblcthw/src/lcthw/radixmap.c	/^void print_element(RMElement *el) {$/;"	f
+print_func	ex15take2.c	/^void print_func(int c, int *a, char **n) {$/;"	f
+print_letters	ex14.c	/^void print_letters(char arg[]) {$/;"	f
+print_letters	ex14_myway.c	/^void print_letters(char arg[]) {$/;"	f
+print_letters	ex14ec.c	/^void print_letters(char arg[], int n) {$/;"	f
+print_map	liblcthw/tests/radixmap_tests.c	/^void print_map(RadixMap *map) {$/;"	f
+print_size	ex22.c	/^void print_size() {$/;"	f
+push_words	liblcthw/tests/darray_algos_tests.c	/^void push_words(DArray *array, int count) {$/;"	f
+qty	ex36/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+qty	liblcthw/src/lcthw/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+radix_sort	liblcthw/src/lcthw/radixmap.c	/^static inline void radix_sort(short offset, uint64_t max, uint64_t *source, uint64_t *dest) {$/;"	f	file:
+raw	liblcthw/src/lcthw/radixmap.h	/^    uint64_t raw;$/;"	m	union:RMElement
+read	bstrlib-master/bstrwrap.cpp	/^CBString CBStream::read () {$/;"	f	class:Bstrlib::CBStream
+read	bstrlib-master/bstrwrap.cpp	/^CBString CBStream::read (int n) {$/;"	f	class:Bstrlib::CBStream
+read	bstrlib-master/bstrwrap.cpp	/^int CBString::read (bNread readPtr, void * parm) {$/;"	f	class:Bstrlib::CBString
+read	bstrlib-master/bstrwrap.cpp	/^void CBStream::read (CBString& s) {$/;"	f	class:Bstrlib::CBStream
+read	bstrlib-master/bstrwrap.cpp	/^void CBStream::read (CBString& s, int n) {$/;"	f	class:Bstrlib::CBStream
+readAppend	bstrlib-master/bstrwrap.cpp	/^void CBStream::readAppend (CBString& s) {$/;"	f	class:Bstrlib::CBStream
+readAppend	bstrlib-master/bstrwrap.cpp	/^void CBStream::readAppend (CBString& s, int n) {$/;"	f	class:Bstrlib::CBStream
+readFnPtr	ex36/bstrlib.c	/^	bNread readFnPtr;	\/* fread compatible fnptr for core stream *\/$/;"	m	struct:bStream	file:
+readFnPtr	liblcthw/src/lcthw/bstrlib.c	/^	bNread readFnPtr;	\/* fread compatible fnptr for core stream *\/$/;"	m	struct:bStream	file:
+readLine	bstrlib-master/bstrwrap.cpp	/^CBString CBStream::readLine (char terminator) {$/;"	f	class:Bstrlib::CBStream
+readLine	bstrlib-master/bstrwrap.cpp	/^CBString CBStream::readLine (const CBString& terminator) {$/;"	f	class:Bstrlib::CBStream
+readLine	bstrlib-master/bstrwrap.cpp	/^void CBStream::readLine (CBString& s, char terminator) {$/;"	f	class:Bstrlib::CBStream
+readLine	bstrlib-master/bstrwrap.cpp	/^void CBStream::readLine (CBString& s, const CBString& terminator) {$/;"	f	class:Bstrlib::CBStream
+readLineAppend	bstrlib-master/bstrwrap.cpp	/^void CBStream::readLineAppend (CBString& s, char terminator) {$/;"	f	class:Bstrlib::CBStream
+readLineAppend	bstrlib-master/bstrwrap.cpp	/^void CBStream::readLineAppend (CBString& s, const CBString& terminator) {$/;"	f	class:Bstrlib::CBStream
+readNothing	bstrlib-master/bstraux.c	/^static size_t readNothing (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+readRef	bstrlib-master/bstraux.c	/^static size_t readRef (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+read_int	ex25.c	/^int read_int(int *out_int) {$/;"	f
+read_int	ex25ec.c	/^int read_int(int *out_int) {$/;"	f
+read_scan	ex25.c	/^int read_scan(const char *fmt, ...) {$/;"	f
+read_scan	ex25ec.c	/^int read_scan(const char *fmt, ...) {$/;"	f
+read_string	ex25.c	/^int read_string(char **out_string, int max_buffer) {$/;"	f
+read_string	ex25ec.c	/^int read_string(char **out_string, int max_buffer) {$/;"	f
+remove	bstrlib-master/bstrwrap.cpp	/^void CBString::remove (int pos, int len) {$/;"	f	class:Bstrlib::CBString
+remove_nl	ex24ec.c	/^void remove_nl(char *str) { \/\/we can make this func void, because we actually modify the input string (dealing with pointers)$/;"	f
+remove_ws	ex24ec.c	/^void remove_ws(char *str) {$/;"	f
+repeat	bstrlib-master/bstrwrap.cpp	/^void CBString::repeat (int count) {$/;"	f	class:Bstrlib::CBString
+replace	bstrlib-master/bstrwrap.cpp	/^void CBString::replace (int pos, int len, const CBString& b, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+replace	bstrlib-master/bstrwrap.cpp	/^void CBString::replace (int pos, int len, const char * s, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+reverse_order	ex18.c	/^int reverse_order(int a, int b) {$/;"	f
+reverse_order	ex18ec.c	/^int reverse_order(int a, int b) {$/;"	f
+reversefind	bstrlib-master/bstrwrap.cpp	/^int CBString::reversefind (char c, int pos) const {$/;"	f	class:Bstrlib::CBString
+reversefind	bstrlib-master/bstrwrap.cpp	/^int CBString::reversefind (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+reversefind	bstrlib-master/bstrwrap.cpp	/^int CBString::reversefind (const char * b, int pos) const {$/;"	f	class:Bstrlib::CBString
+reversefindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::reversefindchr (const CBString& b, int pos) const {$/;"	f	class:Bstrlib::CBString
+reversefindchr	bstrlib-master/bstrwrap.cpp	/^int CBString::reversefindchr (const char * s, int pos) const {$/;"	f	class:Bstrlib::CBString
+rot	bstrlib-master/bstest.c	/^static int rot = 0;$/;"	v	file:
+rot	bstrlib-master/test.cpp	/^static unsigned int rot = 0;$/;"	v	file:
+rows	ex17.c	/^    struct Address rows[MAX_ROWS]; \/\/not a pointer, an actual array of Address structures$/;"	m	struct:Database	typeref:struct:Database::Address	file:
+rows	ex17ec.c	/^    struct Address **rows; \/\/this is an array of pointers$/;"	m	struct:Database	typeref:struct:Database::Address	file:
+rtrim	bstrlib-master/bstrwrap.cpp	/^void CBString::rtrim (const CBString& b) {$/;"	f	class:Bstrlib::CBString
+run_sort_test	liblcthw/tests/darray_algos_tests.c	/^char *run_sort_test(int (*func) (DArray *, DArray_compare), const char *name) { \/\/func is a function pointer$/;"	f
+s	bstrlib-master/bstrwrap.h	/^	const struct tagbstring& s;$/;"	m	class:Bstrlib::CBCharWriteProtected	typeref:struct:Bstrlib::CBCharWriteProtected::tagbstring
+sInp	bstrlib-master/bstraux.c	/^	struct bStream * sInp;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bStream	file:
+safecopy	ex27_1.c	/^int safecopy(int from_len, char *from, int to_len, char *to) {$/;"	f
+sbstr	bstrlib-master/bstest.c	/^struct sbstr {$/;"	s	file:
+sc	bstrlib-master/bstest.c	/^	unsigned char sc;$/;"	m	struct:tagBss	file:
+scan_file	logfind_zed.c	/^int scan_file(const char *filename, int use_or, int search_len, char *search_for[]) {$/;"	f
+scope_demo	ex22_main.c	/^void scope_demo(int count) {$/;"	f
+selection_sort	ex18ec.c	/^int *selection_sort(int *numbers, int count, compare_cb cmp) {$/;"	f
+sentinel	c-skeleton/src/dbg.h	31;"	d
+sentinel	c-skeleton/tests/dbg.h	31;"	d
+sentinel	c-skeleton_ex29/src/dbg.h	31;"	d
+sentinel	c-skeleton_ex29/tests/dbg.h	31;"	d
+sentinel	c-skeleton_ex30/src/dbg.h	31;"	d
+sentinel	c-skeleton_ex30/tests/dbg.h	31;"	d
+sentinel	dbg.h	31;"	d
+sentinel	dbg_ec.h	31;"	d
+sentinel	liblcthw/src/lcthw/dbg.h	31;"	d
+sentinel	liblcthw/tests/dbg.h	31;"	d
+set	ex17.c	/^    int set;$/;"	m	struct:Address	file:
+set	ex17ec.c	/^    int set;$/;"	m	struct:Address	file:
+setInCharField	ex36/bstrlib.c	1360;"	d	file:
+setInCharField	ex36/bstrlib.c	1371;"	d	file:
+setInCharField	liblcthw/src/lcthw/bstrlib.c	1361;"	d	file:
+setInCharField	liblcthw/src/lcthw/bstrlib.c	1372;"	d	file:
+set_age	ex22.c	/^void set_age(int age) {$/;"	f
+setsubstr	bstrlib-master/bstrwrap.cpp	/^void CBString::setsubstr (int pos, const CBString& b, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+setsubstr	bstrlib-master/bstrwrap.cpp	/^void CBString::setsubstr (int pos, const char * s, unsigned char cfill) {$/;"	f	class:Bstrlib::CBString
+sgetc	bstrlib-master/bstrwrap.cpp	/^struct sgetc {$/;"	s	namespace:Bstrlib	file:
+shortBstring	bstrlib-master/bstest.c	/^struct tagbstring shortBstring = bsStatic ("bogus");$/;"	v	typeref:struct:tagbstring
+sin	bstrlib-master/bstrwrap.cpp	/^	std::istream * sin;$/;"	m	struct:Bstrlib::sgetc	file:
+slen	bstrlib-master/utf8util.h	/^	int           	slen;$/;"	m	struct:utf8Iterator
+slen	ex36/bstrlib.h	/^	int slen;$/;"	m	struct:tagbstring
+slen	liblcthw/src/lcthw/bstrlib.h	/^	int slen;$/;"	m	struct:tagbstring
+snapUpSize	ex36/bstrlib.c	/^static int snapUpSize (int i) {$/;"	f	file:
+snapUpSize	liblcthw/src/lcthw/bstrlib.c	/^static int snapUpSize (int i) {$/;"	f	file:
+sort_alg	ex18ec.c	/^typedef int *(*sort_alg) (int*, int, compare_cb);$/;"	t	file:
+sorted_order	ex18.c	/^int sorted_order(int a, int b) {$/;"	f
+sorted_order	ex18ec.c	/^int sorted_order(int a, int b) {$/;"	f
+split	bstrlib-master/bstrwrap.cpp	/^void CBStringList::split (const CBStream& b, const CBString& s) {$/;"	f	class:Bstrlib::CBStringList
+split	bstrlib-master/bstrwrap.cpp	/^void CBStringList::split (const CBStream& b, unsigned char splitChar) {$/;"	f	class:Bstrlib::CBStringList
+split	bstrlib-master/bstrwrap.cpp	/^void CBStringList::split (const CBString& b, const CBString& s) {$/;"	f	class:Bstrlib::CBStringList
+split	bstrlib-master/bstrwrap.cpp	/^void CBStringList::split (const CBString& b, unsigned char splitChar) {$/;"	f	class:Bstrlib::CBStringList
+splitstr	bstrlib-master/bstrwrap.cpp	/^void CBStringList::splitstr (const CBStream& b, const CBString& s) {$/;"	f	class:Bstrlib::CBStringList
+splitstr	bstrlib-master/bstrwrap.cpp	/^void CBStringList::splitstr (const CBString& b, const CBString& s) {$/;"	f	class:Bstrlib::CBStringList
+src	bstrlib-master/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+start	bstrlib-master/utf8util.h	/^	int           	start, next;$/;"	m	struct:utf8Iterator
+strange_order	ex18.c	/^int strange_order(int a, int b) {$/;"	f
+strange_order	ex18ec.c	/^int strange_order(int a, int b) {$/;"	f
+strcat	bstrlib-master/bsafe.c	/^char * strcat (char *dst, const char *src) {$/;"	f
+strcat	bstrlib-master/bsafe.h	35;"	d
+strcat	bstrlib-master/bsafe.h	37;"	d
+strcpy	bstrlib-master/bsafe.c	/^char * strcpy (char *dst, const char *src) {$/;"	f
+strcpy	bstrlib-master/bsafe.h	34;"	d
+strcpy	bstrlib-master/bsafe.h	36;"	d
+strdup	bstrlib-master/bsafe.c	/^char * (strdup) (const char *s) {$/;"	f
+streamSplitCb	bstrlib-master/bstrwrap.cpp	/^static int streamSplitCb (void * parm, int ofs, const_bstring entry) {$/;"	f	namespace:Bstrlib
+strncat	bstrlib-master/bsafe.c	/^char * (strncat) (char *dst, const char *src, size_t n) {$/;"	f
+strncpy	bstrlib-master/bsafe.c	/^char * (strncpy) (char *dst, const char *src, size_t n) {$/;"	f
+strtok	bstrlib-master/bsafe.c	/^char * (strtok) (char *s1, const char *s2) {$/;"	f
+sub	ex35.c	/^        } sub;$/;"	m	union:Testing::__anon3	typeref:struct:Testing::__anon3::__anon4	file:
+swap_nodes	liblcthw/src/lcthw/list_algos.c	/^void swap_nodes(ListNode *a, ListNode *b) { \/\/simple, just swap the values (by zed)$/;"	f
+swap_nodes_complicated	liblcthw/src/lcthw/list_algos.c	/^void swap_nodes_complicated(List *list, ListNode *a, ListNode *b) { \/\/overengineered$/;"	f
+tWrite	bstrlib-master/testaux.c	/^static int tWrite (const void * buf, size_t elsize, size_t nelem, void * parm) {$/;"	f	file:
+tagBss	bstrlib-master/bstest.c	/^struct tagBss {$/;"	s	file:
+tagbstring	ex36/bstrlib.h	/^struct tagbstring {$/;"	s
+tagbstring	liblcthw/src/lcthw/bstrlib.h	/^struct tagbstring {$/;"	s
+temp	liblcthw/src/lcthw/radixmap.h	/^    RMElement *temp;$/;"	m	struct:RadixMap
+terminator	bstrlib-master/bstrwrap.cpp	/^	char terminator;$/;"	m	struct:Bstrlib::sgetc	file:
+test0	bstrlib-master/bstest.c	/^static int test0 (void) {$/;"	f	file:
+test0	bstrlib-master/test.cpp	/^int test0 (void) {$/;"	f
+test0	bstrlib-master/testaux.c	/^int test0 (void) {$/;"	f
+test0_0	bstrlib-master/bstest.c	/^static int test0_0 (const char * s, const char * res) {$/;"	f	file:
+test0_1	bstrlib-master/bstest.c	/^static int test0_1 (const char * s, int len, const char * res) {$/;"	f	file:
+test0_2	bstrlib-master/bstest.c	/^static int test0_2 (char* s) {$/;"	f	file:
+test1	bstrlib-master/bstest.c	/^static int test1 (void) {$/;"	f	file:
+test1	bstrlib-master/test.cpp	/^int test1 (void) {$/;"	f
+test1	bstrlib-master/testaux.c	/^int test1 (void) {$/;"	f
+test1	liblcthw/tests/hashmap_tests.c	/^struct tagbstring test1 = bsStatic("test data 1");$/;"	v	typeref:struct:tagbstring
+test1	liblcthw/tests/list_tests.c	/^char *test1 = "test1 data";$/;"	v
+test10	bstrlib-master/bstest.c	/^static int test10 (void) {$/;"	f	file:
+test10	bstrlib-master/test.cpp	/^int test10 (void) {$/;"	f
+test10	bstrlib-master/testaux.c	/^int test10 (void) {$/;"	f
+test10_0	bstrlib-master/bstest.c	/^static int test10_0 (bstring b, int res, int nochange) {$/;"	f	file:
+test11	bstrlib-master/bstest.c	/^static int test11 (void) {$/;"	f	file:
+test11	bstrlib-master/test.cpp	/^int test11 (void) {$/;"	f
+test11	bstrlib-master/testaux.c	/^int test11 (void) {$/;"	f
+test11_0	bstrlib-master/bstest.c	/^static int test11_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test11_1	bstrlib-master/bstest.c	/^static int test11_1 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test12	bstrlib-master/bstest.c	/^static int test12 (void) {$/;"	f	file:
+test12	bstrlib-master/test.cpp	/^int test12 (void) {$/;"	f
+test12	bstrlib-master/testaux.c	/^int test12 (void) {$/;"	f
+test12_0	bstrlib-master/bstest.c	/^static int test12_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test12_1	bstrlib-master/bstest.c	/^static int test12_1 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test13	bstrlib-master/bstest.c	/^static int test13 (void) {$/;"	f	file:
+test13	bstrlib-master/test.cpp	/^int test13 (void) {$/;"	f
+test13	bstrlib-master/testaux.c	/^int test13 (void) {$/;"	f
+test13_0	bstrlib-master/bstest.c	/^static int test13_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test13_fgetc	bstrlib-master/testaux.c	/^static int test13_fgetc (void * ctx) {$/;"	f	file:
+test14	bstrlib-master/bstest.c	/^static int test14 (void) {$/;"	f	file:
+test14	bstrlib-master/test.cpp	/^int test14 (void) {$/;"	f
+test14	bstrlib-master/testaux.c	/^int test14 (void) {$/;"	f
+test14_0	bstrlib-master/bstest.c	/^static int test14_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test14_aux	bstrlib-master/testaux.c	/^int test14_aux(bstring b, const char* chkVal) {$/;"	f
+test15	bstrlib-master/bstest.c	/^static int test15 (void) {$/;"	f	file:
+test15	bstrlib-master/test.cpp	/^int test15 (void) {$/;"	f
+test15_0	bstrlib-master/bstest.c	/^static int test15_0 (bstring b0, int pos, const_bstring b1, unsigned char fill, char * res) {$/;"	f	file:
+test16	bstrlib-master/bstest.c	/^static int test16 (void) {$/;"	f	file:
+test16	bstrlib-master/test.cpp	/^int test16 (void) {$/;"	f
+test16_0	bstrlib-master/bstest.c	/^static int test16_0 (bstring b0, int pos, const_bstring b1, unsigned char fill, char * res) {$/;"	f	file:
+test16_1	bstrlib-master/bstest.c	/^static int test16_1 (void) {$/;"	f	file:
+test17	bstrlib-master/bstest.c	/^static int test17 (void) {$/;"	f	file:
+test17	bstrlib-master/test.cpp	/^int test17 (void) {$/;"	f
+test17_0	bstrlib-master/bstest.c	/^static int test17_0 (bstring s1, int pos, int len, char * res) {$/;"	f	file:
+test18	bstrlib-master/bstest.c	/^static int test18 (void) {$/;"	f	file:
+test18	bstrlib-master/test.cpp	/^int test18 (void) {$/;"	f
+test18_0	bstrlib-master/bstest.c	/^static int test18_0 (bstring b, int len, int res, int mlen) {$/;"	f	file:
+test18_1	bstrlib-master/bstest.c	1353;"	d	file:
+test18_1_int	bstrlib-master/bstest.c	/^static int test18_1_int (bstring b, int len, int res, int mlen, int __line__) {$/;"	f	file:
+test19	bstrlib-master/bstest.c	/^static int test19 (void) {$/;"	f	file:
+test19	bstrlib-master/test.cpp	/^int test19 (void) {$/;"	f
+test19_0	bstrlib-master/bstest.c	/^static int test19_0 (bstring b, int len, const char * res, int erv) {$/;"	f	file:
+test1_0	bstrlib-master/bstest.c	/^static int test1_0 (const void * blk, int len, const char * res) {$/;"	f	file:
+test2	bstrlib-master/bstest.c	/^static int test2 (void) {$/;"	f	file:
+test2	bstrlib-master/test.cpp	/^int test2 (void) {$/;"	f
+test2	bstrlib-master/testaux.c	/^int test2 (void) {$/;"	f
+test2	liblcthw/tests/hashmap_tests.c	/^struct tagbstring test2 = bsStatic("test data 2");$/;"	v	typeref:struct:tagbstring
+test2	liblcthw/tests/list_tests.c	/^char *test2 = "test2 data";$/;"	v
+test20	bstrlib-master/bstest.c	/^static int test20 (void) {$/;"	f	file:
+test20	bstrlib-master/test.cpp	/^int test20 (void) {$/;"	f
+test21	bstrlib-master/bstest.c	/^static int test21 (void) {$/;"	f	file:
+test21	bstrlib-master/test.cpp	/^int test21 (void) {$/;"	f
+test21_0	bstrlib-master/bstest.c	/^static int test21_0 (bstring b, char sc, int ns) {$/;"	f	file:
+test21_1	bstrlib-master/bstest.c	/^static int test21_1 (bstring b, const_bstring sc, int ns) {$/;"	f	file:
+test22	bstrlib-master/bstest.c	/^static int test22 (void) {$/;"	f	file:
+test22	bstrlib-master/test.cpp	/^int test22 (void) {$/;"	f
+test22_0	bstrlib-master/bstest.c	/^static int test22_0 (const_bstring b, const_bstring sep, int ns, ...) {$/;"	f	file:
+test23	bstrlib-master/bstest.c	/^static int test23 (void) {$/;"	f	file:
+test23	bstrlib-master/test.cpp	/^int test23 (void) {$/;"	f
+test23_aux_open	bstrlib-master/bstest.c	/^static int test23_aux_open (struct sbstr * sb, bstring b) {$/;"	f	file:
+test23_aux_read	bstrlib-master/bstest.c	/^static size_t test23_aux_read (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+test23_aux_splitcb	bstrlib-master/bstest.c	/^static int test23_aux_splitcb (void * parm, int ofs, const struct tagbstring * entry) {$/;"	f	file:
+test23_aux_splitcbx	bstrlib-master/bstest.c	/^static int test23_aux_splitcbx (void * parm, int ofs, const struct tagbstring * entry) {$/;"	f	file:
+test24	bstrlib-master/bstest.c	/^static int test24 (void) {$/;"	f	file:
+test24	bstrlib-master/test.cpp	/^int test24 (void) {$/;"	f
+test24_0	bstrlib-master/bstest.c	/^static int test24_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test25	bstrlib-master/bstest.c	/^static int test25 (void) {$/;"	f	file:
+test25	bstrlib-master/test.cpp	/^int test25 (void) {$/;"	f
+test25_0	bstrlib-master/bstest.c	/^static int test25_0 (bstring s1, int pos, const_bstring s2, int res) {$/;"	f	file:
+test26	bstrlib-master/bstest.c	/^static int test26 (void) {$/;"	f	file:
+test26	bstrlib-master/test.cpp	/^int test26 (void) {$/;"	f
+test26_0	bstrlib-master/bstest.c	/^static int test26_0 (bstring b0, int pos, int len, const_bstring b1, unsigned char fill, char * res) {$/;"	f	file:
+test27	bstrlib-master/bstest.c	/^static int test27 (void) {$/;"	f	file:
+test27	bstrlib-master/test.cpp	/^int test27 (void) {$/;"	f
+test27_0	bstrlib-master/bstest.c	/^static int test27_0 (bstring b0, const_bstring b1, const char * res) {$/;"	f	file:
+test28	bstrlib-master/bstest.c	/^static int test28 (void) {$/;"	f	file:
+test28	bstrlib-master/test.cpp	/^int test28 (void) {$/;"	f
+test28_0	bstrlib-master/bstest.c	/^static int test28_0 (bstring s1, int c, int res) {$/;"	f	file:
+test28_1	bstrlib-master/bstest.c	/^static int test28_1 (bstring s1, int c, int res) {$/;"	f	file:
+test28_2	bstrlib-master/bstest.c	/^static int test28_2 (bstring s1, int c, int pos, int res) {$/;"	f	file:
+test28_3	bstrlib-master/bstest.c	/^static int test28_3 (bstring s1, int c, int pos, int res) {$/;"	f	file:
+test29	bstrlib-master/bstest.c	/^static int test29 (void) {$/;"	f	file:
+test29	bstrlib-master/test.cpp	/^int test29 (void) {$/;"	f
+test29_0	bstrlib-master/bstest.c	/^static int test29_0 (bstring b0, char * s, const char * res) {$/;"	f	file:
+test2_0	bstrlib-master/bstest.c	/^static int test2_0 (const_bstring b, char z, const unsigned char * res) {$/;"	f	file:
+test3	bstrlib-master/bstest.c	/^static int test3 (void) {$/;"	f	file:
+test3	bstrlib-master/test.cpp	/^int test3 (void) {$/;"	f
+test3	bstrlib-master/testaux.c	/^int test3 (void) {$/;"	f
+test3	liblcthw/tests/hashmap_tests.c	/^struct tagbstring test3 = bsStatic("test data 3");$/;"	v	typeref:struct:tagbstring
+test3	liblcthw/tests/list_tests.c	/^char *test3 = "test3 data";$/;"	v
+test30	bstrlib-master/bstest.c	/^static int test30 (void) {$/;"	f	file:
+test30	bstrlib-master/test.cpp	/^int test30 (void) {$/;"	f
+test30_0	bstrlib-master/bstest.c	/^static int test30_0 (bstring b0, const unsigned char * s, int len, const char * res) {$/;"	f	file:
+test31	bstrlib-master/bstest.c	/^static int test31 (void) {$/;"	f	file:
+test31	bstrlib-master/test.cpp	/^int test31 (void) {$/;"	f
+test31_0	bstrlib-master/bstest.c	/^static int test31_0 (bstring b0, const_bstring find, const_bstring replace, int pos, char * res) {$/;"	f	file:
+test31_1	bstrlib-master/bstest.c	/^static int test31_1 (bstring b0, const_bstring find, const_bstring replace, int pos, char * res) {$/;"	f	file:
+test31_aux	bstrlib-master/test.cpp	/^static size_t test31_aux (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+test32	bstrlib-master/bstest.c	/^static int test32 (void) {$/;"	f	file:
+test32	bstrlib-master/test.cpp	/^static int test32(void) {$/;"	f	file:
+test32_0	bstrlib-master/bstest.c	/^static int test32_0 (const_bstring b, const char * s, int res) {$/;"	f	file:
+test32_1	bstrlib-master/bstest.c	/^static int test32_1 (const_bstring b, const char * s, int res) {$/;"	f	file:
+test33	bstrlib-master/bstest.c	/^static int test33 (void) {$/;"	f	file:
+test33	bstrlib-master/test.cpp	/^static int test33(void) {$/;"	f	file:
+test33_0	bstrlib-master/bstest.c	/^static int test33_0 (bstring b0, const char * res) {$/;"	f	file:
+test34	bstrlib-master/bstest.c	/^static int test34 (void) {$/;"	f	file:
+test34_0	bstrlib-master/bstest.c	/^static int test34_0 (bstring b0, const char * res) {$/;"	f	file:
+test35	bstrlib-master/bstest.c	/^static int test35 (void) {$/;"	f	file:
+test35_0	bstrlib-master/bstest.c	/^static int test35_0 (const_bstring b0, const_bstring b1, int res) {$/;"	f	file:
+test36	bstrlib-master/bstest.c	/^static int test36 (void) {$/;"	f	file:
+test36_0	bstrlib-master/bstest.c	/^static int test36_0 (const_bstring b0, const_bstring b1, int n, int res) {$/;"	f	file:
+test37	bstrlib-master/bstest.c	/^static int test37 (void) {$/;"	f	file:
+test37_0	bstrlib-master/bstest.c	/^static int test37_0 (const_bstring b0, const_bstring b1, int res) {$/;"	f	file:
+test38	bstrlib-master/bstest.c	/^static int test38 (void) {$/;"	f	file:
+test38_aux_bNgetc	bstrlib-master/bstest.c	/^static int test38_aux_bNgetc (struct emuFile * f) {$/;"	f	file:
+test38_aux_bNopen	bstrlib-master/bstest.c	/^static int test38_aux_bNopen (struct emuFile * f, bstring b) {$/;"	f	file:
+test38_aux_bNread	bstrlib-master/bstest.c	/^static size_t test38_aux_bNread (void *buff, size_t elsize, size_t nelem, struct emuFile * f) {$/;"	f	file:
+test39	bstrlib-master/bstest.c	/^static int test39 (void) {$/;"	f	file:
+test39_0	bstrlib-master/bstest.c	/^static int test39_0 (const_bstring b, const_bstring lt, const_bstring rt, const_bstring t) {$/;"	f	file:
+test3_0	bstrlib-master/bstest.c	/^static int test3_0 (const_bstring b) {$/;"	f	file:
+test4	bstrlib-master/bstest.c	/^static int test4 (void) {$/;"	f	file:
+test4	bstrlib-master/test.cpp	/^int test4 (void) {$/;"	f
+test4	bstrlib-master/testaux.c	/^int test4 (void) {$/;"	f
+test40	bstrlib-master/bstest.c	/^static int test40 (void) {$/;"	f	file:
+test40_0	bstrlib-master/bstest.c	/^static int test40_0 (bstring b0, const_bstring b1, int left, int len, const char * res) {$/;"	f	file:
+test41	bstrlib-master/bstest.c	/^static int test41 (void) {$/;"	f	file:
+test41_0	bstrlib-master/bstest.c	/^static int test41_0 (bstring b1, int left, int len, const char * res) {$/;"	f	file:
+test42	bstrlib-master/bstest.c	/^static int test42 (void) {$/;"	f	file:
+test42_0	bstrlib-master/bstest.c	/^static int test42_0 (const_bstring bi, int len, const char * res) {$/;"	f	file:
+test43	bstrlib-master/bstest.c	/^static int test43 (void) {$/;"	f	file:
+test44	bstrlib-master/bstest.c	/^static int test44 (void) {$/;"	f	file:
+test44_0	bstrlib-master/bstest.c	/^static int test44_0 (const char * str) {$/;"	f	file:
+test45	bstrlib-master/bstest.c	/^static int test45 (void) {$/;"	f	file:
+test45_0	bstrlib-master/bstest.c	/^static int test45_0 (const char * str) {$/;"	f	file:
+test46	bstrlib-master/bstest.c	/^static int test46 (void) {$/;"	f	file:
+test46_0	bstrlib-master/bstest.c	/^static int test46_0 (const_bstring r, bstring b, int count, const char * fmt, ...) {$/;"	f	file:
+test46_1	bstrlib-master/bstest.c	/^static int test46_1 (bstring b, const char * fmt, const_bstring r, ...) {$/;"	f	file:
+test47	bstrlib-master/bstest.c	/^static int test47 (void) {$/;"	f	file:
+test47_0	bstrlib-master/bstest.c	/^static int test47_0 (const struct tagbstring* b, const unsigned char* blk, int len, int res) {$/;"	f	file:
+test48	bstrlib-master/bstest.c	/^static int test48 (void) {$/;"	f	file:
+test48_0	bstrlib-master/bstest.c	/^static int test48_0 (const_bstring b, const unsigned char * blk, int len, int res) {$/;"	f	file:
+test4_0	bstrlib-master/bstest.c	/^static int test4_0 (const_bstring b, int left, int len, const char * res) {$/;"	f	file:
+test5	bstrlib-master/bstest.c	/^static int test5 (void) {$/;"	f	file:
+test5	bstrlib-master/test.cpp	/^int test5 (void) {$/;"	f
+test5	bstrlib-master/testaux.c	/^int test5 (void) {$/;"	f
+test5_0	bstrlib-master/bstest.c	/^static int test5_0 (bstring b0, const_bstring b1, const char * res) {$/;"	f	file:
+test5_1	bstrlib-master/bstest.c	/^static int test5_1 (void) {$/;"	f	file:
+test6	bstrlib-master/bstest.c	/^static int test6 (void) {$/;"	f	file:
+test6	bstrlib-master/test.cpp	/^int test6 (void) {$/;"	f
+test6	bstrlib-master/testaux.c	/^int test6 (void) {$/;"	f
+test6_0	bstrlib-master/bstest.c	/^static int test6_0 (bstring b, char c, const char * res) {$/;"	f	file:
+test7	bstrlib-master/bstest.c	628;"	d	file:
+test7	bstrlib-master/test.cpp	/^int test7 (void) {$/;"	f
+test7	bstrlib-master/testaux.c	/^int test7 (void) {$/;"	f
+test7x8	bstrlib-master/bstest.c	/^static int test7x8 (char * fnname, int (* fnptr) (const struct tagbstring *, const struct tagbstring *),$/;"	f	file:
+test7x8_0	bstrlib-master/bstest.c	/^static int test7x8_0 (char * fnname, int (* fnptr) (const struct tagbstring *, const struct tagbstring *), const struct tagbstring * b0, const struct tagbstring * b1, int res) {$/;"	f	file:
+test8	bstrlib-master/bstest.c	629;"	d	file:
+test8	bstrlib-master/test.cpp	/^int test8 (void) {$/;"	f
+test8	bstrlib-master/testaux.c	/^int test8 (void) {$/;"	f
+test9	bstrlib-master/bstest.c	/^static int test9 (void) {$/;"	f	file:
+test9	bstrlib-master/test.cpp	/^int test9 (void) {$/;"	f
+test9	bstrlib-master/testaux.c	/^int test9 (void) {$/;"	f
+test9_0	bstrlib-master/bstest.c	/^static int test9_0 (const_bstring b0, const_bstring b1, int n, int res) {$/;"	f	file:
+testInCharField	ex36/bstrlib.c	1358;"	d	file:
+testInCharField	ex36/bstrlib.c	1370;"	d	file:
+testInCharField	liblcthw/src/lcthw/bstrlib.c	1359;"	d	file:
+testInCharField	liblcthw/src/lcthw/bstrlib.c	1371;"	d	file:
+test_add_fast	liblcthw/tests/radixmap_tests.c	/^char *test_add_fast() {$/;"	f
+test_bubble_sort	liblcthw/tests/list_algos_tests.c	/^char *test_bubble_sort() {$/;"	f
+test_bubble_sort	liblcthw/tests/list_algos_zed_tests.c	/^char *test_bubble_sort() {$/;"	f
+test_bubble_sort_complicated	liblcthw/tests/list_algos_tests.c	/^char *test_bubble_sort_complicated() {$/;"	f
+test_check	ex19.c	/^int test_check(char *file_name) {$/;"	f
+test_check_debug	ex19.c	/^int test_check_debug() {$/;"	f
+test_check_mem	ex19.c	/^int test_check_mem() {$/;"	f
+test_copy	liblcthw/tests/list_tests.c	/^char *test_copy() {$/;"	f
+test_create	liblcthw/tests/darray_tests.c	/^char *test_create() {$/;"	f
+test_create	liblcthw/tests/hashmap_tests.c	/^char *test_create() {$/;"	f
+test_create	liblcthw/tests/list_tests.c	/^char *test_create() {$/;"	f
+test_debug	ex19.c	/^void test_debug() {$/;"	f
+test_delete	liblcthw/tests/hashmap_tests.c	/^char *test_delete() {$/;"	f
+test_destroy	liblcthw/tests/darray_tests.c	/^char *test_destroy() {$/;"	f
+test_destroy	liblcthw/tests/hashmap_tests.c	/^char *test_destroy() {$/;"	f
+test_destroy	liblcthw/tests/list_tests.c	/^char *test_destroy() {$/;"	f
+test_dlclose	c-skeleton_ex30/tests/libex30_tests.c	/^char *test_dlclose() {$/;"	f
+test_dlclose	c-skeleton_ex30/tests/template_tests.c	/^char *test_dlclose() {$/;"	f
+test_dlopen	c-skeleton_ex30/tests/libex30_tests.c	/^char *test_dlopen() {$/;"	f
+test_dlopen	c-skeleton_ex30/tests/template_tests.c	/^char *test_dlopen() {$/;"	f
+test_end_count_max	liblcthw/tests/darray_tests.c	/^char *test_end_count_max() {$/;"	f
+test_expand_contract	liblcthw/tests/darray_tests.c	/^char *test_expand_contract() {$/;"	f
+test_failures	c-skeleton_ex30/tests/libex30_tests.c	/^char *test_failures() {$/;"	f
+test_failures	c-skeleton_ex30/tests/template_tests.c	/^char *test_failures() {$/;"	f
+test_find	liblcthw/tests/darray_algos_tests.c	/^char *test_find() {$/;"	f
+test_first_last	liblcthw/tests/darray_tests.c	/^char *test_first_last() {$/;"	f
+test_functions	c-skeleton_ex30/tests/libex30_tests.c	/^char *test_functions() {$/;"	f
+test_functions	c-skeleton_ex30/tests/template_tests.c	/^char *test_functions() {$/;"	f
+test_get	liblcthw/tests/darray_tests.c	/^char *test_get() {$/;"	f
+test_get_set	liblcthw/tests/hashmap_tests.c	/^char *test_get_set() {$/;"	f
+test_insert_sorted	liblcthw/tests/list_algos_tests.c	/^char *test_insert_sorted() {$/;"	f
+test_join	liblcthw/tests/list_tests.c	/^char *test_join() {$/;"	f
+test_log_err	ex19.c	/^void test_log_err() {$/;"	f
+test_log_info	ex19.c	/^void test_log_info() {$/;"	f
+test_log_warn	ex19.c	/^void test_log_warn() {$/;"	f
+test_merge_sort	liblcthw/tests/list_algos_tests.c	/^char *test_merge_sort() {$/;"	f
+test_merge_sort	liblcthw/tests/list_algos_zed_tests.c	/^char *test_merge_sort() {$/;"	f
+test_my_heapsort	liblcthw/tests/darray_algos_tests.c	/^char *test_my_heapsort() {$/;"	f
+test_my_mergesort	liblcthw/tests/darray_algos_tests.c	/^char *test_my_mergesort() {$/;"	f
+test_my_qsort	liblcthw/tests/darray_algos_tests.c	/^char *test_my_qsort() {$/;"	f
+test_new	liblcthw/tests/darray_tests.c	/^char *test_new() {$/;"	f
+test_operations	liblcthw/tests/radixmap_tests.c	/^static char *test_operations() {$/;"	f	file:
+test_push_pop	liblcthw/tests/darray_tests.c	/^char *test_push_pop() {$/;"	f
+test_push_pop	liblcthw/tests/list_tests.c	/^char *test_push_pop() {$/;"	f
+test_qsort	liblcthw/tests/darray_algos_tests.c	/^char *test_qsort() {$/;"	f
+test_remove	liblcthw/tests/darray_tests.c	/^char *test_remove() {$/;"	f
+test_remove	liblcthw/tests/list_tests.c	/^char *test_remove() {$/;"	f
+test_search	liblcthw/tests/radixmap_tests.c	/^static int test_search(RadixMap *map) {$/;"	f	file:
+test_sentinel	ex19.c	/^int test_sentinel(int code) {$/;"	f
+test_set	liblcthw/tests/darray_tests.c	/^char *test_set() {$/;"	f
+test_shift	liblcthw/tests/list_tests.c	/^char *test_shift() {$/;"	f
+test_sort_add	liblcthw/tests/darray_algos_tests.c	/^char *test_sort_add() {$/;"	f
+test_sorting	ex18.c	/^void test_sorting(int* numbers, int count, compare_cb cmp) {$/;"	f
+test_sorting	ex18ec.c	/^void test_sorting(int* numbers, int count, sort_alg sort, compare_cb cmp) {$/;"	f
+test_split	liblcthw/tests/list_tests.c	/^char *test_split() {$/;"	f
+test_to_understand_radix	liblcthw/tests/radixmap_tests.c	/^char *test_to_understand_radix() {$/;"	f
+test_to_understand_random	liblcthw/tests/radixmap_tests.c	/^char *test_to_understand_random() {$/;"	f
+test_traverse	liblcthw/tests/hashmap_tests.c	/^char *test_traverse() {$/;"	f
+test_unshift	liblcthw/tests/list_tests.c	/^char *test_unshift() {$/;"	f
+testcmp	liblcthw/tests/darray_algos_tests.c	/^int testcmp(char **a, char **b) {$/;"	f
+tests_run	c-skeleton/tests/minunit.h	/^int tests_run;$/;"	v
+tests_run	c-skeleton_ex30/tests/minunit.h	/^int tests_run;$/;"	v
+tests_run	liblcthw/tests/minunit.h	/^int tests_run;$/;"	v
+tests_run	liblcthw/tests/minunit_changed.h	/^int tests_run;$/;"	v
+tests_run	minunit.h	/^int tests_run;$/;"	v
+tolower	bstrlib-master/bstrwrap.cpp	/^void CBString::tolower () {$/;"	f	class:Bstrlib::CBString
+toupper	bstrlib-master/bstrwrap.cpp	/^void CBString::toupper () {$/;"	f	class:Bstrlib::CBString
+traverse_called	liblcthw/tests/hashmap_tests.c	/^static int  traverse_called = 0;$/;"	v	file:
+traverse_fail_cb	liblcthw/tests/hashmap_tests.c	/^static int traverse_fail_cb(HashmapNode *node) {$/;"	f	file:
+traverse_good_cb	liblcthw/tests/hashmap_tests.c	/^static int traverse_good_cb(HashmapNode *node) {$/;"	f	file:
+trim	bstrlib-master/bstrwrap.h	/^	inline void trim (const CBString& b = CBString (bsStaticBlkParms (" \\t\\v\\f\\r\\n"))) {$/;"	f	struct:Bstrlib::CBString
+trunc	bstrlib-master/bstrwrap.cpp	/^void CBString::trunc (int len) {$/;"	f	class:Bstrlib::CBString
+type	ex35.c	/^    VariantType type;$/;"	m	struct:Variant	file:
+unread	bstrlib-master/bstrwrap.cpp	/^void CBStream::unread (const CBString& s) {$/;"	f	class:Bstrlib::CBStream
+upcase	ex36/bstrlib.c	598;"	d	file:
+upcase	liblcthw/src/lcthw/bstrlib.c	599;"	d	file:
+update_ratio	ex22.c	/^double update_ratio(double new_ratio) {$/;"	f
+uppercase	c-skeleton_ex29/src/libex29.c	/^int uppercase(const char *msg) {$/;"	f
+uppercase	c-skeleton_ex30/src/libex30.c	/^int uppercase(const char *msg) {$/;"	f
+uppercase	libex29.c	/^int uppercase(const char *msg) {$/;"	f
+uppercase	libex29_ec.c	/^int uppercase(int len, const char *msg) {$/;"	f
+utf8Iterator	bstrlib-master/utf8util.h	/^struct utf8Iterator {$/;"	s
+utf8IteratorGetCurrCodePoint	bstrlib-master/utf8util.c	/^cpUcs4 utf8IteratorGetCurrCodePoint (struct utf8Iterator* iter, cpUcs4 errCh) {$/;"	f
+utf8IteratorGetNextCodePoint	bstrlib-master/utf8util.c	/^cpUcs4 utf8IteratorGetNextCodePoint (struct utf8Iterator* iter, cpUcs4 errCh) {$/;"	f
+utf8IteratorInit	bstrlib-master/utf8util.c	/^void utf8IteratorInit (struct utf8Iterator* iter, unsigned char* data, int slen) {$/;"	f
+utf8IteratorNoMore	bstrlib-master/utf8util.h	50;"	d
+utf8IteratorUninit	bstrlib-master/utf8util.c	/^void utf8IteratorUninit (struct utf8Iterator* iter) {$/;"	f
+utf8ScanBackwardsForCodePoint	bstrlib-master/utf8util.c	/^int utf8ScanBackwardsForCodePoint (unsigned char* msg, int len, int pos, cpUcs4* out) {$/;"	f
+val1	liblcthw/tests/darray_tests.c	/^static int *val1 = NULL;$/;"	v	file:
+val2	liblcthw/tests/darray_tests.c	/^static int *val2 = NULL;$/;"	v	file:
+valid_copy	ex23.c	/^int valid_copy(char *data, int count, char expects) {$/;"	f
+valid_copy	ex23ec2.c	/^int valid_copy(char *data, int count, char expects) {$/;"	f
+value	liblcthw/src/lcthw/list.h	/^    void *value;$/;"	m	struct:ListNode
+value	liblcthw/src/lcthw/radixmap.h	/^        uint32_t value;$/;"	m	struct:RMElement::__anon5
+values	liblcthw/tests/list_algos_tests.c	/^char *values[] = { "XXXX", "1234", "abcd", "xjvef", "NDSS" };$/;"	v
+values	liblcthw/tests/list_algos_zed_tests.c	/^char *values[] = { "XXXX", "1234", "abcd", "xjvef", "NDSS" };$/;"	v
+vfgetc	bstrlib-master/testaux.c	/^struct vfgetc {$/;"	s	file:
+weight	ex16.c	/^    int weight;$/;"	m	struct:Person	file:
+weight	ex16ec.c	/^    int weight;$/;"	m	struct:Person	file:
+what	bstrlib-master/bstrwrap.h	/^	virtual const char *what () const throw () { return msg.c_str(); }$/;"	f	struct:Bstrlib::CBStringException
+writeFn	bstrlib-master/bstraux.c	/^    bNwrite writeFn; \/* fwrite work-a-like fnptr for core stream *\/$/;"	m	struct:bwriteStream	file:
+writeallow	bstrlib-master/bstrwrap.cpp	/^void CBString::writeallow () {$/;"	f	class:Bstrlib::CBString
+writeprotect	bstrlib-master/bstrwrap.cpp	/^void CBString::writeprotect () {$/;"	f	class:Bstrlib::CBString
+wspace	ex36/bstrlib.c	600;"	d	file:
+wspace	liblcthw/src/lcthw/bstrlib.c	601;"	d	file:
+xxxxxBstring	bstrlib-master/bstest.c	/^struct tagbstring xxxxxBstring = bsStatic ("xxxxx");$/;"	v	typeref:struct:tagbstring
+zeds_device	ex23.c	/^int zeds_device(char *from, char *to, int count) {$/;"	f
+zeds_device	ex23ec2.c	/^int zeds_device(char *from, char *to, int count) {$/;"	f
+~CBStream	bstrlib-master/bstrwrap.cpp	/^CBStream::~CBStream () {$/;"	f	class:Bstrlib::CBStream
+~CBString	bstrlib-master/bstrwrap.cpp	/^CBString::~CBString () {$/;"	f	class:Bstrlib::CBString
+~CBStringException	bstrlib-master/bstrwrap.h	/^	virtual ~CBStringException () throw () {}$/;"	f	struct:Bstrlib::CBStringException
