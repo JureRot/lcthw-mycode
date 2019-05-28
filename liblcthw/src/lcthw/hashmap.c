@@ -117,7 +117,18 @@ static inline DArray *Hashmap_find_bucket(Hashmap *map, void *key, int create, u
         // new bucket, set it up
         //DONT KNOW WHY THERE IS DEFAULT NUMBER HERE AND VOID*, WE NEED TO CREATE JUST ONE BUCKET
         //bucket = DArray_create(sizeof(void *), DEFAULT_NUMBER_OF_BUCKETS);
-        bucket = DArray_create(sizeof(DArray *), 1); // i think this is more correct (we just create one bucket)
+        //bucket = DArray_create(sizeof(DArray *), 1); // i think this is more correct (we just create one bucket of size DArray)
+        bucket = DArray_create(sizeof(HashmapNode *), 1); // i think this is even more correct (we just create one bucket of size HashmapNode)
+
+		//TODO TODO TODO TODO TODO TODO TODO TODO
+		//need to test this if it works correcly or if i just dont get it
+		//
+		//dont know why 100 new void pointers
+		//but maybe we need the space if more than one have the same hash
+		//but it is darray, it should increase in size if full
+		//and what is the size of element of darray (void * or HashmapNode)
+		//TODO TODO TODO TODO TODO TODO TODO TODO
+
         check_mem(bucket);
         DArray_set(map->buckets, bucket_n, bucket); //we set the newly created bucket into buckets
     }
