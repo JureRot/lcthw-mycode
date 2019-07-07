@@ -36,7 +36,7 @@ static uint32_t default_hash(void *a) {
 }
 
 //create function
-//takes compare function pointer and hashing functin poiter
+//takes compare function pointer and hashing functin pointer
 //returns pointer to Hashmap
 Hashmap *Hashmap_create(Hashmap_compare compare, Hashmap_hash hash) {
     Hashmap *map = calloc(1, sizeof(Hashmap)); //we reserve space

@@ -13,7 +13,7 @@ typedef int (*Hashmap_compare) (void *a, void *b);
 typedef uint32_t (*Hashmap_hash) (void *key);
 
 //structure of the Hashmap
-//bucktes is a dynamic array (DArray) of (in our case 100) buckets,
+//buckets is a dynamic array (DArray) of (in our case 100) buckets,
 //    each of which is a dynamic array of HashmapNodes
 //compare is a pointer to a comparison function
 //hash is a pointer to a hashing function
