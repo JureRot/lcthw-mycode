@@ -118,16 +118,14 @@ static inline DArray *Hashmap_find_bucket(Hashmap *map, void *key, int create, u
         //DONT KNOW WHY THERE IS DEFAULT NUMBER HERE AND VOID*, WE NEED TO CREATE JUST ONE BUCKET
         //bucket = DArray_create(sizeof(void *), DEFAULT_NUMBER_OF_BUCKETS);
         //bucket = DArray_create(sizeof(DArray *), 1); // i think this is more correct (we just create one bucket of size DArray)
-        bucket = DArray_create(sizeof(HashmapNode *), 1); // i think this is even more correct (we just create one bucket of size HashmapNode)
+        bucket = DArray_create(sizeof(HashmapNode *), 1); // i think this is even more correct (we just create one bucket of size HashmapNode) (or void* ???)
+		//the moment we push to this bucket(DArray) containing only one HashmapNode it will expand to 300 elements
+		//if we had DArray_expand implemented correctly (size times two for instance) it would make a lot more sense (but even now it works and it is correct)
+		//(we could make the staring size of 2 to dalay the expansion until two elements have the same hash)
 
-		//TODO TODO TODO TODO TODO TODO TODO TODO
-		//need to test this if it works correcly or if i just dont get it
-		//
-		//dont know why 100 new void pointers
-		//but maybe we need the space if more than one have the same hash
-		//but it is darray, it should increase in size if full
-		//and what is the size of element of darray (void * or HashmapNode)
-		//TODO TODO TODO TODO TODO TODO TODO TODO
+		//TODO
+		//this still may not be correct and working for all edge-cases
+		//some testing is still recommended
 
         check_mem(bucket);
         DArray_set(map->buckets, bucket_n, bucket); //we set the newly created bucket into buckets
@@ -186,7 +184,7 @@ void *Hashmap_get(Hashmap *map, void *key) {
     DArray *bucket = Hashmap_find_bucket(map, key, 0, &hash); //we get the pointer to bucket of key and the hash (thanks to Hashmap_find_bucket function)
     if (!bucket) return NULL; //if bucket not found, we (we didnt create it), we just return null
 
-    int i = Hashmap_get_node(map, hash, bucket, key); //we get the inex of node inside the bucket
+    int i = Hashmap_get_node(map, hash, bucket, key); //we get the index of node inside the bucket
     if (i == -1) return NULL; //if wrong index, we return null
 
     HashmapNode *node = DArray_get(bucket, i); //get the to node at the spedific index in the specific bucket

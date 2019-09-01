@@ -33,6 +33,100 @@ static int traverse_fail_cb(HashmapNode *node) {
     }
 }
 
+char *test_human_test() { //test for humans to understand the workings
+
+    map = Hashmap_create(NULL, NULL);
+    mu_assert(map != NULL, "Failed to create map.");
+
+	if (map->buckets) {
+		printf("map has buckets\n");
+	}
+
+	bstring key = bfromcstr("1");
+	bstring value = bfromcstr("one");
+	bstring key2 = bfromcstr("2");
+	bstring value2 = bfromcstr("two");
+	bstring key3 = bfromcstr("3");
+	bstring value3 = bfromcstr("three");
+	bstring key4 = bfromcstr("4");
+	bstring value4 = bfromcstr("four");
+	bstring key5 = bfromcstr("5");
+	bstring value5 = bfromcstr("five");
+	bstring key6 = bfromcstr("6");
+	bstring value6 = bfromcstr("six");
+	bstring key7 = bfromcstr("7");
+	bstring value7 = bfromcstr("seven");
+	bstring key8 = bfromcstr("8");
+	bstring value8 = bfromcstr("eight");
+	bstring key9 = bfromcstr("9");
+	bstring value9 = bfromcstr("nine");
+	bstring key10 = bfromcstr("10");
+	bstring value10 = bfromcstr("ten");
+
+	int rc = Hashmap_set(map, &key, &value);
+	//int rc = Hashmap_set(map, key, value);
+
+	rc = Hashmap_set(map, &key2, &value2);
+	//rc = Hashmap_set(map, key2, value2);
+
+	rc = Hashmap_set(map, &key3, &value3);
+	rc = Hashmap_set(map, &key4, &value4);
+	rc = Hashmap_set(map, &key5, &value5);
+	rc = Hashmap_set(map, &key6, &value6);
+	rc = Hashmap_set(map, &key7, &value7);
+	rc = Hashmap_set(map, &key8, &value8);
+	rc = Hashmap_set(map, &key9, &value9);
+	rc = Hashmap_set(map, &key10, &value10);
+
+	rc = Hashmap_set(map, &key10, &value10);
+
+	printf("%s\n", bdata(key));
+
+
+    for (int i=0; i<DArray_count(map->buckets); i++) {
+        DArray *bucket = DArray_get(map->buckets, i);
+        if (bucket) {
+            for (int j=0; j<DArray_count(bucket); j++) {
+                HashmapNode *node = DArray_get(bucket, j);
+
+				bstring *cur_key = node->key;
+				bstring *cur_value = node->data;
+
+				printf("bucket i: %d, node j: %d, node adr: %p\n", i, j, node);
+				printf("key: %s, value: %s\n", bdata(*cur_key), bdata(*cur_value));
+            }
+        }
+    }
+
+	//TODO ZAKAJ MAJO ISTI KEY-I RAZLICNE HASHE???
+
+
+	bdestroy(key);
+	bdestroy(value);
+	bdestroy(key2);
+	bdestroy(value2);
+	bdestroy(key3);
+	bdestroy(value3);
+	bdestroy(key4);
+	bdestroy(value4);
+	bdestroy(key5);
+	bdestroy(value5);
+	bdestroy(key6);
+	bdestroy(value6);
+	bdestroy(key7);
+	bdestroy(value7);
+	bdestroy(key8);
+	bdestroy(value8);
+	bdestroy(key9);
+	bdestroy(value9);
+	bdestroy(key10);
+	bdestroy(value10);
+
+    Hashmap_destroy(map);
+
+	return NULL;
+}
+
 char *test_create() {
     map = Hashmap_create(NULL, NULL);
     mu_assert(map != NULL, "Failed to create map.");
@@ -102,6 +196,8 @@ char *test_delete() {
 
 char *all_tests() {
     mu_suite_start();
+
+	mu_run_test(test_human_test);
 
     mu_run_test(test_create);
     mu_run_test(test_get_set);
