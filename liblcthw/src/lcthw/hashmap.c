@@ -32,6 +32,9 @@ static uint32_t default_hash(void *a) {
     hash ^= (hash >> 11);
     hash += (hash << 15);
 
+	//for testing
+	//printf("value: %s, len: %d, hash: %d, bucket_n: %d\n", key, len, hash, hash%100);
+
     return hash;
 }
 

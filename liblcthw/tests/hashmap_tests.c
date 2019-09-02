@@ -14,6 +14,28 @@ struct tagbstring expect1 = bsStatic("THE VALUE 1");
 struct tagbstring expect2 = bsStatic("THE VALUE 2");
 struct tagbstring expect3 = bsStatic("THE VALUE 3");
 
+struct tagbstring key1 = bsStatic("1");
+struct tagbstring value1 = bsStatic("one");
+struct tagbstring key2 = bsStatic("2");
+struct tagbstring value2 = bsStatic("two");
+struct tagbstring key3 = bsStatic("3");
+struct tagbstring value3 = bsStatic("three");
+struct tagbstring key4 = bsStatic("4");
+struct tagbstring value4 = bsStatic("four");
+struct tagbstring key5 = bsStatic("5");
+struct tagbstring value5 = bsStatic("five");
+struct tagbstring key6 = bsStatic("6");
+struct tagbstring value6 = bsStatic("six");
+struct tagbstring key7 = bsStatic("7");
+struct tagbstring value7 = bsStatic("seven");
+struct tagbstring key8 = bsStatic("8");
+struct tagbstring value8 = bsStatic("eight");
+struct tagbstring key9 = bsStatic("9");
+struct tagbstring value9 = bsStatic("nine");
+struct tagbstring key10 = bsStatic("10");
+struct tagbstring value10 = bsStatic("ten");
+struct tagbstring value10two = bsStatic("ten2");
+
 //traverse function that increments the traverse_called (counts number of nodes)
 static int traverse_good_cb(HashmapNode *node) {
     debug("KEY: %s", bdata((bstring) node->key));
@@ -33,42 +55,18 @@ static int traverse_fail_cb(HashmapNode *node) {
     }
 }
 
+//traverse for human_test()
+static int traverse_human_test(HashmapNode *node) {
+	printf("node addr: %p, bucket: %d, key: %s, value: %s\n", node, node->hash%100, bdata((bstring)node->key), bdata((bstring)node->data));
+
+	return 0;
+}
+
 char *test_human_test() { //test for humans to understand the workings
-
     map = Hashmap_create(NULL, NULL);
-    mu_assert(map != NULL, "Failed to create map.");
 
-	if (map->buckets) {
-		printf("map has buckets\n");
-	}
-
-	bstring key = bfromcstr("1");
-	bstring value = bfromcstr("one");
-	bstring key2 = bfromcstr("2");
-	bstring value2 = bfromcstr("two");
-	bstring key3 = bfromcstr("3");
-	bstring value3 = bfromcstr("three");
-	bstring key4 = bfromcstr("4");
-	bstring value4 = bfromcstr("four");
-	bstring key5 = bfromcstr("5");
-	bstring value5 = bfromcstr("five");
-	bstring key6 = bfromcstr("6");
-	bstring value6 = bfromcstr("six");
-	bstring key7 = bfromcstr("7");
-	bstring value7 = bfromcstr("seven");
-	bstring key8 = bfromcstr("8");
-	bstring value8 = bfromcstr("eight");
-	bstring key9 = bfromcstr("9");
-	bstring value9 = bfromcstr("nine");
-	bstring key10 = bfromcstr("10");
-	bstring value10 = bfromcstr("ten");
-
-	int rc = Hashmap_set(map, &key, &value);
-	//int rc = Hashmap_set(map, key, value);
-
+	int rc = Hashmap_set(map, &key1, &value1);
 	rc = Hashmap_set(map, &key2, &value2);
-	//rc = Hashmap_set(map, key2, value2);
-
 	rc = Hashmap_set(map, &key3, &value3);
 	rc = Hashmap_set(map, &key4, &value4);
 	rc = Hashmap_set(map, &key5, &value5);
@@ -77,50 +75,9 @@ char *test_human_test() { //test for humans to understand the workings
 	rc = Hashmap_set(map, &key8, &value8);
 	rc = Hashmap_set(map, &key9, &value9);
 	rc = Hashmap_set(map, &key10, &value10);
+	rc = Hashmap_set(map, &key10, &value10two);
 
-	rc = Hashmap_set(map, &key10, &value10);
-
-	printf("%s\n", bdata(key));
-
-
-    for (int i=0; i<DArray_count(map->buckets); i++) {
-        DArray *bucket = DArray_get(map->buckets, i);
-        if (bucket) {
-            for (int j=0; j<DArray_count(bucket); j++) {
-                HashmapNode *node = DArray_get(bucket, j);
-
-				bstring *cur_key = node->key;
-				bstring *cur_value = node->data;
-
-				printf("bucket i: %d, node j: %d, node adr: %p\n", i, j, node);
-				printf("key: %s, value: %s\n", bdata(*cur_key), bdata(*cur_value));
-            }
-        }
-    }
-
-	//TODO ZAKAJ MAJO ISTI KEY-I RAZLICNE HASHE???
-
-
-	bdestroy(key);
-	bdestroy(value);
-	bdestroy(key2);
-	bdestroy(value2);
-	bdestroy(key3);
-	bdestroy(value3);
-	bdestroy(key4);
-	bdestroy(value4);
-	bdestroy(key5);
-	bdestroy(value5);
-	bdestroy(key6);
-	bdestroy(value6);
-	bdestroy(key7);
-	bdestroy(value7);
-	bdestroy(key8);
-	bdestroy(value8);
-	bdestroy(key9);
-	bdestroy(value9);
-	bdestroy(key10);
-	bdestroy(value10);
+	Hashmap_traverse(map, traverse_human_test);
 
     Hashmap_destroy(map);
 
