@@ -14,6 +14,7 @@ struct tagbstring expect1 = bsStatic("THE VALUE 1");
 struct tagbstring expect2 = bsStatic("THE VALUE 2");
 struct tagbstring expect3 = bsStatic("THE VALUE 3");
 
+//for human_test
 struct tagbstring key1 = bsStatic("1");
 struct tagbstring value1 = bsStatic("one");
 struct tagbstring key2 = bsStatic("2");
@@ -57,11 +58,12 @@ static int traverse_fail_cb(HashmapNode *node) {
 
 //traverse for human_test()
 static int traverse_human_test(HashmapNode *node) {
-	printf("node addr: %p, bucket: %d, key: %s, value: %s\n", node, node->hash%100, bdata((bstring)node->key), bdata((bstring)node->data));
+	printf("node addr: %p, hash: %d, bucket: %d, key: %s, value: %s\n", node, node->hash, node->hash%DEFAULT_NUMBER_OF_BUCKETS, bdata((bstring)node->key), bdata((bstring)node->data));
 
 	return 0;
 }
 
+//test for understanding the workings of this hashmap implementation
 char *test_human_test() { //test for humans to understand the workings
     map = Hashmap_create(NULL, NULL);
 
@@ -78,6 +80,9 @@ char *test_human_test() { //test for humans to understand the workings
 	rc = Hashmap_set(map, &key10, &value10two);
 
 	Hashmap_traverse(map, traverse_human_test);
+
+	bstring result = Hashmap_get(map, &key4);
+	printf("value of key4: %s\n", bdata(result));
 
     Hashmap_destroy(map);
 

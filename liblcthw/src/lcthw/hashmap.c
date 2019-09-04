@@ -11,6 +11,10 @@ static int default_compare(void *a, void *b) {
     return bstrcmp((bstring) a, (bstring) b);
 }
 
+int testcmp(HashmapNode *a, HashmapNode *b) {
+    return bstrcmp((bstring)a->key, (bstring)b->key);
+}
+
 /*
  * Simple Bob Jenkin's hash algorithm taken from the wikipedia description.
  */
@@ -153,7 +157,11 @@ int Hashmap_set(Hashmap *map, void *key, void *data) {
     check_mem(node);
 
     DArray_push(bucket, node); //we push the node to the correct bucket
+
     //here we could sort the bucket to have he nodes inside buckets sorted (easier search and set)
+	//cant we just use DArray_qsort or DArray_sort_add for this (already implemented in darray_algos.c)
+	//DONT THINK SO, BECAUSE WE WORK WITH BSTRINGS HERE (need to compare HashmapNodes, not chars in array)
+	DArray_qsort(bucket, testcmp); //to deluje
 
     return 0;
 
@@ -174,7 +182,10 @@ static inline int Hashmap_get_node(Hashmap *map, uint32_t hash, DArray *bucket, 
             return i;
         }
     }
+
     //if the buckets were sorted we could use binary search to find the node faster
+	//cant we just use DArray_find for this (already implemented in darray_algos.c)
+	//DONT THINK SO, BECAUSE WE WORK WITH BSTRINGS HERE (need to compare HashmapNodes, not chars in array)
 
     return -1;
 }
