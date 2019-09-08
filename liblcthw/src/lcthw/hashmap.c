@@ -11,7 +11,8 @@ static int default_compare(void *a, void *b) {
     return bstrcmp((bstring) a, (bstring) b);
 }
 
-int testcmp(HashmapNode *a, HashmapNode *b) {
+int sortcmp(HashmapNode *a, HashmapNode *b) {
+	//I DONT KNOW WHAT IS PASSED TO THIS
     return bstrcmp((bstring)a->key, (bstring)b->key);
 }
 
@@ -161,7 +162,11 @@ int Hashmap_set(Hashmap *map, void *key, void *data) {
     //here we could sort the bucket to have he nodes inside buckets sorted (easier search and set)
 	//cant we just use DArray_qsort or DArray_sort_add for this (already implemented in darray_algos.c)
 	//DONT THINK SO, BECAUSE WE WORK WITH BSTRINGS HERE (need to compare HashmapNodes, not chars in array)
-	DArray_qsort(bucket, testcmp); //to deluje
+
+	//this is an improvement
+	//we sort the bucket after insert (could have done a sorted insert (DArray_sort_add)) (slower insert but faster find)
+	DArray_qsort(bucket, sortcmp);
+	//DArray_my_qsort(bucket, sortcmp);
 
     return 0;
 
@@ -186,8 +191,24 @@ static inline int Hashmap_get_node(Hashmap *map, uint32_t hash, DArray *bucket, 
     //if the buckets were sorted we could use binary search to find the node faster
 	//cant we just use DArray_find for this (already implemented in darray_algos.c)
 	//DONT THINK SO, BECAUSE WE WORK WITH BSTRINGS HERE (need to compare HashmapNodes, not chars in array)
+	//why doesn't DArray_find work here (something is wrong)
 
     return -1;
+}
+
+static inline int Hashmap_get_node_binary(Hashmap *map, uint32_t hash, DArray *bucket, void *key) {
+
+	//CMP SAM PO SEB DEAL PROU SAM NE VEM ZAKAJ NE MORM V DARRAY_FIND TEGA VRZT
+	HashmapNode *el = Hashmap_node_create(hash ,key, NULL);
+	HashmapNode *n = DArray_get(bucket, 3);
+	int cmp = sortcmp(el, n);
+
+	int f = DArray_find(bucket, el, sortcmp);
+	printf("cmp: %d, f: %d\n", cmp, f);
+
+	//OCITNO BO TREBA NOU BINARY SEARCH SPISAT KLE
+
+	return -1;
 }
 
 //funct to get value of key in hashmap

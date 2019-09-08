@@ -40,28 +40,10 @@ DEBUG tests/darray_tests.c:152: ----- test_first_last
 DEBUG tests/darray_tests.c:153: ----- test_end_count_max
 DEBUG tests/hashmap_tests.c:173: ----- RUNNING: ./tests/hashmap_tests
 DEBUG tests/hashmap_tests.c:162: ----- test_human_test
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 1
-DEBUG src/lcthw/hashmap.c:179: TRY: 2
-DEBUG src/lcthw/hashmap.c:179: TRY: 3
-DEBUG tests/hashmap_tests.c:164: ----- test_create
-DEBUG tests/hashmap_tests.c:165: ----- test_get_set
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG tests/hashmap_tests.c:166: ----- test_traverse
-DEBUG tests/hashmap_tests.c:42: KEY: test data 1
-DEBUG tests/hashmap_tests.c:42: KEY: test data 3
-DEBUG tests/hashmap_tests.c:42: KEY: test data 2
-DEBUG tests/hashmap_tests.c:49: KEY: test data 1
-DEBUG tests/hashmap_tests.c:49: KEY: test data 3
-DEBUG tests/hashmap_tests.c:167: ----- test_delete
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 1
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG src/lcthw/hashmap.c:179: TRY: 0
-DEBUG tests/hashmap_tests.c:168: ----- test_destroy
+DEBUG src/lcthw/hashmap.c:184: TRY: 0
+DEBUG src/lcthw/hashmap.c:184: TRY: 1
+DEBUG src/lcthw/hashmap.c:184: TRY: 2
+DEBUG src/lcthw/hashmap.c:184: TRY: 3
 DEBUG tests/list_algos_tests.c:513: ----- RUNNING: ./tests/list_algos_tests
 DEBUG tests/list_algos_tests.c:182: ----- test_bubble_sort_complicated
 DEBUG tests/list_algos_tests.c:183: ----- test_bubble_sort
