@@ -287,7 +287,7 @@ void *Hashmap_delete(Hashmap *map, void *key) {
         return NULL;
 
     //int i = Hashmap_get_node(map, hash, bucket, key); //get index of node in bucket
-    int i = Hashmap_get_node_binary_search(map, hash, bucket, key); //my binary search version (DONT KNOW IF IT WORKS)
+    int i = Hashmap_get_node_binary_search(map, hash, bucket, key); //my binary search version (DOESNT WORK WITH LESS THAN 16 BUCKETS (for the specific tests))
     if (i == -1)
         return NULL;
 
@@ -301,6 +301,9 @@ void *Hashmap_delete(Hashmap *map, void *key) {
         // alright, looks like it's not the last one, swap it
         DArray_set(bucket, i, ending); //we set the value of our node to the value of the one we poped (the last)
     }
+
+	//we need to sort the bucket again
+	DArray_qsort(bucket, hashnodecmp);
 
     return data;
 }

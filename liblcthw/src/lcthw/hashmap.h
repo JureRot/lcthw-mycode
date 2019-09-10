@@ -7,7 +7,7 @@
 //define defualt number of buckets in hash (could be dynamic or user defined)
 #define DEFAULT_NUMBER_OF_BUCKETS 100
 //for testing purposes
-//#define DEFAULT_NUMBER_OF_BUCKETS 3
+//#define DEFAULT_NUMBER_OF_BUCKETS 16
 
 //function pointer to a comparison function
 typedef int (*Hashmap_compare) (void *a, void *b);
