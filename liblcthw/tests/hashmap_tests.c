@@ -84,6 +84,12 @@ char *test_human_test() { //test for humans to understand the workings
 	bstring result = Hashmap_get(map, &key4);
 	printf("value of key4: %s\n", bdata(result));
 
+    bstring deleted4 = (bstring) Hashmap_delete(map, &key4);
+	printf("value of deteled key4: %s\n", bdata(deleted4));
+
+    bstring deleted5 = (bstring) Hashmap_delete(map, &key5);
+	printf("value of deteled key5: %s\n", bdata(deleted5));
+
     Hashmap_destroy(map);
 
 	return NULL;
@@ -159,13 +165,14 @@ char *test_delete() {
 char *all_tests() {
     mu_suite_start();
 
-	mu_run_test(test_human_test);
+	//this is a human test to better understand the workings
+	//mu_run_test(test_human_test);
 
-    //mu_run_test(test_create);
-    //mu_run_test(test_get_set);
-    //mu_run_test(test_traverse);
-    //mu_run_test(test_delete);
-    //mu_run_test(test_destroy);
+    mu_run_test(test_create);
+    mu_run_test(test_get_set);
+    mu_run_test(test_traverse);
+    mu_run_test(test_delete);
+    mu_run_test(test_destroy);
 
     return NULL;
 }

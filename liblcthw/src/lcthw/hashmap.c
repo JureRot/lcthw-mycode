@@ -11,7 +11,7 @@ static int default_compare(void *a, void *b) {
     return bstrcmp((bstring) a, (bstring) b);
 }
 
-int sortcmp(HashmapNode *a, HashmapNode *b) {
+int hashnodecmp(HashmapNode *a, HashmapNode *b) {
 	//I DONT KNOW WHAT IS PASSED TO THIS
     return bstrcmp((bstring)a->key, (bstring)b->key);
 }
@@ -165,8 +165,8 @@ int Hashmap_set(Hashmap *map, void *key, void *data) {
 
 	//this is an improvement
 	//we sort the bucket after insert (could have done a sorted insert (DArray_sort_add)) (slower insert but faster find)
-	DArray_qsort(bucket, sortcmp);
-	//DArray_my_qsort(bucket, sortcmp);
+	DArray_qsort(bucket, hashnodecmp);
+	//DArray_my_qsort(bucket, hashnodecmp);
 
     return 0;
 
@@ -196,19 +196,39 @@ static inline int Hashmap_get_node(Hashmap *map, uint32_t hash, DArray *bucket, 
     return -1;
 }
 
-static inline int Hashmap_get_node_binary(Hashmap *map, uint32_t hash, DArray *bucket, void *key) {
+static inline int Hashmap_get_node_binary_search(Hashmap *map, uint32_t hash, DArray *bucket, void *key) {
+	//This is a copy of the one in the darray_algos
+	//I tried to make that one work with this but had not success
 
-	//CMP SAM PO SEB DEAL PROU SAM NE VEM ZAKAJ NE MORM V DARRAY_FIND TEGA VRZT
 	HashmapNode *el = Hashmap_node_create(hash ,key, NULL);
-	HashmapNode *n = DArray_get(bucket, 3);
-	int cmp = sortcmp(el, n);
+	//HashmapNode *n = DArray_get(bucket, 3);
+	//int cmp = hashnodecmp(el, n);
 
-	int f = DArray_find(bucket, el, sortcmp);
-	printf("cmp: %d, f: %d\n", cmp, f);
+	//int f = DArray_find(bucket, el, hashnodecmp);
+	//printf("cmp: %d, f: %d\n", cmp, f);
 
-	//OCITNO BO TREBA NOU BINARY SEARCH SPISAT KLE
+    int low = 0;
+    int high = bucket->end - 1;
+    //int mid = -1;
 
-	return -1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int compare = hashnodecmp(el, bucket->contents[mid]);
+
+        if (compare == 0) { //el is equal to middle, so we return indes of middle
+			free(el);
+            return mid;
+        } else if (compare < 0) { //el smaller than current middle, go to lower half
+            high = mid - 1;
+        } else if (compare > 0) { //el bigger than current middle, go to highter half
+            low = mid + 1;
+        }
+    }
+
+	free(el);
+
+error: //fallthrough
+    return -1;
 }
 
 //funct to get value of key in hashmap
@@ -219,7 +239,8 @@ void *Hashmap_get(Hashmap *map, void *key) {
     DArray *bucket = Hashmap_find_bucket(map, key, 0, &hash); //we get the pointer to bucket of key and the hash (thanks to Hashmap_find_bucket function)
     if (!bucket) return NULL; //if bucket not found, we (we didnt create it), we just return null
 
-    int i = Hashmap_get_node(map, hash, bucket, key); //we get the index of node inside the bucket
+    //int i = Hashmap_get_node(map, hash, bucket, key); //we get the index of node inside the bucket
+    int i = Hashmap_get_node_binary_search(map, hash, bucket, key); //my binary search version
     if (i == -1) return NULL; //if wrong index, we return null
 
     HashmapNode *node = DArray_get(bucket, i); //get the to node at the spedific index in the specific bucket
@@ -265,7 +286,8 @@ void *Hashmap_delete(Hashmap *map, void *key) {
     if (!bucket)
         return NULL;
 
-    int i = Hashmap_get_node(map, hash, bucket, key); //get index of node in bucket
+    //int i = Hashmap_get_node(map, hash, bucket, key); //get index of node in bucket
+    int i = Hashmap_get_node_binary_search(map, hash, bucket, key); //my binary search version (DONT KNOW IF IT WORKS)
     if (i == -1)
         return NULL;
 
