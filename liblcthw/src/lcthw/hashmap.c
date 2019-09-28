@@ -6,6 +6,7 @@
 //#include "dbg.h" //just for writting
 #include <lcthw/bstrlib.h>
 //#include "bstrlib.h" //just for writting
+#include <lcthw/darray_algos.h>
 
 static int default_compare(void *a, void *b) {
     return bstrcmp((bstring) a, (bstring) b);
@@ -227,7 +228,7 @@ static inline int Hashmap_get_node_binary_search(Hashmap *map, uint32_t hash, DA
 
 	free(el);
 
-error: //fallthrough
+	//fallthrough
     return -1;
 }
 
