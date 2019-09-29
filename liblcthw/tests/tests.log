@@ -1,0 +1,73 @@
+DEBUG tests/bstr_tests.c:366: ----- RUNNING: ./tests/bstr_tests
+DEBUG tests/bstr_tests.c:342: ----- bfromcstr_test
+DEBUG tests/bstr_tests.c:343: ----- blk2bstr_test
+DEBUG tests/bstr_tests.c:344: ----- bstrcpy_test
+DEBUG tests/bstr_tests.c:345: ----- bassign_test
+DEBUG tests/bstr_tests.c:346: ----- bassigncstr_test
+DEBUG tests/bstr_tests.c:347: ----- bassignblk_test
+DEBUG tests/bstr_tests.c:348: ----- bdestroy_test
+DEBUG tests/bstr_tests.c:349: ----- bconcat_test
+DEBUG tests/bstr_tests.c:350: ----- bstricmp_test
+DEBUG tests/bstr_tests.c:351: ----- biseq_test
+DEBUG tests/bstr_tests.c:352: ----- binstr_test
+DEBUG tests/bstr_tests.c:353: ----- bfindreplace_test
+DEBUG tests/bstr_tests.c:354: ----- bsplit_test
+DEBUG tests/bstr_tests.c:355: ----- bformat_test
+DEBUG tests/bstr_tests.c:356: ----- blength_test
+DEBUG tests/bstr_tests.c:357: ----- bdata_test
+DEBUG tests/bstr_tests.c:358: ----- bchar_test
+DEBUG tests/darray_algos_tests.c:302: ----- RUNNING: ./tests/darray_algos_tests
+DEBUG tests/darray_algos_tests.c:143: ----- test_qsort
+DEBUG tests/darray_algos_tests.c:38: --- Testing qsort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:148: ----- test_my_qsort
+DEBUG tests/darray_algos_tests.c:38: --- Testing my_qsort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:149: ----- test_my_heapsort
+DEBUG tests/darray_algos_tests.c:38: --- Testing my_heapsort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:150: ----- test_my_mergesort
+DEBUG tests/darray_algos_tests.c:38: --- Testing my_mergesort sorting algorithm ---
+DEBUG tests/darray_algos_tests.c:152: ----- test_sort_add
+DEBUG tests/darray_algos_tests.c:153: ----- test_find
+DEBUG tests/darray_tests.c:162: ----- RUNNING: ./tests/darray_tests
+DEBUG tests/darray_tests.c:143: ----- test_create
+DEBUG tests/darray_tests.c:144: ----- test_new
+DEBUG tests/darray_tests.c:145: ----- test_set
+DEBUG tests/darray_tests.c:146: ----- test_get
+DEBUG tests/darray_tests.c:147: ----- test_remove
+DEBUG tests/darray_tests.c:148: ----- test_expand_contract
+DEBUG tests/darray_tests.c:149: ----- test_push_pop
+DEBUG tests/darray_tests.c:150: ----- test_destroy
+DEBUG tests/darray_tests.c:152: ----- test_first_last
+DEBUG tests/darray_tests.c:153: ----- test_end_count_max
+DEBUG tests/hashmap_tests.c:180: ----- RUNNING: ./tests/hashmap_tests
+DEBUG tests/hashmap_tests.c:171: ----- test_create
+DEBUG tests/hashmap_tests.c:172: ----- test_get_set
+DEBUG tests/hashmap_tests.c:173: ----- test_traverse
+DEBUG tests/hashmap_tests.c:42: KEY: test data 3
+DEBUG tests/hashmap_tests.c:42: KEY: test data 1
+DEBUG tests/hashmap_tests.c:42: KEY: test data 2
+DEBUG tests/hashmap_tests.c:49: KEY: test data 3
+DEBUG tests/hashmap_tests.c:49: KEY: test data 1
+DEBUG tests/hashmap_tests.c:174: ----- test_delete
+DEBUG tests/hashmap_tests.c:175: ----- test_destroy
+DEBUG tests/list_algos_tests.c:513: ----- RUNNING: ./tests/list_algos_tests
+DEBUG tests/list_algos_tests.c:182: ----- test_bubble_sort_complicated
+DEBUG tests/list_algos_tests.c:183: ----- test_bubble_sort
+DEBUG tests/list_algos_tests.c:184: ----- test_merge_sort
+DEBUG tests/list_algos_tests.c:187: ----- test_insert_sorted
+DEBUG tests/list_algos_zed_tests.c:91: ----- RUNNING: ./tests/list_algos_zed_tests
+DEBUG tests/list_algos_zed_tests.c:85: ----- test_bubble_sort
+DEBUG tests/list_algos_zed_tests.c:86: ----- test_merge_sort
+DEBUG tests/list_tests.c:211: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:198: ----- test_create
+DEBUG tests/list_tests.c:199: ----- test_push_pop
+DEBUG tests/list_tests.c:200: ----- test_unshift
+DEBUG tests/list_tests.c:201: ----- test_copy
+DEBUG tests/list_tests.c:202: ----- test_join
+DEBUG tests/list_tests.c:203: ----- test_split
+DEBUG tests/list_tests.c:204: ----- test_remove
+DEBUG tests/list_tests.c:205: ----- test_shift
+DEBUG tests/list_tests.c:206: ----- test_destroy
+DEBUG tests/radixmap_tests.c:267: ----- RUNNING: ./tests/radixmap_tests
+DEBUG tests/radixmap_tests.c:198: ----- test_operations
+DEBUG tests/radixmap_tests.c:199: ----- test_to_understand_radix
+DEBUG tests/radixmap_tests.c:204: ----- test_add_fast
